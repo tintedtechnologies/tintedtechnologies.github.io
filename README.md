@@ -1,1 +1,1 @@
-# tintedtechnologies.github.io
+# Tinted Technologies
