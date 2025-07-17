@@ -20,7 +20,6 @@
   --gradient-secondary: linear-gradient(135deg, var(--primary-blue), var(--accent-purple));
 
   /* Theme Colors */
-  color-scheme: dark light;
   color: var(--text-white);
   background-color: var(--bg-black);
 
@@ -202,6 +201,7 @@ section[id] {
   text-align: center;
   z-index: 2;
   position: relative;
+  padding-top: 3rem;
 }
 
 .hero-badge {
@@ -268,62 +268,7 @@ section[id] {
   transition: all 0.3s ease;
 }
 
-/* Floating Animation Elements */
-.hero-visual {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.floating-cards {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.floating-card {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 1rem 1.5rem;
-  backdrop-filter: blur(10px);
-  font-weight: 600;
-  animation: float 6s ease-in-out infinite;
-}
-
-.card-1 {
-  top: 20%;
-  left: 10%;
-  animation-delay: 0s;
-}
-
-.card-2 {
-  top: 60%;
-  right: 15%;
-  animation-delay: 2s;
-}
-
-.card-3 {
-  bottom: 30%;
-  left: 15%;
-  animation-delay: 4s;
-}
-
-.card-4 {
-  top: 15%;
-  right: 20%;
-  animation-delay: 1s;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-}
+/* Floating Animation Elements - Removed */
 
 /* Modern Services Section */
 .services-modern {
@@ -1027,10 +972,6 @@ body.mobile-menu-open {
     gap: 3rem;
   }
   
-  .floating-card {
-    display: none;
-  }
-  
   .container {
     padding: 0 1rem;
   }
@@ -1343,104 +1284,4 @@ body.mobile-menu-open {
 
 .serve-list li:last-child {
   margin-bottom: 0;
-}
-
-/* Light Mode Adaptations */
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--text-dark);
-    background-color: var(--bg-light);
-  }
-  
-  body {
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-  }
-  
-  .hero-modern {
-    background: radial-gradient(ellipse at center, rgba(201, 148, 0, 0.1) 0%, transparent 70%);
-  }
-  
-  .navbar {
-    background: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar .nav-links a {
-    color: var(--text-dark);
-  }
-  
-  .service-card {
-    background: white;
-    border: 1px solid var(--gray-light);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .footer {
-    background: var(--bg-light);
-    border-top: 1px solid var(--gray-light);
-  }
-  
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    background: white;
-    border: 1px solid var(--gray-light);
-    color: var(--text-dark);
-  }
-  
-  .form-group select option {
-    background: #ffffff !important;
-    color: #1a1a1a !important;
-    padding: 0.5rem;
-    font-weight: normal;
-  }
-  
-  .form-group select option:checked {
-    background: var(--primary-gold) !important;
-    color: #000000 !important;
-  }
-  
-  /* Light theme validation styles */
-  .form-group input.error,
-  .form-group textarea.error,
-  .form-group select.error {
-    border-color: #ff4444;
-    box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.1);
-  }
-  
-  .error-message {
-    color: #cc0000;
-  }
-  
-  .character-count {
-    color: rgba(0, 0, 0, 0.6);
-  }
-  
-  /* Light theme disabled button */
-  .btn-primary.disabled,
-  .btn-primary:disabled {
-    background: rgba(0, 0, 0, 0.1);
-    color: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-  }
-  
-  .btn-primary.disabled:hover,
-  .btn-primary:disabled:hover {
-    background: rgba(0, 0, 0, 0.1);
-    color: rgba(0, 0, 0, 0.4);
-    transform: none;
-  }
-  
-  .floating-card {
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    color: var(--text-dark);
-  }
-  
-  .hero-badge {
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    color: var(--text-dark);
-  }
 }

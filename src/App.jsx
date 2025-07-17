@@ -14,9 +14,6 @@ const Home = () => {
       <section id="home" className="hero-modern">
         <div className="container">
           <div className="hero-content">
-            <div className="hero-badge">
-              <span>🚀 Tech Studio • Open Source • AI & Cloud Training</span>
-            </div>
             <h1 className="hero-title">
               Building <span className="gradient-text">Inclusive</span> Technology<br/>
               for <span className="gradient-text-blue">Everyone</span>
@@ -33,14 +30,6 @@ const Home = () => {
                 <button className="btn-secondary">View Services</button>
               </Link>
             </div>
-          </div>
-        </div>
-        <div className="hero-visual">
-          <div className="floating-cards">
-            <div className="floating-card card-1">AI Training</div>
-            <div className="floating-card card-2">Open Source</div>
-            <div className="floating-card card-3">Consulting</div>
-            <div className="floating-card card-4">Custom Workshops</div>
           </div>
         </div>
       </section>

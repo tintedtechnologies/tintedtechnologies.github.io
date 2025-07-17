@@ -19,34 +19,32 @@ const Services = () => {
         <div className="container">
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '900px', margin: '0 auto' }}>
             <div className="card">
-              <h3 className="text-gold">AI & Cloud Training</h3>
+              <h3 className="text-gold">Modern Tech Training</h3>
               <p>
-                Comprehensive training programs designed to build practical skills in 
-                artificial intelligence and cloud computing. From fundamentals to advanced 
-                implementations, we make complex technologies accessible. Our programs cover 
-                machine learning fundamentals, cloud architecture & deployment, AI ethics & 
-                responsible development, and hands-on project experience.
+                Hands-on learning in web development, AI, and cloud—powered by Python and JavaScript. 
+                We make complex concepts accessible through project-based learning and real-world examples. 
+                Whether you're starting out or leveling up, our training covers everything from full-stack 
+                web development and machine learning to cloud deployments and automation.
               </p>
             </div>
 
             <div className="card">
-              <h3 className="text-blue">Technical Consulting</h3>
+              <h3 className="text-blue">Mentoring & Tech Guidance</h3>
               <p>
-                Strategic guidance for organizations looking to implement AI and cloud 
-                solutions. We help you navigate technology decisions, build inclusive 
-                practices, and create sustainable technical strategies. Our consulting includes 
-                AI strategy & implementation, cloud migration planning, inclusive technology 
-                practices, and technical architecture review.
+                Personalized support to help you break into or grow within tech. We offer 1:1 mentoring, 
+                technical advising, and strategic consulting for individuals and teams. Whether you're 
+                building your first project, refining your career path, or scaling a product, we're here 
+                to guide you with code reviews, architectural insight, and actionable next steps.
               </p>
             </div>
 
             <div className="card">
-              <h3 className="text-gold">Custom Workshops</h3>
+              <h3 className="text-gold">Talks & Workshops</h3>
               <p>
-                Tailored educational experiences for teams, communities, and organizations. 
-                We design workshops that meet your specific needs and focus on practical, 
-                applicable skills. We offer community tech workshops, corporate training 
-                programs, student & bootcamp support, and accessibility-focused sessions.
+                Dynamic sessions for companies, conferences, and communities. Book us for engaging talks 
+                and custom workshops focused on AI, cloud, and modern web development. We tailor content 
+                for audiences ranging from beginners to professionals, delivering real value through 
+                practical examples and interactive learning.
               </p>
             </div>
           </div>
