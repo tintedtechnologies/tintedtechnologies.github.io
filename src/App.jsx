@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import ScrollToTop from './components/ScrollToTop';
 import About from './pages/About';
@@ -26,12 +26,12 @@ const Home = () => {
               open knowledge, and hands-on AI & cloud education.
             </p>
             <div className="hero-actions">
-              <a href="/contact">
+              <Link to="/contact">
                 <button className="btn-primary">Start a Project</button>
-              </a>
-              <a href="/services">
+              </Link>
+              <Link to="/services">
                 <button className="btn-secondary">View Services</button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -93,9 +93,9 @@ const Home = () => {
                 We believe technology should work for everyone.
               </p>
               <div style={{ marginTop: '2rem' }}>
-                <a href="/about">
+                <Link to="/about">
                   <button className="btn-secondary">Learn More About Us</button>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="values-grid">
@@ -135,9 +135,9 @@ const Home = () => {
               Let's discuss your next project or learning journey.
             </p>
             <div className="cta-actions">
-              <a href="/contact">
+              <Link to="/contact">
                 <button className="btn-primary">Start a Conversation</button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

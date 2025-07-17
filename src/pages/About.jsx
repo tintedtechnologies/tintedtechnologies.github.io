@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const About = () => {
   return (
     <div style={{ paddingTop: '6rem' }}>
@@ -137,12 +139,12 @@ const About = () => {
             your next project or learning journey.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="/services">
+            <Link to="/services">
               <button className="btn-primary">View Our Services</button>
-            </a>
-            <a href="/contact">
+            </Link>
+            <Link to="/contact">
               <button className="btn-secondary">Start a Conversation</button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
