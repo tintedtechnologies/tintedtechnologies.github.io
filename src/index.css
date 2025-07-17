@@ -164,6 +164,7 @@ section[id] {
   display: flex;
   align-items: center;
   position: relative;
+  padding: 8rem 0;
   background: 
     radial-gradient(ellipse 80% 50% at 50% 40%, rgba(201, 148, 0, 0.08) 0%, transparent 60%),
     radial-gradient(ellipse 60% 40% at 80% 20%, rgba(0, 74, 173, 0.05) 0%, transparent 60%),
