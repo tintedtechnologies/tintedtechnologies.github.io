@@ -14,23 +14,19 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Services Stack */}
       <section className="section">
         <div className="container">
-          <div className="grid grid-3">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '900px', margin: '0 auto' }}>
             <div className="card">
               <h3 className="text-gold">AI & Cloud Training</h3>
               <p>
                 Comprehensive training programs designed to build practical skills in 
                 artificial intelligence and cloud computing. From fundamentals to advanced 
-                implementations, we make complex technologies accessible.
+                implementations, we make complex technologies accessible. Our programs cover 
+                machine learning fundamentals, cloud architecture & deployment, AI ethics & 
+                responsible development, and hands-on project experience.
               </p>
-              <ul style={{ listStyle: 'none', padding: 0, marginTop: '1rem' }}>
-                <li>• Machine Learning Fundamentals</li>
-                <li>• Cloud Architecture & Deployment</li>
-                <li>• AI Ethics & Responsible Development</li>
-                <li>• Hands-on Project Experience</li>
-              </ul>
             </div>
 
             <div className="card">
@@ -38,14 +34,10 @@ const Services = () => {
               <p>
                 Strategic guidance for organizations looking to implement AI and cloud 
                 solutions. We help you navigate technology decisions, build inclusive 
-                practices, and create sustainable technical strategies.
+                practices, and create sustainable technical strategies. Our consulting includes 
+                AI strategy & implementation, cloud migration planning, inclusive technology 
+                practices, and technical architecture review.
               </p>
-              <ul style={{ listStyle: 'none', padding: 0, marginTop: '1rem' }}>
-                <li>• AI Strategy & Implementation</li>
-                <li>• Cloud Migration Planning</li>
-                <li>• Inclusive Technology Practices</li>
-                <li>• Technical Architecture Review</li>
-              </ul>
             </div>
 
             <div className="card">
@@ -53,14 +45,9 @@ const Services = () => {
               <p>
                 Tailored educational experiences for teams, communities, and organizations. 
                 We design workshops that meet your specific needs and focus on practical, 
-                applicable skills.
+                applicable skills. We offer community tech workshops, corporate training 
+                programs, student & bootcamp support, and accessibility-focused sessions.
               </p>
-              <ul style={{ listStyle: 'none', padding: 0, marginTop: '1rem' }}>
-                <li>• Community Tech Workshops</li>
-                <li>• Corporate Training Programs</li>
-                <li>• Student & Bootcamp Support</li>
-                <li>• Accessibility-Focused Sessions</li>
-              </ul>
             </div>
           </div>
         </div>
