@@ -1,1 +1,0 @@
-# tintedtechnologies.github.io
