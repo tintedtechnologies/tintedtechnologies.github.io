@@ -1,147 +1,229 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import ScrollToTop from './components/ScrollToTop';
-import About from './pages/About';
-import OurWork from './pages/OurWork';
-import Contact from './pages/Contact';
-import './App.css';
+import { useEffect, useState } from 'react';
+import styles from './App.module.css';
+import './scroll.css';
+import logo from './assets/logo.png';
+import founderImage from './assets/founderceo.jpeg';
 
-// Single Page Home Component
-const Home = () => {
-  return (
-    <div className="startup-layout">
-      {/* Hero Section */}
-      <section id="home" className="hero-modern">
-        <div className="container">
-          <div className="hero-content">
-            <h1 className="hero-title">
-              We Build <span className="gradient-text">Tools</span> & <span className="gradient-text-blue">Content</span>
-            </h1>
-            <p className="hero-subtitle">
-              We’re a creative studio building developer-first tools, open-source projects, and approachable tech education for all skill levels.
-            </p>
-            <div className="hero-actions">
-              <Link to="/our-work">
-                <button className="btn-primary">Explore Our Projects</button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Preview */}
-      <section id="services" className="services-modern">
-        <div className="container">
-          <div className="section-header">
-            <h2>What We Do</h2>
-            <p>We build digital tools and educational content to democratize modern tech.</p>
-          </div>
-          <div className="services-grid">
-            <div className="service-card">
-              <div className="service-icon">🛠️</div>
-              <h3>Original Products</h3>
-              <p>
-                Clean, focused apps built to make technology more accessible, intuitive, and useful — especially for learners, creators, and community-driven builders.
-              </p>
-            </div>
-            <div className="service-card featured">
-              <div className="service-icon">🌟</div>
-              <h3>Open Source</h3>
-              <p>
-                We contribute openly to grow community knowledge and provide starter kits, templates, and public experiments for developers.
-              </p>
-            </div>
-            <div className="service-card">
-              <div className="service-icon">🎓</div>
-              <h3>Developer Education</h3>
-              <p>
-                Through YouTube, workshops, and blog content, we break down modern tech for self-taught devs, beginners, and lifelong learners.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Preview Section */}
-      <section id="about-preview" className="mission-modern">
-        <div className="container">
-          <div className="mission-content">
-            <div className="mission-text">
-              <h2>Who We Are</h2>
-              <p className="mission-statement">
-                We’re a tech studio focused on building tools that reflect the communities and voices too often left out of tech.
-                We believe technology should be transparent, accessible, and culturally grounded.
-              </p>
-              <div style={{ marginTop: '2rem' }}>
-                <Link to="/about">
-                  <button className="btn-secondary">Learn More About Us</button>
-                </Link>
-              </div>
-            </div>
-            <div className="values-grid">
-              <div className="value-item">
-                <div className="value-number">🔥</div>
-                <div>
-                  <h4>Inclusive by Design</h4>
-                  <p>Technology built for everyone — not just the insiders.</p>
-                </div>
-              </div>
-              <div className="value-item">
-                <div className="value-number">🌟</div>
-                <div>
-                  <h4>Open Knowledge</h4>
-                  <p>We publish, share, and document our work freely.</p>
-                </div>
-              </div>
-              <div className="value-item">
-                <div className="value-number">🎓</div>
-                <div>
-                  <h4>Project-Based Learning</h4>
-                  <p>We teach by building real things — and showing how it’s done.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section id="contact-cta" className="cta-modern">
-        <div className="container">
-          <div className="cta-content">
-            <h2>Ready to Learn, Build, or Create with Us?</h2>
-            <p>
-              Whether you're here to explore our tools, dive into tutorials, or be part of a more inclusive tech movement — you're in the right place.
-            </p>
-            <div className="cta-actions">
-              <Link to="/contact">
-                <button className="btn-primary">Get in Touch</button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+// Social icon SVGs (simple inline for demo)
+const socialIcons = {
+  github: (
+    <svg className={styles.socialIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+  ),
 };
 
+// Main App component for Tinted Technologies landing page
 function App() {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+  
+  // Effect to handle showing/hiding back to top button based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  // Function to scroll back to top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  // Handles contact form submission by opening the user's mail client
+  function handleContactSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('contactName').value || '';
+    const email = document.getElementById('contactEmail').value || '';
+    const message = document.getElementById('contactMessage').value || '';
+    
+    const subject = `Contact from ${name} | Tinted Technologies Website`;
+    const body = `${message}`;
+    
+    window.location.href = `mailto:technology.tinted@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+  
+  // This function handles smooth scrolling when clicking on navigation links
+  function handleNavClick(e, sectionId) {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="App">
-        <Navigation />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/our-work" element={<OurWork />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
+    <div className={styles.appContainer} id="top">
+      {/* Navigation Bar */}
+      <nav className={styles.navbar}>
+        <div className={styles.navLinks}>
+          <a href="#top" onClick={(e) => {e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'});}} className={styles.navLink}>Home</a>
+          <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className={styles.navLink}>About</a>
+          <a href="#mission" onClick={(e) => handleNavClick(e, 'mission')} className={styles.navLink}>Mission</a>
+          <a href="#founder" onClick={(e) => handleNavClick(e, 'founder')} className={styles.navLink}>Founder</a>
+          <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')} className={styles.navLink}>Projects</a>
+          <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className={styles.navLink}>Contact</a>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <div className={styles.heroText}>
+          <h1 className={styles.heroTitle}>Tinted<br/>Technologies</h1>
+          <div className={styles.heroDesc}>
+            Apps, content, and education at the intersection of culture + tech.
+          </div>
+          <div className={styles.heroBtns}>
+            <button className={styles.heroBtn} onClick={(e) => handleNavClick(e, 'contact')}>Contact</button>
+          </div>
+        </div>
+        <div className={styles.heroImg}>
+          <img src={logo} alt="Tinted Technologies Logo" />
+        </div>
+        {/* Scroll indicator arrow */}
+        <div className={styles.scrollIndicator} onClick={(e) => handleNavClick(e, 'about')}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <polyline points="19 12 12 19 5 12"></polyline>
+          </svg>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <div className={styles.mainContent}>
+        {/* About Section */}
+        <div className={styles.aboutSection} id="about">
+          <div className={styles.sectionTitle}>About</div>
+          <div className={styles.sectionContent}>
+            Tinted Technologies is a creative tech studio redefining how people learn and connect with technology. We design AI-powered learning apps, produce engaging educational content, and build projects that fuse culture with innovation.
+          </div>
+          <div className={styles.badgeRow}>
+            <span className={styles.badge}>Founded in 2025</span>
+          </div>
+          {/* Scroll indicator arrow */}
+          <div className={styles.scrollIndicator} onClick={(e) => handleNavClick(e, 'mission')}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </div>
+        </div>
+        
+        {/* Mission Section */}
+        <div className={styles.missionSection} id="mission">
+          <div className={styles.sectionTitle}>Mission</div>
+          <div className={styles.missionContent}>
+            Tinted Technologies is on a mission to make technology <span className={styles.missionHighlight1}>simple, accessible, inclusive</span>, and <span className={styles.missionHighlight2}>culturally relevant</span>—creating experiences that <span className={styles.missionHighlight3}>spark learning, fuel creativity, and strengthen connection</span> in the digital age.
+          </div>
+          {/* Scroll indicator arrow */}
+          <div className={styles.scrollIndicator} onClick={(e) => handleNavClick(e, 'founder')}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </div>
+        </div>
+        
+        {/* Founder Section */}
+        <div className={styles.founderSection} id="founder">
+          <div className={styles.sectionTitle}>Founder</div>
+          <div className={styles.founderInfo}>
+            <div className={styles.founderAvatar}>
+              <img src={founderImage} alt="Jay - Founder & CEO" />
+            </div>
+            <div className={styles.founderName}>Jay</div>
+            <div className={styles.founderRole}>Founder & CEO</div>
+            <div className={styles.founderBio}>
+              "Driven to make technology accessible and inclusive, Jay brings deep expertise in cloud engineering, 
+              AI development, and open-source innovation. Through Tinted Technologies, Jay leads the creation of tools, 
+              apps, and content that bridge the gap between technology and culture—empowering people to learn, build, 
+              and thrive in the digital age."
+            </div>
+          </div>
+          {/* Scroll indicator arrow */}
+          <div className={styles.scrollIndicator} onClick={(e) => handleNavClick(e, 'projects')}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </div>
+        </div>
+        
+        {/* Projects Section */}
+        <div className={styles.projectsSection} id="projects">
+          <div className={styles.sectionTitle}>Projects</div>
+          <div className={styles.projects}>
+            <div className={styles.projectCard}>
+              <div className={styles.projectIcon}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="4"></circle>
+                </svg>
+              </div>
+              <div className={styles.projectTitle}>Imjustablknerd</div>
+              <div className={styles.projectDesc}>YouTube | Tech tutorials</div>
+              <a className={styles.projectLink} href="https://www.youtube.com/@imjustablknerd" target="_blank" rel="noopener noreferrer">Learn more <span>→</span></a>
+            </div>
+            <div className={styles.projectCard}>
+              <div className={styles.comingSoonBanner}>Coming Soon</div>
+              <div className={styles.projectIcon}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div className={styles.projectTitle}>Project Zunova</div>
+              <div className={styles.projectDesc}>AI powered coding reduction platform</div>
+            </div>
+          </div>
+          {/* Scroll indicator arrow */}
+          <div className={styles.scrollIndicator} onClick={(e) => handleNavClick(e, 'contact')}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </div>
+        </div>
+      
+        {/* Contact Section */}
+        <div className={styles.contactSection} id="contact">
+          <div className={styles.sectionTitle}>Contact</div>
+          <div className={styles.contactFormContainer}>
+            <form className={styles.contactForm} onSubmit={handleContactSubmit}>
+              <input id="contactName" className={styles.input} type="text" placeholder="Name" required />
+              <input id="contactEmail" className={styles.input} type="email" placeholder="Email" required />
+              <textarea id="contactMessage" className={styles.input} placeholder="Message" rows={4} required />
+              <button className={styles.sendBtn} type="submit">Send Message</button>
+            </form>
+            <div className={styles.contactSocials}>
+              <a href="https://github.com/tintedtechnologies" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{socialIcons.github}</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </Router>
+      
+      {/* Back to Top Button */}
+      {showBackToTop && (
+        <button 
+          className={styles.backToTopBtn} 
+          onClick={scrollToTop}
+          aria-label="Back to top"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </button>
+      )}
+    </div>
   );
 }
 
+// Export the App component
 export default App;
