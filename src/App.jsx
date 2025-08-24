@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
 import styles from './App.module.css';
 import './scroll.css';
 import logo from './assets/logo.png';
 import founderImage from './assets/founderceo.jpeg';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
 // Social icon SVGs (simple inline for demo)
 const socialIcons = {
@@ -11,8 +14,8 @@ const socialIcons = {
   ),
 };
 
-// Main App component for Tinted Technologies landing page
-function App() {
+// Home component (the original landing page)
+function Home() {
   const [showBackToTop, setShowBackToTop] = useState(false);
   
   // Effect to handle showing/hiding back to top button based on scroll position
@@ -70,6 +73,7 @@ function App() {
           <a href="#founder" onClick={(e) => handleNavClick(e, 'founder')} className={styles.navLink}>Founder</a>
           <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')} className={styles.navLink}>Projects</a>
           <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className={styles.navLink}>Contact</a>
+          <Link to="/blog" className={styles.navLink}>Blog</Link>
         </div>
       </nav>
 
@@ -222,6 +226,17 @@ function App() {
         </button>
       )}
     </div>
+  );
+}
+
+// Main App component for Tinted Technologies
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
+    </Routes>
   );
 }
 

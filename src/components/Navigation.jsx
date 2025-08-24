@@ -83,6 +83,15 @@ const Navigation = () => {
               Contact
             </Link>
           </li>
+                    <li>
+            <Link 
+              to="/blog" 
+              className={location.pathname === '/blog' ? 'active' : ''}
+              onClick={closeMobileMenu}
+            >
+              Blog
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
