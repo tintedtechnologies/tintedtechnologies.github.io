@@ -124,7 +124,7 @@ function Home() {
         <div className={styles.missionSection} id="mission">
           <div className={styles.sectionTitle}>Mission</div>
           <div className={styles.missionContent}>
-            Tinted Technologies is on a mission to make technology <span className={styles.missionHighlight1}>simple, accessible, inclusive</span>, and <span className={styles.missionHighlight2}>culturally relevant</span>—creating experiences that <span className={styles.missionHighlight3}>spark learning, fuel creativity, and strengthen connection</span> in the digital age.
+            Tinted Technologies is on a mission to make technology <span className={styles.missionHighlight1}>simple, accessible, inclusive</span>, and <span className={styles.missionHighlight2}>culturally relevant, </span>creating experiences that <span className={styles.missionHighlight3}>spark learning, fuel creativity, and strengthen connection</span> in the digital age.
           </div>
           {/* Scroll indicator arrow */}
           <div className={styles.scrollIndicator} onClick={(e) => handleNavClick(e, 'founder')}>
@@ -145,10 +145,7 @@ function Home() {
             <div className={styles.founderName}>Jay</div>
             <div className={styles.founderRole}>Founder & CEO</div>
             <div className={styles.founderBio}>
-              "Driven to make technology accessible and inclusive, Jay brings deep expertise in cloud engineering, 
-              AI development, and open-source innovation. Through Tinted Technologies, Jay leads the creation of tools, 
-              apps, and content that bridge the gap between technology and culture—empowering people to learn, build, 
-              and thrive in the digital age."
+Driven to make technology accessible and inclusive, Jay brings deep expertise in cloud engineering, AI development, and open-source innovation. Through Tinted Technologies, Jay leads the creation of tools, apps, and content that bridge the gap between technology and culture, empowering people to learn, build, and thrive in the digital age.
             </div>
           </div>
           {/* Scroll indicator arrow */}
