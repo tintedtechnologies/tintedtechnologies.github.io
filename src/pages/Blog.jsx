@@ -59,7 +59,7 @@ function Blog() {
             <Link to="/#founder" className={styles.navLink}>Founder</Link>
             <Link to="/#projects" className={styles.navLink}>Projects</Link>
             <Link to="/#contact" className={styles.navLink}>Contact</Link>
-            <Link to="/blog" className={styles.navLink}>Blog</Link>
+            <Link to="/blog" className={styles.navLink}>Insights</Link>
           </div>
         </nav>
         <div className={styles.mainContent}>
@@ -84,7 +84,7 @@ function Blog() {
           <Link to="/#founder" className={styles.navLink}>Founder</Link>
           <Link to="/#projects" className={styles.navLink}>Projects</Link>
           <Link to="/#contact" className={styles.navLink}>Contact</Link>
-          <Link to="/blog" className={styles.navLink}>Blog</Link>
+          <Link to="/blog" className={styles.navLink}>Insights</Link>
         </div>
       </nav>
 

@@ -70,7 +70,7 @@ function Home() {
           <a href="#founder" onClick={(e) => handleNavClick(e, 'founder')} className={styles.navLink}>Founder</a>
           <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')} className={styles.navLink}>Projects</a>
           <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className={styles.navLink}>Contact</a>
-          <Link to="/blog" className={styles.navLink}>Blog</Link>
+          <Link to="/blog" className={styles.navLink}>Insights</Link>
         </div>
       </nav>
 
