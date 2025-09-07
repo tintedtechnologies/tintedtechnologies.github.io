@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tinted Technologies</title>
+    <script type="text/javascript">
+      // Store the attempted path and redirect to home
+      sessionStorage.redirect = location.pathname + location.search + location.hash;
+      location.replace('/');
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
