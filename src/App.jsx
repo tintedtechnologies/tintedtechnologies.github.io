@@ -3,7 +3,6 @@ import { Routes, Route, Link } from 'react-router-dom';
 import styles from './App.module.css';
 import './scroll.css';
 import logo from './assets/logo.png';
-import founderImage from './assets/founderceo.jpeg';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 
@@ -70,8 +69,6 @@ function Home() {
           <a href="#top" onClick={(e) => {e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'});}} className={styles.navLink}>Home</a>
           <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className={styles.navLink}>About</a>
           <a href="#mission" onClick={(e) => handleNavClick(e, 'mission')} className={styles.navLink}>Mission</a>
-          <a href="#founder" onClick={(e) => handleNavClick(e, 'founder')} className={styles.navLink}>Founder</a>
-          <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')} className={styles.navLink}>Projects</a>
           <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className={styles.navLink}>Contact</a>
           <Link to="/blog" className={styles.navLink}>Insights</Link>
         </div>
@@ -125,64 +122,6 @@ function Home() {
           <div className={styles.sectionTitle}>Mission</div>
           <div className={styles.missionContent}>
             Tinted Technologies is on a mission to make technology <span className={styles.missionHighlight1}>simple, accessible, inclusive</span>, and <span className={styles.missionHighlight2}>culturally relevant, </span>creating experiences that <span className={styles.missionHighlight3}>spark learning, fuel creativity, and strengthen connection</span> in the digital age.
-          </div>
-          {/* Scroll indicator arrow */}
-          <div className={styles.scrollIndicator} onClick={(e) => handleNavClick(e, 'founder')}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="12" y1="5" x2="12" y2="19"></line>
-              <polyline points="19 12 12 19 5 12"></polyline>
-            </svg>
-          </div>
-        </div>
-        
-        {/* Founder Section */}
-        <div className={styles.founderSection} id="founder">
-          <div className={styles.sectionTitle}>Founder</div>
-          <div className={styles.founderInfo}>
-            <div className={styles.founderAvatar}>
-              <img src={founderImage} alt="Jay - Founder & CEO" />
-            </div>
-            <div className={styles.founderName}>Jay</div>
-            <div className={styles.founderRole}>Founder & CEO</div>
-            <div className={styles.founderBio}>
-Driven to make technology accessible and inclusive, Jay brings deep expertise in cloud engineering, AI development, and open-source innovation. Through Tinted Technologies, Jay leads the creation of tools, apps, and content that bridge the gap between technology and culture, empowering people to learn, build, and thrive in the digital age.
-            </div>
-          </div>
-          {/* Scroll indicator arrow */}
-          <div className={styles.scrollIndicator} onClick={(e) => handleNavClick(e, 'projects')}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="12" y1="5" x2="12" y2="19"></line>
-              <polyline points="19 12 12 19 5 12"></polyline>
-            </svg>
-          </div>
-        </div>
-        
-        {/* Projects Section */}
-        <div className={styles.projectsSection} id="projects">
-          <div className={styles.sectionTitle}>Projects</div>
-          <div className={styles.projects}>
-            <div className={styles.projectCard}>
-              <div className={styles.projectIcon}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <circle cx="12" cy="12" r="4"></circle>
-                </svg>
-              </div>
-              <div className={styles.projectTitle}>Imjustablknerd</div>
-              <div className={styles.projectDesc}>YouTube | Tech tutorials</div>
-              <a className={styles.projectLink} href="https://www.youtube.com/@imjustablknerd" target="_blank" rel="noopener noreferrer">Learn more <span>→</span></a>
-            </div>
-            <div className={styles.projectCard}>
-              <div className={styles.comingSoonBanner}>Coming Soon</div>
-              <div className={styles.projectIcon}>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-              </div>
-              <div className={styles.projectTitle}>Project Zunova</div>
-              <div className={styles.projectDesc}>AI powered coding reduction platform</div>
-            </div>
           </div>
           {/* Scroll indicator arrow */}
           <div className={styles.scrollIndicator} onClick={(e) => handleNavClick(e, 'contact')}>

@@ -56,8 +56,6 @@ function Blog() {
             <Link to="/" className={styles.navLink}>Home</Link>
             <Link to="/#about" className={styles.navLink}>About</Link>
             <Link to="/#mission" className={styles.navLink}>Mission</Link>
-            <Link to="/#founder" className={styles.navLink}>Founder</Link>
-            <Link to="/#projects" className={styles.navLink}>Projects</Link>
             <Link to="/#contact" className={styles.navLink}>Contact</Link>
             <Link to="/blog" className={styles.navLink}>Insights</Link>
           </div>
@@ -81,8 +79,6 @@ function Blog() {
           <Link to="/" className={styles.navLink}>Home</Link>
           <Link to="/#about" className={styles.navLink}>About</Link>
           <Link to="/#mission" className={styles.navLink}>Mission</Link>
-          <Link to="/#founder" className={styles.navLink}>Founder</Link>
-          <Link to="/#projects" className={styles.navLink}>Projects</Link>
           <Link to="/#contact" className={styles.navLink}>Contact</Link>
           <Link to="/blog" className={styles.navLink}>Insights</Link>
         </div>
