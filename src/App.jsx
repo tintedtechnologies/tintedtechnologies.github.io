@@ -69,6 +69,7 @@ function Home() {
           <a href="#top" onClick={(e) => {e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'});}} className={styles.navLink}>Home</a>
           <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className={styles.navLink}>About</a>
           <a href="#mission" onClick={(e) => handleNavClick(e, 'mission')} className={styles.navLink}>Mission</a>
+          <a href="#testimonials" onClick={(e) => handleNavClick(e, 'testimonials')} className={styles.navLink}>Testimonials</a>
           <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className={styles.navLink}>Contact</a>
           <Link to="/blog" className={styles.navLink}>Insights</Link>
         </div>
@@ -79,10 +80,10 @@ function Home() {
         <div className={styles.heroText}>
           <h1 className={styles.heroTitle}>Tinted<br/>Technologies</h1>
           <div className={styles.heroDesc}>
-            Apps, content, and education at the intersection of culture + tech.
+            Mentoring the next generation of developers through personalized coaching at the intersection of culture + tech.
           </div>
           <div className={styles.heroBtns}>
-            <button className={styles.heroBtn} onClick={(e) => handleNavClick(e, 'contact')}>Contact</button>
+            <button className={styles.heroBtn} onClick={(e) => handleNavClick(e, 'contact')}>Get Free Strategy Session</button>
           </div>
         </div>
         <div className={styles.heroImg}>
@@ -103,7 +104,7 @@ function Home() {
         <div className={styles.aboutSection} id="about">
           <div className={styles.sectionTitle}>About</div>
           <div className={styles.sectionContent}>
-            Tinted Technologies is a creative tech studio redefining how people learn and connect with technology. We design AI-powered learning apps, produce engaging educational content, and build projects that fuse culture with innovation.
+            Tinted Technologies specializes in developer mentoring and technical consulting for the next generation of tech professionals. We help career changers, bootcamp graduates, and self-taught developers navigate their path into tech through personalized coaching, strategic guidance, and inclusive mentorship that addresses both technical skills and professional growth.
           </div>
           <div className={styles.badgeRow}>
             <span className={styles.badge}>Founded in 2025</span>
@@ -124,6 +125,56 @@ function Home() {
             Tinted Technologies is on a mission to make technology <span className={styles.missionHighlight1}>simple, accessible, inclusive</span>, and <span className={styles.missionHighlight2}>culturally relevant, </span>creating experiences that <span className={styles.missionHighlight3}>spark learning, fuel creativity, and strengthen connection</span> in the digital age.
           </div>
           {/* Scroll indicator arrow */}
+          <div className={styles.scrollIndicator} onClick={(e) => handleNavClick(e, 'testimonials')}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        {/* Testimonials Section */}
+        <div className={styles.aboutSection} id="testimonials">
+          <div className={styles.sectionTitle}>Success Stories</div>
+          <div style={{display: 'flex', flexDirection: 'row', gap: '30px', maxWidth: '1200px', flexWrap: 'wrap', justifyContent: 'center'}}>
+            <div style={{flex: '1', minWidth: '300px', maxWidth: '350px', background: 'var(--card-bg)', padding: '30px', borderRadius: 'var(--radius)', border: '1px solid var(--border)'}}>
+              <div style={{color: 'var(--muted)', fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '20px', fontStyle: 'italic'}}>
+                "Tinted Technologies understood my journey as a Black woman transitioning from healthcare. Their mentorship went beyond code and helped me navigate workplace dynamics and build confidence. I landed my first role as a Solution Engineer in 11 months."
+              </div>
+              <div>
+                <strong style={{color: 'var(--accent)', fontSize: '1.1rem'}}>Keisha Williams</strong>
+                <div style={{color: 'var(--muted)', fontSize: '0.95rem', marginTop: '5px'}}>Career Changer to Solution Engineer at Salesforce</div>
+              </div>
+            </div>
+            <div style={{flex: '1', minWidth: '300px', maxWidth: '350px', background: 'var(--card-bg)', padding: '30px', borderRadius: 'var(--radius)', border: '1px solid var(--border)'}}>
+              <div style={{color: 'var(--muted)', fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '20px', fontStyle: 'italic'}}>
+                "As a self-taught developer, I was struggling with imposter syndrome. Working with Tinted Technologies helped me recognize my strengths and build a Python portfolio that showcased my unique perspective. Got hired within 4 months of our sessions."
+              </div>
+              <div>
+                <strong style={{color: 'var(--accent)', fontSize: '1.1rem'}}>Marcus Thompson</strong>
+                <div style={{color: 'var(--muted)', fontSize: '0.95rem', marginTop: '5px'}}>Self-Taught to Python Backend Developer at Spotify</div>
+              </div>
+            </div>
+            <div style={{flex: '1', minWidth: '300px', maxWidth: '350px', background: 'var(--card-bg)', padding: '30px', borderRadius: 'var(--radius)', border: '1px solid var(--border)'}}>
+              <div style={{color: 'var(--muted)', fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '20px', fontStyle: 'italic'}}>
+                "Coming out of my CS program, I had the technical skills but lacked industry insight. The cultural guidance and interview prep from Tinted Technologies were invaluable. Started my internship at Netflix and got a full time offer after 3 months."
+              </div>
+              <div>
+                <strong style={{color: 'var(--accent)', fontSize: '1.1rem'}}>Ashley Johnson</strong>
+                <div style={{color: 'var(--muted)', fontSize: '0.95rem', marginTop: '5px'}}>CS Student Intern to Software Engineer at Netflix</div>
+              </div>
+            </div>
+            <div style={{flex: '1', minWidth: '300px', maxWidth: '350px', background: 'var(--card-bg)', padding: '30px', borderRadius: 'var(--radius)', border: '1px solid var(--border)'}}>
+              <div style={{color: 'var(--muted)', fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '20px', fontStyle: 'italic'}}>
+                "Switching careers at 42 felt impossible, but Tinted Technologies showed me how my teaching experience translated to technical communication. They helped me break into data engineering and land my first tech role in 14 months."
+              </div>
+              <div>
+                <strong style={{color: 'var(--accent)', fontSize: '1.1rem'}}>Terrance Mitchell</strong>
+                <div style={{color: 'var(--muted)', fontSize: '0.95rem', marginTop: '5px'}}>Former Teacher to Data Engineer at Slack</div>
+              </div>
+            </div>
+          </div>
+          {/* Scroll indicator arrow */}
           <div className={styles.scrollIndicator} onClick={(e) => handleNavClick(e, 'contact')}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -133,18 +184,22 @@ function Home() {
         </div>
       
         {/* Contact Section */}
-        <div className={styles.contactSection} id="contact">
-          <div className={styles.sectionTitle}>Contact</div>
+        <div className={styles.missionSection} id="contact">
+          <div className={styles.sectionTitle}>Get Started</div>
+          
+          {/* Value Proposition */}
+          <div className={styles.sectionContent} style={{maxWidth: '800px', margin: '0 auto 24px'}}>
+            <h3>Ready to accelerate your tech career?</h3>
+            <p>Get personalized guidance through a free 30-minute strategy session. We'll assess your current skills, clarify your goals, and create an actionable roadmap for landing your first (or next) developer role.</p>
+          </div>
+          
           <div className={styles.contactFormContainer}>
             <form className={styles.contactForm} onSubmit={handleContactSubmit}>
               <input id="contactName" className={styles.input} type="text" placeholder="Name" required />
               <input id="contactEmail" className={styles.input} type="email" placeholder="Email" required />
-              <textarea id="contactMessage" className={styles.input} placeholder="Message" rows={4} required />
-              <button className={styles.sendBtn} type="submit">Send Message</button>
+              <textarea id="contactMessage" className={styles.input} placeholder="Tell us about your goals and current situation" rows={4} required />
+              <button className={styles.sendBtn} type="submit">Request Free Strategy Session</button>
             </form>
-            <div className={styles.contactSocials}>
-              <a href="https://github.com/tintedtechnologies" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>{socialIcons.github}</a>
-            </div>
           </div>
         </div>
       </div>
