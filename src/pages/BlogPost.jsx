@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { marked } from 'marked';
+import Navigation from '../components/Navigation';
 import styles from '../App.module.css';
 import { getBlogPosts, getBlogPostContent } from '../utils/blogUtils';
 
@@ -41,15 +42,7 @@ function BlogPost() {
   if (loading) {
     return (
       <div className={styles.appContainer}>
-        <nav className={styles.navbar}>
-          <div className={styles.navLinks}>
-            <Link to="/" className={styles.navLink}>Home</Link>
-            <Link to="/#about" className={styles.navLink}>About</Link>
-            <Link to="/#mission" className={styles.navLink}>Mission</Link>
-            <Link to="/#contact" className={styles.navLink}>Contact</Link>
-            <Link to="/blog" className={styles.navLink}>Insights</Link>
-          </div>
-        </nav>
+        <Navigation />
         <div className={styles.blogPostContainer}>
           <div className={styles.blogPostContent}>
             <h1>Loading...</h1>
@@ -62,15 +55,7 @@ function BlogPost() {
   if (error || !post) {
     return (
       <div className={styles.appContainer}>
-        <nav className={styles.navbar}>
-          <div className={styles.navLinks}>
-            <Link to="/" className={styles.navLink}>Home</Link>
-            <Link to="/#about" className={styles.navLink}>About</Link>
-            <Link to="/#mission" className={styles.navLink}>Mission</Link>
-            <Link to="/#contact" className={styles.navLink}>Contact</Link>
-            <Link to="/blog" className={styles.navLink}>Insights</Link>
-          </div>
-        </nav>
+        <Navigation />
         <div className={styles.blogPostContainer}>
           <div className={styles.blogPostContent}>
             <h1>Post not found</h1>
@@ -85,16 +70,7 @@ function BlogPost() {
 
   return (
     <div className={styles.appContainer}>
-      {/* Navigation Bar */}
-      <nav className={styles.navbar}>
-        <div className={styles.navLinks}>
-          <Link to="/" className={styles.navLink}>Home</Link>
-          <Link to="/#about" className={styles.navLink}>About</Link>
-          <Link to="/#mission" className={styles.navLink}>Mission</Link>
-          <Link to="/#contact" className={styles.navLink}>Contact</Link>
-          <Link to="/blog" className={styles.navLink}>Insights</Link>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Blog Post Content */}
       <div className={styles.blogPostContainer}>

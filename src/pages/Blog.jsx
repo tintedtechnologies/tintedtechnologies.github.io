@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import Navigation from '../components/Navigation';
 import styles from '../App.module.css';
 import { getBlogPosts } from '../utils/blogUtils';
 
@@ -51,15 +52,7 @@ function Blog() {
   if (loading) {
     return (
       <div className={styles.appContainer}>
-        <nav className={styles.navbar}>
-          <div className={styles.navLinks}>
-            <Link to="/" className={styles.navLink}>Home</Link>
-            <Link to="/#about" className={styles.navLink}>About</Link>
-            <Link to="/#mission" className={styles.navLink}>Mission</Link>
-            <Link to="/#contact" className={styles.navLink}>Contact</Link>
-            <Link to="/blog" className={styles.navLink}>Insights</Link>
-          </div>
-        </nav>
+        <Navigation />
         <div className={styles.mainContent}>
           <div className={styles.blogSection}>
             <div className={styles.blogHeader}>
@@ -73,28 +66,31 @@ function Blog() {
 
   return (
     <div className={styles.appContainer}>
-      {/* Navigation Bar */}
-      <nav className={styles.navbar}>
-        <div className={styles.navLinks}>
-          <Link to="/" className={styles.navLink}>Home</Link>
-          <Link to="/#about" className={styles.navLink}>About</Link>
-          <Link to="/#mission" className={styles.navLink}>Mission</Link>
-          <Link to="/#contact" className={styles.navLink}>Contact</Link>
-          <Link to="/blog" className={styles.navLink}>Insights</Link>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Blog Content */}
-      <div className={styles.mainContent}>
-        <div className={styles.blogSection}>
-          <div className={styles.blogHeader}>
-            <h2 className={styles.sectionTitle}>Latest Posts</h2>
-          </div>
-          <div className={styles.blogGrid}>
-            {posts.map((post) => (
-              <BlogCard key={post.id} post={post} />
-            ))}
-          </div>
+      <div style={{
+        padding: '120px 40px 60px',
+        maxWidth: '1400px',
+        margin: '0 auto'
+      }}>
+        <div style={{
+          textAlign: 'center',
+          marginBottom: '40px'
+        }}>
+          <h1 style={{ 
+            fontSize: '3rem', 
+            fontWeight: 'bold', 
+            margin: 0,
+            color: 'var(--foreground)'
+          }}>
+            Latest <span style={{ color: '#FFD700' }}>Posts</span>
+          </h1>
+        </div>
+        <div className={styles.blogGrid}>
+          {posts.map((post) => (
+            <BlogCard key={post.id} post={post} />
+          ))}
         </div>
       </div>
     </div>
