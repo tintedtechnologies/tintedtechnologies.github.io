@@ -11,7 +11,7 @@ main {
 
 /* Active navigation link styling */
 .nav-links a.active {
-  color: var(--primary-gold);
+  color: #00B140;
   font-weight: 600;
 }
 

@@ -4,15 +4,34 @@ import logo from '../assets/logo.png';
 
 const Navigation = () => {
   const location = useLocation();
+  
+  const handleAnchorClick = (e, targetId) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
 
   return (
     <nav className={styles.navbar}>
-      <Link to="/" style={{ 
-        display: 'flex', 
-        alignItems: 'center',
-        textDecoration: 'none',
-        marginRight: 'auto'
-      }}>
+      <Link
+        to="/"
+        style={{ 
+          display: 'flex', 
+          alignItems: 'center',
+          justifyContent: 'center',
+          textDecoration: 'none',
+          marginRight: 'auto',
+          cursor: 'pointer',
+          height: '100%'
+        }}
+        onClick={() => {
+          if (location.pathname === '/') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }}
+      >
         <img 
           src={logo} 
           alt="Tinted Technologies" 
@@ -28,29 +47,50 @@ const Navigation = () => {
         />
       </Link>
       <div className={styles.navLinks}>
-        <Link 
-          to="/mission" 
-          className={`${styles.navLink} ${location.pathname === '/mission' ? styles.navLinkActive : ''}`}
-        >
-          Mission
-        </Link>
-        <Link 
-          to="/about" 
-          className={`${styles.navLink} ${location.pathname === '/about' ? styles.navLinkActive : ''}`}
-        >
-          About
-        </Link>
+        {location.pathname === '/' ? (
+          <>
+            <a 
+              href="#mission"
+              onClick={(e) => handleAnchorClick(e, 'mission')}
+              className={styles.navLink}
+            >
+              Mission
+            </a>
+            <a 
+              href="#about"
+              onClick={(e) => handleAnchorClick(e, 'about')}
+              className={styles.navLink}
+            >
+              About
+            </a>
+            <a 
+              href="#services"
+              onClick={(e) => handleAnchorClick(e, 'services')}
+              className={styles.navLink}
+            >
+              Services
+            </a>
+            <a 
+              href="#contact"
+              onClick={(e) => handleAnchorClick(e, 'contact')}
+              className={styles.navLink}
+            >
+              Contact
+            </a>
+          </>
+        ) : (
+          <Link 
+            to="/"
+            className={styles.navLink}
+          >
+            Home
+          </Link>
+        )}
         <Link 
           to="/blog" 
           className={`${styles.navLink} ${location.pathname === '/blog' || location.pathname.startsWith('/blog/') ? styles.navLinkActive : ''}`}
         >
           Blog
-        </Link>
-        <Link 
-          to="/contact" 
-          className={`${styles.navLink} ${location.pathname === '/contact' ? styles.navLinkActive : ''}`}
-        >
-          Contact
         </Link>
       </div>
     </nav>

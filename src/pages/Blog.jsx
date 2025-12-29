@@ -84,7 +84,7 @@ function Blog() {
             margin: 0,
             color: 'var(--foreground)'
           }}>
-            Latest <span style={{ color: '#FFD700' }}>Posts</span>
+            Latest <span style={{ color: '#00B140' }}>Posts</span>
           </h1>
         </div>
         <div className={styles.blogGrid}>
