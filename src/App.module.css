@@ -427,7 +427,11 @@
   }
   
   .navLinks {
-    gap: 18px;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+    overflow-x: visible;
   }
   
   .heroTitle {
@@ -894,6 +898,11 @@
   
   .blogPostTitle {
     font-size: 2rem;
+    padding: 0;
+  }
+  
+  .blogPostArticle {
+    padding: 0 1rem;
   }
   
   .blogPostArticle h1 {
@@ -904,17 +913,14 @@
     font-size: 1.3rem;
   }
   
-  .blogPostArticle p {
-    padding: 0 1rem;
-  }
-  
+  .blogPostArticle p,
   .blogPostArticle ul,
   .blogPostArticle ol {
-    padding: 0 1rem;
+    padding: 0;
   }
   
   .blogPostArticle blockquote {
-    margin: 2.5rem 1rem;
+    margin: 2.5rem 0;
     padding: 1rem;
   }
   
@@ -922,5 +928,80 @@
     flex-direction: column;
     gap: 15px;
     align-items: flex-start;
+  }
+}
+
+/* Extra small mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 16px 12px 10px;
+  }
+  
+  .logo {
+    font-size: 1.1rem;
+  }
+  
+  .navLinks a {
+    font-size: 0.95rem;
+  }
+  
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+  
+  .heroDesc {
+    font-size: 1.1rem;
+  }
+  
+  .section {
+    padding: 20px 15px;
+  }
+  
+  .missionContent {
+    font-size: 1.1rem;
+    padding: 25px 15px;
+  }
+  
+  .projectCard {
+    padding: 20px 15px;
+  }
+  
+  .blogSection {
+    padding: 30px 15px;
+  }
+  
+  .blogCard {
+    padding: 18px;
+  }
+  
+  .blogTitle {
+    font-size: 1.2rem;
+  }
+  
+  .blogPostContent {
+    padding: 25px 15px;
+  }
+  
+  .blogPostTitle {
+    font-size: 1.75rem;
+    max-width: 95%;
+  }
+  
+  .blogPostArticle {
+    padding: 0 0.5rem;
+  }
+  
+  .blogPostArticle h1 {
+    font-size: 1.3rem;
+  }
+  
+  .blogPostArticle h2 {
+    font-size: 1.15rem;
+  }
+  
+  .blogPostArticle p,
+  .blogPostArticle ul,
+  .blogPostArticle ol {
+    font-size: 0.95rem;
   }
 }

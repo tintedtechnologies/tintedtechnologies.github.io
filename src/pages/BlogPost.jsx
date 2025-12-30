@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { marked } from 'marked';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import styles from '../App.module.css';
 import { getBlogPosts, getBlogPostContent } from '../utils/blogUtils';
 
@@ -103,6 +104,7 @@ function BlogPost() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

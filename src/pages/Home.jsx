@@ -44,7 +44,7 @@ ${formData.message}`;
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '100vh',
+        minHeight: '100vh',
         textAlign: 'center',
         padding: '100px 1.5rem 4rem',
         position: 'relative',
@@ -94,7 +94,14 @@ ${formData.message}`;
               e.preventDefault();
               const element = document.getElementById('contact');
               if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                const navbarHeight = 80;
+                const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - navbarHeight;
+                
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+                });
               }
             }}
             style={{
@@ -128,11 +135,11 @@ ${formData.message}`;
 
       {/* Mission Section */}
       <section id="mission" style={{
-        height: '100vh',
+        minHeight: 'calc(100vh - 80px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '6rem 1.5rem',
+        padding: '2rem 1.5rem',
         background: 'linear-gradient(180deg, #000000 0%, #0a0a0a 100%)',
         position: 'relative'
       }}>
@@ -167,11 +174,11 @@ ${formData.message}`;
 
       {/* About Section */}
       <section id="about" style={{
-        height: '100vh',
+        minHeight: 'calc(100vh - 80px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '6rem 1.5rem',
+        padding: '2rem 1.5rem',
         background: 'linear-gradient(180deg, #0a0a0a 0%, #000000 100%)',
         position: 'relative'
       }}>
@@ -248,11 +255,11 @@ ${formData.message}`;
 
       {/* Services Section */}
       <section id="services" style={{
-        height: '100vh',
+        minHeight: 'calc(100vh - 80px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '0 1.5rem',
+        padding: '2rem 1.5rem',
         background: '#000000'
       }}>
         <div style={{
@@ -529,11 +536,11 @@ ${formData.message}`;
 
       {/* Contact Section */}
       <section id="contact" style={{
-        height: '100vh',
+        minHeight: 'calc(100vh - 80px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '6rem 1.5rem',
+        padding: '2rem 1.5rem',
         background: 'linear-gradient(180deg, #000000 0%, #0a0a0a 100%)',
         overflow: 'auto'
       }}>

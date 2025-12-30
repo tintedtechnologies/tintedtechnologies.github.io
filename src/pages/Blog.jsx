@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import styles from '../App.module.css';
 import { getBlogPosts } from '../utils/blogUtils';
 
@@ -93,6 +94,7 @@ function Blog() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
