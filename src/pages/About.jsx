@@ -8,11 +8,11 @@ const About = () => {
       
       {/* Single Page About Content */}
       <section style={{
-        height: 'calc(100vh - 80px)',
+        minHeight: 'calc(100vh - 80px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '2rem'
+        padding: '6rem 1.5rem 2rem'
       }}>
         <div style={{
           width: '100%',
@@ -23,22 +23,24 @@ const About = () => {
         }}>
           {/* Our Story Title */}
           <h1 style={{ 
-            fontSize: '3rem', 
-            fontWeight: 'bold', 
+            fontSize: 'clamp(2.5rem, 6vw, 4rem)', 
+            fontWeight: '800', 
             margin: 0,
-            color: 'var(--foreground)'
+            color: '#ffffff',
+            letterSpacing: '-0.02em'
           }}>
-            Our <span style={{ color: '#FFD700' }}>Story</span>
+            Our <span style={{ color: '#00B140' }}>Story</span>
           </h1>
           
           {/* Our Story Statement */}
           <p style={{ 
-            fontSize: '1.5rem', 
+            fontSize: 'clamp(1.15rem, 2.5vw, 1.5rem)', 
             margin: 0,
-            color: 'var(--muted)',
-            lineHeight: '1.6',
+            color: '#cccccc',
+            lineHeight: '1.7',
             textAlign: 'center',
-            maxWidth: '800px'
+            maxWidth: '800px',
+            fontWeight: '400'
           }}>
             Building technology that's <span style={{ color: '#9B59B6' }}>inclusive</span> and <span style={{ color: '#FFD700' }}>accessible</span>, empowering everyone to learn, create, and shape the future.
           </p>

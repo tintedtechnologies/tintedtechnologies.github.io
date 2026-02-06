@@ -57,7 +57,12 @@ function Blog() {
         <div className={styles.mainContent}>
           <div className={styles.blogSection}>
             <div className={styles.blogHeader}>
-              <h2 className={styles.sectionTitle}>Loading Posts...</h2>
+              <h2 style={{
+                fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+                fontWeight: '800',
+                color: '#ffffff',
+                letterSpacing: '-0.02em'
+              }}>Loading Posts...</h2>
             </div>
           </div>
         </div>
@@ -70,20 +75,17 @@ function Blog() {
       <Navigation />
 
       {/* Blog Content */}
-      <div style={{
-        padding: '120px 40px 60px',
-        maxWidth: '1400px',
-        margin: '0 auto'
-      }}>
+      <div className={styles.blogSection}>
         <div style={{
           textAlign: 'center',
           marginBottom: '40px'
         }}>
           <h1 style={{ 
-            fontSize: '3rem', 
-            fontWeight: 'bold', 
+            fontSize: 'clamp(2.5rem, 6vw, 4rem)', 
+            fontWeight: '800', 
             margin: 0,
-            color: 'var(--foreground)'
+            color: '#ffffff',
+            letterSpacing: '-0.02em'
           }}>
             Latest <span style={{ color: '#00B140' }}>Posts</span>
           </h1>

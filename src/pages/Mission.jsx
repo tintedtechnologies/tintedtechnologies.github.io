@@ -12,10 +12,9 @@ const Mission = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        height: 'calc(100vh - 80px)',
         minHeight: 'calc(100vh - 80px)',
         textAlign: 'center',
-        padding: '2rem'
+        padding: '6rem 1.5rem 2rem'
       }}>
         <div style={{ 
           textAlign: 'center',
@@ -28,22 +27,24 @@ const Mission = () => {
         }}>
           {/* Mission Title */}
           <h1 style={{ 
-            fontSize: '3rem', 
-            fontWeight: 'bold', 
+            fontSize: 'clamp(2.5rem, 6vw, 4rem)', 
+            fontWeight: '800', 
             margin: 0,
-            color: 'var(--foreground)'
+            color: '#ffffff',
+            letterSpacing: '-0.02em'
           }}>
-            Our <span style={{ color: '#FFD700' }}>Mission</span>
+            Our <span style={{ color: '#00B140' }}>Mission</span>
           </h1>
           
           {/* Mission Statement */}
           <p style={{ 
-            fontSize: '1.5rem', 
+            fontSize: 'clamp(1.15rem, 2.5vw, 1.5rem)', 
             margin: 0,
-            color: 'var(--muted)',
-            lineHeight: '1.6',
+            color: '#cccccc',
+            lineHeight: '1.7',
             textAlign: 'center',
-            maxWidth: '800px'
+            maxWidth: '800px',
+            fontWeight: '400'
           }}>
             Making technology <span style={{ color: '#4A90E2' }}>simple</span>, <span style={{ color: '#FFD700' }}>accessible</span>, and{' '}
             <span style={{ color: '#9B59B6' }}>inclusive</span>, creating experiences that{' '}

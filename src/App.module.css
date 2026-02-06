@@ -17,11 +17,10 @@
 
 .appContainer {
   min-height: 100vh;
-  min-width: 100vw;
-  width: 100vw;
+  width: 100%;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -35,7 +34,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 20px clamp(24px, 5vw, 80px);
   width: 100%;
   position: fixed;
   top: 0;
@@ -47,6 +46,58 @@
   transition: all 0.3s ease;
   border-bottom: 1px solid rgba(0, 177, 64, 0.2);
   min-height: 80px;
+}
+
+/* Navigation logo */
+.navLogo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 110;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hamburgerLine {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburgerLineTop {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburgerLineMiddle {
+  opacity: 0;
+}
+
+.hamburgerLineBottom {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Nav overlay backdrop */
+.navOverlay {
+  display: none;
 }
 
 .navLinks {
@@ -285,6 +336,16 @@
   text-align: center;
 }
 
+/* Founder image */
+.founderImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00B140;
+  box-shadow: 0 8px 24px rgba(0, 177, 64, 0.3);
+}
+
 .sectionTitle {
   font-size: 4rem;
   font-weight: 700;
@@ -362,6 +423,79 @@
 
 
 
+/* ===== Mobile Navigation (768px breakpoint) ===== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navOverlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+  }
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.97);
+    backdrop-filter: blur(16px);
+    padding: 20px 24px 32px;
+    gap: 0;
+    border-bottom: 1px solid rgba(0, 177, 64, 0.3);
+    z-index: 105;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+
+  .navLinksOpen {
+    display: flex;
+  }
+
+  .navLink {
+    font-size: 1.15rem;
+    padding: 14px 16px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .navLink:last-child {
+    border-bottom: none;
+  }
+
+  .navLink::after {
+    display: none;
+  }
+
+  .navLogo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .founderImage {
+    width: 160px;
+    height: 160px;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .sectionContent {
+    font-size: 1.15rem;
+  }
+}
+
 @media (max-width: 900px) {
   .navbar {
     flex-direction: row;
@@ -371,18 +505,11 @@
     justify-content: space-between;
   }
   
-  .navLinks {
-    display: flex;
-    gap: 18px;
-    overflow-x: auto;
-    padding-bottom: 0;
-  }
-  
   .hero {
     flex-direction: column;
     align-items: center;
     gap: 40px;
-    padding: 120px 20px 40px; /* Extra top padding to account for fixed navbar */
+    padding: 120px 20px 40px;
     text-align: center;
   }
   
@@ -426,14 +553,6 @@
     padding: 20px 15px 12px;
   }
   
-  .navLinks {
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    align-items: center;
-    overflow-x: visible;
-  }
-  
   .heroTitle {
     font-size: 2.8rem;
   }
@@ -473,8 +592,6 @@
     padding: 30px 20px;
   }
   
-
-  
   .projectCard {
     padding: 25px 20px;
   }
@@ -482,7 +599,7 @@
 
 /* Blog Styles */
 .blogSection {
-  padding: 120px 40px 60px;
+  padding: 120px clamp(20px, 5vw, 60px) 60px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -518,7 +635,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 400px;
+  min-height: 350px;
 }
 
 .blogCard:hover {
@@ -656,21 +773,24 @@
   width: 100%;
   min-height: calc(100vh - 80px);
   background: var(--bg);
-  padding: 40px 60px;
+  padding: 40px clamp(20px, 5vw, 60px);
 }
 
 .blogPostHeader {
   margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .blogPostTitle {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 700;
   margin: 30px 0;
   line-height: 1.2;
   color: #00B140;
   text-align: center;
-  max-width: 85%;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 2rem;
@@ -680,6 +800,9 @@
   margin-top: 50px;
   padding-top: 30px;
   border-top: 1px solid var(--border);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .backToBlog {
@@ -748,10 +871,10 @@
   color: #e0e0e0;
   text-align: left;
   font-size: 1.25rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  max-width: 1200px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 0 2rem;
 }
 
 .blogPostArticle h2,
@@ -821,69 +944,39 @@
 
 .blogPostArticle blockquote {
   border-left: 4px solid #00B140;
-  padding-left: 1.5rem;
+  padding: 1.5rem;
   margin: 2.5rem 0;
   font-style: italic;
   background-color: rgba(0, 177, 64, 0.05);
   text-align: left;
   font-size: 1.25rem;
-  padding: 1.5rem;
   border-radius: 8px;
 }
 
 .blogPostArticle code {
-  background-color: #f1f1f1;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
   padding: 0.2rem 0.4rem;
-  border-radius: 3px;
+  border-radius: 4px;
   font-family: 'Courier New', monospace;
+  font-size: 0.9em;
 }
 
 .blogPostArticle pre {
-  background-color: #f8f9fa;
-  padding: 1rem;
-  border-radius: 5px;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  padding: 1.5rem;
+  border-radius: 8px;
   overflow-x: auto;
   margin: 1.5rem 0;
+  text-align: left;
+  border: 1px solid var(--border);
 }
 
 .blogPostArticle pre code {
   background-color: transparent;
   padding: 0;
-}
-
-.blogPostArticle blockquote {
-  border-left: 4px solid #00B140;
-  padding-left: 1.5rem;
-  margin: 2.5rem 3rem;
-  font-style: italic;
-  background-color: rgba(0, 177, 64, 0.05);
-  text-align: left;
-  font-size: 1.25rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1.5rem;
-  border-radius: 8px;
-}
-
-.blogPostArticle code {
-  background-color: #f1f1f1;
-  padding: 0.2rem 0.4rem;
-  border-radius: 3px;
-  font-family: 'Courier New', monospace;
-}
-
-.blogPostArticle pre {
-  background-color: #f8f9fa;
-  padding: 1rem;
-  border-radius: 5px;
-  overflow-x: auto;
-  margin: 1.5rem 0;
-  text-align: left;
-}
-
-.blogPostArticle pre code {
-  background-color: transparent;
-  padding: 0;
+  color: inherit;
 }
 
 /* Mobile responsiveness for blog post */
@@ -929,6 +1022,16 @@
     gap: 15px;
     align-items: flex-start;
   }
+
+  .blogTag {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .blogPostTag {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
 }
 
 /* Extra small mobile devices (480px and below) */
@@ -937,12 +1040,32 @@
     padding: 16px 12px 10px;
   }
   
-  .logo {
-    font-size: 1.1rem;
+  .navLogo {
+    width: 40px;
+    height: 40px;
   }
-  
-  .navLinks a {
-    font-size: 0.95rem;
+
+  .navLinks {
+    top: 70px;
+    max-height: calc(100vh - 70px);
+  }
+
+  .navLink {
+    font-size: 1.05rem;
+    padding: 12px 14px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .sectionContent {
+    font-size: 1.05rem;
+  }
+
+  .founderImage {
+    width: 130px;
+    height: 130px;
   }
   
   .heroTitle {
@@ -1003,5 +1126,44 @@
   .blogPostArticle ul,
   .blogPostArticle ol {
     font-size: 0.95rem;
+  }
+}
+
+/* ===== Large Desktop Screens (1600px+) ===== */
+@media (min-width: 1600px) {
+  .navbar {
+    padding: 20px 120px;
+  }
+
+  .blogPostContent {
+    padding: 50px 80px;
+  }
+
+  .blogPostArticle {
+    font-size: 1.3rem;
+  }
+
+  .blogPostArticle p {
+    font-size: 1.3rem;
+  }
+
+  .blogGrid {
+    gap: 36px;
+  }
+
+  .blogCard {
+    padding: 36px;
+  }
+
+  .founderImage {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+/* ===== Ultra-wide Screens (2000px+) ===== */
+@media (min-width: 2000px) {
+  .navbar {
+    padding: 24px 200px;
   }
 }

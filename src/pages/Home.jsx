@@ -60,12 +60,13 @@ ${formData.message}`;
           gap: '2.5rem'
         }}>
           <h1 style={{ 
-            fontSize: 'clamp(3.5rem, 10vw, 6.5rem)',
+            fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)',
             fontWeight: '800',
             margin: 0,
             lineHeight: '1.05',
             color: '#ffffff',
-            letterSpacing: '-0.02em'
+            letterSpacing: '-0.02em',
+            whiteSpace: 'nowrap'
           }}>
             Tinted <span style={{ color: '#00B140' }}>Technologies</span>
           </h1>
@@ -229,14 +230,7 @@ ${formData.message}`;
                 <img 
                   src={founderImage} 
                   alt="Jay - Founder of Tinted Technologies" 
-                  style={{
-                    width: '200px',
-                    height: '200px',
-                    borderRadius: '50%',
-                    objectFit: 'cover',
-                    border: '4px solid #00B140',
-                    boxShadow: '0 8px 24px rgba(0, 177, 64, 0.3)'
-                  }}
+                  className={styles.founderImage}
                 />
               </div>
               <p style={{
@@ -283,14 +277,14 @@ ${formData.message}`;
               margin: '0 auto',
               lineHeight: '1.7'
             }}>
-              I help organizations bring clarity and momentum to complex cloud and AI initiatives through focused, senior-level support.
+              We help individuals, small businesses, and teams build real skills and make smart technology decisions.
             </p>
           </div>
 
           {/* Services Grid */}
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))',
             gap: '1.75rem'
           }}>
             {/* Service Card 1 */}
@@ -302,7 +296,70 @@ ${formData.message}`;
               padding: '2rem',
               transition: 'all 0.4s ease',
               position: 'relative',
-              overflow: 'hidden'
+              overflow: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center'
+            }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-8px)';
+                e.currentTarget.style.borderColor = 'rgba(0, 177, 64, 0.6)';
+                e.currentTarget.style.boxShadow = '0 12px 40px rgba(0, 177, 64, 0.2)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              <div style={{
+                width: '60px',
+                height: '60px',
+                borderRadius: '16px',
+                background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '1.5rem'
+              }}>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" fill="#ffffff"/>
+                </svg>
+              </div>
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontWeight: '700',
+                marginBottom: '1rem',
+                color: '#ffffff',
+                letterSpacing: '-0.01em'
+              }}>
+                Tech Foundations & Career Enablement
+              </h3>
+              <p style={{
+                fontSize: '1.05rem',
+                color: '#bbbbbb',
+                lineHeight: '1.7',
+                margin: 0
+              }}>
+                Train individuals to break into tech: cloud basics, AI literacy, real-world tooling, and career-ready skills.
+              </p>
+            </div>
+
+            {/* Service Card 2 */}
+            <div style={{
+              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              borderRadius: '20px',
+              padding: '2rem',
+              transition: 'all 0.4s ease',
+              position: 'relative',
+              overflow: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center'
             }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
@@ -336,7 +393,7 @@ ${formData.message}`;
                 color: '#ffffff',
                 letterSpacing: '-0.01em'
               }}>
-                Cloud Architecture & Modernization
+                Small Business Cloud & AI Advisory
               </h3>
               <p style={{
                 fontSize: '1.05rem',
@@ -344,62 +401,7 @@ ${formData.message}`;
                 lineHeight: '1.7',
                 margin: 0
               }}>
-                Migrate, optimize, and reimagine your infrastructure — with deep expertise in Azure and experience across AWS and GCP.
-              </p>
-            </div>
-
-            {/* Service Card 2 */}
-            <div style={{
-              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              borderRadius: '20px',
-              padding: '2rem',
-              transition: 'all 0.4s ease',
-              position: 'relative',
-              overflow: 'hidden'
-            }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.borderColor = 'rgba(0, 177, 64, 0.6)';
-                e.currentTarget.style.boxShadow = '0 12px 40px rgba(0, 177, 64, 0.2)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              <div style={{
-                width: '60px',
-                height: '60px',
-                borderRadius: '16px',
-                background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                marginBottom: '1.5rem'
-              }}>
-                <svg width="32" height="32" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M1.5 3.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1-.75-.75ZM1 7.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 0 1.5h-3.5A.75.75 0 0 1 1 7.25Zm0 4a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1-.75-.75Zm9.25-10.25a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5a.75.75 0 0 1 .75-.75Zm2.53 2.47a.75.75 0 0 1 0 1.06l-1.5 1.5a.75.75 0 0 1-1.06-1.06l1.5-1.5a.75.75 0 0 1 1.06 0Zm0 5a.75.75 0 0 0 0-1.06l-1.5-1.5a.75.75 0 0 0-1.06 1.06l1.5 1.5a.75.75 0 0 0 1.06 0ZM11 10.25a.75.75 0 0 1 .75.75v3.25a.75.75 0 0 1-1.5 0V11a.75.75 0 0 1 .75-.75Z" fill="#ffffff"/>
-                </svg>
-              </div>
-              <h3 style={{
-                fontSize: '1.5rem',
-                fontWeight: '700',
-                marginBottom: '1rem',
-                color: '#ffffff',
-                letterSpacing: '-0.01em'
-              }}>
-                Strategy & Technical Advising
-              </h3>
-              <p style={{
-                fontSize: '1.05rem',
-                color: '#bbbbbb',
-                lineHeight: '1.7',
-                margin: 0
-              }}>
-                From product ideation to MVP acceleration — clear, focused support.
+                Practical consulting to help small businesses get online, modernize operations, and use cloud + AI responsibly.
               </p>
             </div>
 
@@ -412,7 +414,11 @@ ${formData.message}`;
               padding: '2rem',
               transition: 'all 0.4s ease',
               position: 'relative',
-              overflow: 'hidden'
+              overflow: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center'
             }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
@@ -436,23 +442,7 @@ ${formData.message}`;
                 marginBottom: '1.5rem'
               }}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="3" r="2" fill="#ffffff"/>
-                  <circle cx="12" cy="21" r="2" fill="#ffffff"/>
-                  <circle cx="3" cy="12" r="2" fill="#ffffff"/>
-                  <circle cx="21" cy="12" r="2" fill="#ffffff"/>
-                  <circle cx="6" cy="6" r="2" fill="#ffffff"/>
-                  <circle cx="18" cy="6" r="2" fill="#ffffff"/>
-                  <circle cx="6" cy="18" r="2" fill="#ffffff"/>
-                  <circle cx="18" cy="18" r="2" fill="#ffffff"/>
-                  <circle cx="12" cy="12" r="3" fill="#ffffff"/>
-                  <line x1="12" y1="5" x2="12" y2="9" stroke="#ffffff" strokeWidth="2"/>
-                  <line x1="12" y1="15" x2="12" y2="19" stroke="#ffffff" strokeWidth="2"/>
-                  <line x1="5" y1="12" x2="9" y2="12" stroke="#ffffff" strokeWidth="2"/>
-                  <line x1="15" y1="12" x2="19" y2="12" stroke="#ffffff" strokeWidth="2"/>
-                  <line x1="7.5" y1="7.5" x2="9.9" y2="9.9" stroke="#ffffff" strokeWidth="2"/>
-                  <line x1="14.1" y1="14.1" x2="16.5" y2="16.5" stroke="#ffffff" strokeWidth="2"/>
-                  <line x1="7.5" y1="16.5" x2="9.9" y2="14.1" stroke="#ffffff" strokeWidth="2"/>
-                  <line x1="14.1" y1="9.9" x2="16.5" y2="7.5" stroke="#ffffff" strokeWidth="2"/>
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z" fill="#ffffff"/>
                 </svg>
               </div>
               <h3 style={{
@@ -462,7 +452,7 @@ ${formData.message}`;
                 color: '#ffffff',
                 letterSpacing: '-0.01em'
               }}>
-                Generative AI Integration
+                Applied AI & Automation
               </h3>
               <p style={{
                 fontSize: '1.05rem',
@@ -470,7 +460,7 @@ ${formData.message}`;
                 lineHeight: '1.7',
                 margin: 0
               }}>
-                Use LLMs to improve operations, customer experiences, or internal tools.
+                Identify where AI actually helps. Process automation, internal tools, and efficiency, without overengineering.
               </p>
             </div>
 
@@ -483,7 +473,11 @@ ${formData.message}`;
               padding: '2rem',
               transition: 'all 0.4s ease',
               position: 'relative',
-              overflow: 'hidden'
+              overflow: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center'
             }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';

@@ -1,12 +1,30 @@
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from '../App.module.css';
 import logo from '../assets/logo.png';
 
 const Navigation = () => {
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Close menu on route change
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
   
   const handleAnchorClick = (e, targetId) => {
     e.preventDefault();
+    setMenuOpen(false);
     const element = document.getElementById(targetId);
     if (element) {
       const navbarHeight = 80;
@@ -19,6 +37,8 @@ const Navigation = () => {
       });
     }
   };
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <nav className={styles.navbar}>
@@ -34,6 +54,7 @@ const Navigation = () => {
           height: '100%'
         }}
         onClick={() => {
+          setMenuOpen(false);
           if (location.pathname === '/') {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }
@@ -42,18 +63,30 @@ const Navigation = () => {
         <img 
           src={logo} 
           alt="Tinted Technologies" 
-          style={{
-            width: '60px',
-            height: '60px',
-            objectFit: 'contain',
-            cursor: 'pointer',
-            transition: 'transform 0.3s ease'
-          }}
+          className={styles.navLogo}
           onMouseEnter={(e) => e.target.style.transform = 'scale(1.1)'}
           onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
         />
       </Link>
-      <div className={styles.navLinks}>
+
+      {/* Hamburger button - visible on mobile only */}
+      <button
+        className={styles.hamburger}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={menuOpen}
+      >
+        <span className={`${styles.hamburgerLine} ${menuOpen ? styles.hamburgerLineTop : ''}`}></span>
+        <span className={`${styles.hamburgerLine} ${menuOpen ? styles.hamburgerLineMiddle : ''}`}></span>
+        <span className={`${styles.hamburgerLine} ${menuOpen ? styles.hamburgerLineBottom : ''}`}></span>
+      </button>
+
+      {/* Overlay backdrop */}
+      {menuOpen && (
+        <div className={styles.navOverlay} onClick={closeMenu}></div>
+      )}
+
+      <div className={`${styles.navLinks} ${menuOpen ? styles.navLinksOpen : ''}`}>
         {location.pathname === '/' ? (
           <>
             <a 
@@ -89,6 +122,7 @@ const Navigation = () => {
           <Link 
             to="/"
             className={styles.navLink}
+            onClick={closeMenu}
           >
             Home
           </Link>
@@ -96,6 +130,7 @@ const Navigation = () => {
         <Link 
           to="/blog" 
           className={`${styles.navLink} ${location.pathname === '/blog' || location.pathname.startsWith('/blog/') ? styles.navLinkActive : ''}`}
+          onClick={closeMenu}
         >
           Blog
         </Link>
