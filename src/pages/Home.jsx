@@ -3,8 +3,14 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import styles from '../App.module.css';
 import founderImage from '../assets/founderceo.jpeg';
+import { useSEO } from '../utils/useSEO';
 
 function Home() {
+  useSEO({
+    title: null,
+    description: 'Tinted Technologies helps individuals, small businesses, and teams build real skills and make smart technology decisions. Cloud & AI consulting, training, and workshops.',
+    path: '/'
+  });
   const [formData, setFormData] = useState({
     name: '',
     email: '',

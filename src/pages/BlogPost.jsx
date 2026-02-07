@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import styles from '../App.module.css';
 import { getBlogPosts, getBlogPostContent } from '../utils/blogUtils';
+import { useSEO } from '../utils/useSEO';
 
 function BlogPost() {
   const { slug } = useParams();
@@ -12,6 +13,15 @@ function BlogPost() {
   const [markdownContent, setMarkdownContent] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+
+  useSEO({
+    title: post?.title || 'Blog Post',
+    description: post?.description || 'Read this article on the Tinted Technologies blog.',
+    path: `/blog/${slug}`,
+    type: 'article',
+    publishedDate: post?.date,
+    author: post?.author
+  });
 
   useEffect(() => {
     async function loadPost() {

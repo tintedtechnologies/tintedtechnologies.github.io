@@ -2,8 +2,15 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import styles from '../App.module.css';
+import { useSEO } from '../utils/useSEO';
 
 const Services = () => {
+  useSEO({
+    title: 'Services',
+    description: 'Tech training, small business cloud & AI advisory, applied AI & automation consulting, and hands-on workshops from Tinted Technologies.',
+    path: '/services'
+  });
+
   return (
     <div className={styles.appContainer}>
       <Navigation />

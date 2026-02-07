@@ -1,8 +1,15 @@
 import { useState } from 'react';
 import Navigation from '../components/Navigation';
 import styles from '../App.module.css';
+import { useSEO } from '../utils/useSEO';
 
 const Contact = () => {
+  useSEO({
+    title: 'Contact Us',
+    description: 'Get in touch with Tinted Technologies. Schedule a consultation for cloud consulting, AI advisory, tech training, or workshops.',
+    path: '/contact'
+  });
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',

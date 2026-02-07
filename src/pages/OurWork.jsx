@@ -2,8 +2,15 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import styles from '../App.module.css';
+import { useSEO } from '../utils/useSEO';
 
 const OurWork = () => {
+  useSEO({
+    title: 'Our Work',
+    description: 'See how Tinted Technologies helps teams and individuals build with confidence through cloud consulting, AI integration, and tech education.',
+    path: '/our-work'
+  });
+
   return (
     <div className={styles.appContainer}>
       <Navigation />

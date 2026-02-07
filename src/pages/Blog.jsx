@@ -4,6 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import styles from '../App.module.css';
 import { getBlogPosts } from '../utils/blogUtils';
+import { useSEO } from '../utils/useSEO';
 
 function BlogCard({ post }) {
   return (
@@ -34,6 +35,12 @@ function BlogCard({ post }) {
 function Blog() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  useSEO({
+    title: 'Blog',
+    description: 'Insights on cloud architecture, AI, tech training, and building inclusive technology. Read the latest from Tinted Technologies.',
+    path: '/blog'
+  });
 
   useEffect(() => {
     async function loadPosts() {

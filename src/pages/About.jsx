@@ -1,7 +1,14 @@
 import Navigation from '../components/Navigation';
 import styles from '../App.module.css';
+import { useSEO } from '../utils/useSEO';
 
 const About = () => {
+  useSEO({
+    title: 'About',
+    description: 'Learn about Tinted Technologies and our founder. We partner with startups and small businesses to design scalable cloud systems and apply AI responsibly.',
+    path: '/about'
+  });
+
   return (
     <div className={styles.appContainer}>
       <Navigation />
