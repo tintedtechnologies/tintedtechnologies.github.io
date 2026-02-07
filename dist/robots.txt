@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+Disallow: /assets/
+
+Sitemap: https://tintedtechnologies.com/sitemap.xml
