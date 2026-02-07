@@ -31,7 +31,7 @@ Email: ${formData.email}
 Message:
 ${formData.message}`;
 
-    const mailtoLink = `mailto:admin@tintedtechnologies.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:jay@tintedtechnologies.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     window.location.href = mailtoLink;
     
