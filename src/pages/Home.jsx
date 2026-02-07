@@ -235,7 +235,7 @@ ${formData.message}`;
               }}>
                 <img 
                   src={founderImage} 
-                  alt="Jay - Founder of Tinted Technologies" 
+                  alt="Jay - Founder & CEO of Tinted Technologies" 
                   className={styles.founderImage}
                 />
               </div>
@@ -246,7 +246,7 @@ ${formData.message}`;
                 margin: 0,
                 fontWeight: '400'
               }}>
-                Jay, Founder of Tinted Technologies, is a Cloud & AI Architect who partners with startups and small businesses to design scalable cloud systems and apply generative AI responsibly.
+                Jay, Founder & CEO of Tinted Technologies, is a Cloud & AI Engineer and Architect focused on tech foundations, small business cloud adoption, and practical AI automation. He trains individuals to enter tech, helps small businesses modernize responsibly, and applies AI where it delivers real operational value.
               </p>
             </div>
           </div>
