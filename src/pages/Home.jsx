@@ -8,7 +8,7 @@ import { useSEO } from '../utils/useSEO';
 function Home() {
   useSEO({
     title: null,
-    description: 'Tinted Technologies helps individuals, small businesses, and teams build real skills and make smart technology decisions. Cloud & AI consulting, training, and workshops.',
+    description: 'Tinted Technologies helps individuals and small businesses build real skills and make smart technology decisions. Cloud & AI consulting, training, and workshops.',
     path: '/'
   });
   const [formData, setFormData] = useState({
@@ -84,16 +84,7 @@ ${formData.message}`;
             lineHeight: '1.5',
             fontWeight: '400'
           }}>
-            Cloud & AI architecture for teams building what's next.
-          </p>
-          <p style={{ 
-            fontSize: 'clamp(1.05rem, 2.2vw, 1.35rem)',
-            color: '#888888',
-            margin: 0,
-            maxWidth: '720px',
-            lineHeight: '1.7'
-          }}>
-            We partner with startups and small businesses to design scalable cloud systems, apply generative AI responsibly, and make confident technology decisions.
+            Cloud & AI guidance for individuals and small businesses.
           </p>
           <a
             href="#contact"
@@ -174,7 +165,7 @@ ${formData.message}`;
             fontWeight: '400',
             textAlign: 'center'
           }}>
-            Expert Cloud & AI architecture that helps organizations innovate with confidence and drive measurable impact.
+            Practical Cloud & AI guidance that helps individuals and small businesses build skills, modernize, and grow with confidence.
           </p>
         </div>
       </section>
@@ -226,7 +217,7 @@ ${formData.message}`;
                 color: '#00B140',
                 letterSpacing: '-0.01em'
               }}>
-                About the Founder
+                About the Founder & CEO
               </h3>
               <div style={{
                 display: 'flex',
@@ -283,7 +274,7 @@ ${formData.message}`;
               margin: '0 auto',
               lineHeight: '1.7'
             }}>
-              We help individuals, small businesses, and teams build real skills and make smart technology decisions.
+              We train individuals entering tech, partner with small businesses to modernize with cloud, and apply AI where it delivers real value.
             </p>
           </div>
 
@@ -527,7 +518,7 @@ ${formData.message}`;
                 lineHeight: '1.7',
                 margin: 0
               }}>
-                Hands-on learning or internal upskilling on modern cloud + AI.
+                Hands-on learning and internal upskilling on modern cloud and AI tools for individuals and teams ready to level up.
               </p>
             </div>
           </div>
@@ -572,7 +563,7 @@ ${formData.message}`;
               margin: 0,
               lineHeight: '1.7'
             }}>
-              Interested in consulting or a potential collaboration?
+              Interested in consulting, training, or workshops?
             </p>
           </div>
 

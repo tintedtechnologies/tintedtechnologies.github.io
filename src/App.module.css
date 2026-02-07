@@ -523,28 +523,12 @@
     gap: 30px;
   }
   
-  .aboutSection {
-    padding: 40px 20px;
-    margin: 40px 20px;
-    width: calc(100% - 40px);
-  }
-  
   .projects {
     flex-direction: column;
   }
   
   .mainContent {
     padding: 0 20px;
-  }
-  
-  .projectsSection,
-  .missionSection {
-    padding: 100px 0 60px;
-  }
-  
-  .missionContent {
-    padding: 40px 30px;
-    font-size: 1.3rem;
   }
 }
 
@@ -585,11 +569,6 @@
   
   .section {
     padding: 25px 20px;
-  }
-  
-  .missionContent {
-    font-size: 1.2rem;
-    padding: 30px 20px;
   }
   
   .projectCard {
@@ -1078,11 +1057,6 @@
   
   .section {
     padding: 20px 15px;
-  }
-  
-  .missionContent {
-    font-size: 1.1rem;
-    padding: 25px 15px;
   }
   
   .projectCard {
