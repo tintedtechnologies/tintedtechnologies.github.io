@@ -246,7 +246,7 @@ ${formData.message}`;
                 margin: 0,
                 fontWeight: '400'
               }}>
-                Jay, Founder & CEO of Tinted Technologies, is a Cloud & AI Engineer and Architect focused on tech foundations, small business cloud adoption, and practical AI automation. He trains individuals to enter tech, helps small businesses modernize responsibly, and applies AI where it delivers real operational value.
+                Jay, Founder & CEO of Tinted Technologies, is a Cloud & AI Architect focused on tech foundations, small business cloud adoption, and practical automation. He trains individuals entering tech, helps small businesses modernize, and applies AI where it delivers real operational value.
               </p>
             </div>
           </div>
