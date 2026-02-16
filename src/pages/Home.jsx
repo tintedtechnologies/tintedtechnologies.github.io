@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import styles from '../App.module.css';
-import founderImage from '../assets/founderceo.jpeg';
+import founderImage from '../assets/founder.png';
 import { useSEO } from '../utils/useSEO';
 
 function Home() {
@@ -84,7 +84,7 @@ ${formData.message}`;
             lineHeight: '1.5',
             fontWeight: '400'
           }}>
-            Cloud & AI guidance for individuals and small businesses.
+            Modernizing Small Businesses with Practical Cloud, AI & Automation.
           </p>
           <a
             href="#contact"
@@ -274,7 +274,7 @@ ${formData.message}`;
               margin: '0 auto',
               lineHeight: '1.7'
             }}>
-              We train individuals entering tech, partner with small businesses to modernize with cloud, and apply AI where it delivers real value.
+             We modernize small businesses through structured cloud strategy, practical automation, and applied AI while equipping individuals with real-world technical capability.
             </p>
           </div>
 
@@ -339,7 +339,7 @@ ${formData.message}`;
                 lineHeight: '1.7',
                 margin: 0
               }}>
-                Train individuals to break into tech: cloud basics, AI literacy, real-world tooling, and career-ready skills.
+                Structured cloud and AI training focused on practical skills, real tools, and career readiness.
               </p>
             </div>
 
@@ -398,7 +398,7 @@ ${formData.message}`;
                 lineHeight: '1.7',
                 margin: 0
               }}>
-                Practical consulting to help small businesses get online, modernize operations, and use cloud + AI responsibly.
+                Strategic cloud modernization and applied AI solutions that improve efficiency and operational structure.
               </p>
             </div>
 
@@ -457,7 +457,7 @@ ${formData.message}`;
                 lineHeight: '1.7',
                 margin: 0
               }}>
-                Identify where AI actually helps. Process automation, internal tools, and efficiency, without overengineering.
+                Targeted automation and AI integration designed to reduce manual work and streamline internal workflows.
               </p>
             </div>
 
@@ -518,7 +518,7 @@ ${formData.message}`;
                 lineHeight: '1.7',
                 margin: 0
               }}>
-                Hands-on learning and internal upskilling on modern cloud and AI tools for individuals and teams ready to level up.
+                Hands-on training sessions that upskill teams in cloud, automation, and applied AI fundamentals.
               </p>
             </div>
           </div>
