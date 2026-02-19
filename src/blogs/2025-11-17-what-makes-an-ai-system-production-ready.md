@@ -1,5 +1,5 @@
 ---
-title: "What Makes an AI System Production-Ready"
+title: "What Makes an AI System Production Ready"
 description: "Building an AI model is only half the journey."
 author: "Jay"
 date: "November 17 2025"

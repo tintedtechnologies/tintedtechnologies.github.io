@@ -6,7 +6,7 @@ date: "August 25, 2025"
 tags: ["Coding","Innovation","Learning","Creativity","Technology"]
 category: "Tech + Learning"
 image: "/images/idea-to-code.jpg"
-featured: true
+featured: false
 ---
 
 Most people have ideas: an app that solves a daily problem, a website to showcase a project, or a tool that helps their community. But too often, those ideas stay in notebooks or conversations because *“I don’t know how to code”* feels like a wall.  

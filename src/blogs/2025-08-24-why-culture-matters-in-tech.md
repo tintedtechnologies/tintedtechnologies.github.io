@@ -6,7 +6,7 @@ date: "August 24, 2025"
 tags: ["Culture", "Technology", "Inclusion", "AI", "Innovation"]
 category: "Tech + Culture"
 image: "/images/culture-in-tech-cover.jpg"
-featured: true
+featured: false
 ---
 
 Technology isn’t just built in labs or offices, it’s built on values, perspectives, and lived experiences. Every app, algorithm, and AI system reflects the assumptions of the people who created it. That’s why culture matters. At **Tinted Technologies**, our mission is to make technology human-centered, relevant, and empowering for everyone.

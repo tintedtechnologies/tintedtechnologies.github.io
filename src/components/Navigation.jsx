@@ -127,6 +127,7 @@ const Navigation = () => {
             Home
           </Link>
         )}
+        {/**
         <Link 
           to="/blog" 
           className={`${styles.navLink} ${location.pathname === '/blog' || location.pathname.startsWith('/blog/') ? styles.navLinkActive : ''}`}
@@ -134,6 +135,7 @@ const Navigation = () => {
         >
           Blog
         </Link>
+         */}
       </div>
     </nav>
   );

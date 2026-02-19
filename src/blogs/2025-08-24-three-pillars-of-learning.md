@@ -1,15 +1,15 @@
 ---
-title: "The 3 Pillars of Learning: A Science-Backed Method You Can Teach With Today"
+title: "The 3 Pillars of Learning: A Science Backed Method You Can Teach With Today"
 description: "Keep it simple, teach in easy steps, make learners apply it, then quiz them in real-world contexts—backed by rigorous research."
 author: "Jay"
 date: "August 24, 2025"
 tags: ["Learning Science","Teaching","Active Learning","Retrieval Practice","Cognitive Load"]
 category: "Learning & Education"
 image: "/images/three-pillars-science.jpg"
-featured: true
+featured: false
 ---
 
-**Bottom line:** People learn best when lessons are **simple and well-guided**, **built in small steps**, **applied right away**, and **tested with real-world checks**. That isn’t branding, it’s what the best evidence shows.
+**Bottom line:** People learn best when lessons are **simple and well guided**, **built in small steps**, **applied right away**, and **tested with real world checks**. That isn’t branding, it’s what the best evidence shows.
 
 ## Pillar 1: Clarity (Keep it simple)
 
@@ -57,7 +57,7 @@ This doesn’t just check memory—it **strengthens** it.
 
 The **3 Pillars of Learning** aren’t just theory for us. They’re the foundation we’ll use to design everything we build. While our apps and platforms are still in development, our approach to teaching will follow this framework:
 
-- **Clarity first:** future AI-powered learning tools will break down complex concepts step by step, making them simple and approachable.  
+- **Clarity first:** future AI powered learning tools will break down complex concepts step by step, making them simple and approachable.  
 - **Connection built in:** educational content will link technology to culture, showing learners how skills apply in their real lives and communities.  
 - **Creativity encouraged:** projects, challenges, and interactive tools will invite learners to apply knowledge in hands-on ways that inspire innovation.  
 
@@ -86,8 +86,6 @@ This framework keeps us **grounded in proven science** while pushing us to **inn
 - **Caveat on minimal guidance (for novices)**  
   - Kirschner, P. A., Sweller, J., & Clark, R. E. (2006). *Why minimal guidance during instruction does not work*. **Educational Psychologist**. DOI: [10.1207/s15326985ep4102_1](https://www.tandfonline.com/doi/abs/10.1207/s15326985ep4102_1)  
 
-## Fit check (no BS)
+## Conclusion
 
-Yes—the pillars **fit** the evidence **if** you keep them **guided** (worked examples → faded support), **applied** (active tasks), and **reinforced** (retrieval + spacing). If you drop guidance and go pure discovery, results get worse for novices.
-
-**The future won’t just be coded, it will be culturally tinted.**
+Yes, the pillars **fit** the evidence **if** you keep them **guided** (worked examples → faded support), **applied** (active tasks), and **reinforced** (retrieval + spacing). If you drop guidance and go pure discovery, results get worse for novices.

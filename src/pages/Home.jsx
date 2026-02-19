@@ -84,7 +84,7 @@ ${formData.message}`;
             lineHeight: '1.5',
             fontWeight: '400'
           }}>
-            Modernizing Small Businesses with Practical Cloud, AI & Automation.
+            Build Job Ready Cloud & AI Skills
           </p>
           <a
             href="#contact"
@@ -126,7 +126,7 @@ ${formData.message}`;
               e.target.style.boxShadow = '0 4px 20px rgba(0, 177, 64, 0.3)';
             }}
           >
-            Let&apos;s Talk →
+            Request Training →
           </a>
         </div>
       </section>
@@ -165,7 +165,7 @@ ${formData.message}`;
             fontWeight: '400',
             textAlign: 'center'
           }}>
-            Practical Cloud & AI guidance that helps individuals and small businesses build skills, modernize, and grow with confidence.
+            We develop practical, job ready cloud, AI, and programming skills for individuals and teams.
           </p>
         </div>
       </section>
@@ -237,7 +237,7 @@ ${formData.message}`;
                 margin: 0,
                 fontWeight: '400'
               }}>
-                Jay, Founder & CEO of Tinted Technologies, is a Cloud & AI Architect focused on tech foundations, small business cloud adoption, and practical automation. He trains individuals entering tech, helps small businesses modernize, and applies AI where it delivers real operational value.
+                Jay is the Founder & CEO of Tinted Technologies, a cloud & AI practitioner and technical educator with real world industry experience. He delivers structured, hands on training that builds job ready capability in cloud, AI, and programming for individuals and teams.
               </p>
             </div>
           </div>
@@ -265,17 +265,8 @@ ${formData.message}`;
               color: '#ffffff',
               letterSpacing: '-0.02em'
             }}>
-              Consulting <span style={{ color: '#00B140' }}>Services</span>
+              Training  <span style={{ color: '#00B140' }}>&</span> Workforce Development
             </h2>
-            <p style={{
-              fontSize: 'clamp(1.05rem, 2.2vw, 1.35rem)',
-              color: '#888888',
-              maxWidth: '800px',
-              margin: '0 auto',
-              lineHeight: '1.7'
-            }}>
-             We modernize small businesses through structured cloud strategy, practical automation, and applied AI while equipping individuals with real-world technical capability.
-            </p>
           </div>
 
           {/* Services Grid */}
@@ -331,7 +322,7 @@ ${formData.message}`;
                 color: '#ffffff',
                 letterSpacing: '-0.01em'
               }}>
-                Tech Foundations & Career Enablement
+                Tech Foundations & Career Readiness
               </h3>
               <p style={{
                 fontSize: '1.05rem',
@@ -339,7 +330,7 @@ ${formData.message}`;
                 lineHeight: '1.7',
                 margin: 0
               }}>
-                Structured cloud and AI training focused on practical skills, real tools, and career readiness.
+                Structured training in Python, cloud fundamentals, and AI designed to build strong technical foundations and prepare individuals for modern technical roles.
               </p>
             </div>
 
@@ -390,7 +381,7 @@ ${formData.message}`;
                 color: '#ffffff',
                 letterSpacing: '-0.01em'
               }}>
-                Small Business Cloud & AI Advisory
+                Corporate Technical Workshops
               </h3>
               <p style={{
                 fontSize: '1.05rem',
@@ -398,7 +389,7 @@ ${formData.message}`;
                 lineHeight: '1.7',
                 margin: 0
               }}>
-                Strategic cloud modernization and applied AI solutions that improve efficiency and operational structure.
+                Hands-on workshops that upskill teams in cloud, automation, and AI, focused on practical application and real world performance.
               </p>
             </div>
 
@@ -449,7 +440,7 @@ ${formData.message}`;
                 color: '#ffffff',
                 letterSpacing: '-0.01em'
               }}>
-                Applied AI & Automation
+                Applied AI Training for Teams
               </h3>
               <p style={{
                 fontSize: '1.05rem',
@@ -457,7 +448,7 @@ ${formData.message}`;
                 lineHeight: '1.7',
                 margin: 0
               }}>
-                Targeted automation and AI integration designed to reduce manual work and streamline internal workflows.
+                Practical AI instruction that teaches teams how to responsibly and effectively integrate AI tools into everyday workflows.
               </p>
             </div>
 
@@ -510,7 +501,7 @@ ${formData.message}`;
                 color: '#ffffff',
                 letterSpacing: '-0.01em'
               }}>
-                Workshops & Enablement
+                Cloud & Automation Skills Development
               </h3>
               <p style={{
                 fontSize: '1.05rem',
@@ -518,7 +509,7 @@ ${formData.message}`;
                 lineHeight: '1.7',
                 margin: 0
               }}>
-                Hands-on training sessions that upskill teams in cloud, automation, and applied AI fundamentals.
+                Focused training programs that build operational capability in modern cloud environments and automation practices.
               </p>
             </div>
           </div>
@@ -553,7 +544,7 @@ ${formData.message}`;
               textAlign: 'center',
               letterSpacing: '-0.02em'
             }}>
-              Let&apos;s Work <span style={{ color: '#00B140' }}>Together</span>
+              Build <span style={{ color: '#00B140' }}>Your</span> Team&apos;s Cloud <span style={{ color: '#00B140' }}>&</span> AI <span style={{ color: '#00B140' }}>Capability</span>
             </h2>
             
             <p style={{
@@ -563,7 +554,7 @@ ${formData.message}`;
               margin: 0,
               lineHeight: '1.7'
             }}>
-              Interested in consulting, training, or workshops?
+              Tell us about your team’s training goals.
             </p>
           </div>
 
@@ -729,7 +720,7 @@ ${formData.message}`;
                 e.target.style.boxShadow = '0 4px 20px rgba(0, 177, 64, 0.3)';
               }}
             >
-              Send Message →
+              Request Training →
             </button>
           </form>
         </div>
