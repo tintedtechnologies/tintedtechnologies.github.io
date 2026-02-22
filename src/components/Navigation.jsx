@@ -111,6 +111,13 @@ const Navigation = () => {
               Services
             </a>
             <a 
+              href="#why-us"
+              onClick={(e) => handleAnchorClick(e, 'why-us')}
+              className={styles.navLink}
+            >
+              Why Us
+            </a>
+            <a 
               href="#contact"
               onClick={(e) => handleAnchorClick(e, 'contact')}
               className={styles.navLink}

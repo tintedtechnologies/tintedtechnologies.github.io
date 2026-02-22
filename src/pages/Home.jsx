@@ -84,7 +84,7 @@ ${formData.message}`;
             lineHeight: '1.5',
             fontWeight: '400'
           }}>
-            Build Job Ready Cloud & AI Skills
+            Develop Job-Ready Talent. Strengthen Technical Teams.
           </p>
           <a
             href="#contact"
@@ -165,7 +165,7 @@ ${formData.message}`;
             fontWeight: '400',
             textAlign: 'center'
           }}>
-            We develop practical, job ready cloud, AI, and programming skills for individuals and teams.
+            We develop practical, job-ready cloud, AI, and programming skills for individuals and teams.
           </p>
         </div>
       </section>
@@ -269,12 +269,23 @@ ${formData.message}`;
             </h2>
           </div>
 
-          {/* Services Grid */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))',
-            gap: '1.75rem'
-          }}>
+          {/* For Individuals */}
+          <div style={{ marginBottom: '2.5rem' }}>
+            <p style={{
+              fontSize: '0.85rem',
+              fontWeight: '600',
+              textTransform: 'uppercase',
+              letterSpacing: '0.15em',
+              color: '#00B140',
+              marginBottom: '1rem'
+            }}>
+              For Individuals
+            </p>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))',
+              gap: '1.75rem'
+            }}>
             {/* Service Card 1 */}
             <div style={{
               background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
@@ -334,6 +345,84 @@ ${formData.message}`;
               </p>
             </div>
 
+            {/* Service Card - 1:1 Mentorship */}
+            <div style={{
+              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              borderRadius: '20px',
+              padding: '2rem',
+              transition: 'all 0.4s ease',
+              position: 'relative',
+              overflow: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center'
+            }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-8px)';
+                e.currentTarget.style.borderColor = 'rgba(0, 177, 64, 0.6)';
+                e.currentTarget.style.boxShadow = '0 12px 40px rgba(0, 177, 64, 0.2)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              <div style={{
+                width: '60px',
+                height: '60px',
+                borderRadius: '16px',
+                background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '1.5rem'
+              }}>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="#ffffff"/>
+                </svg>
+              </div>
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontWeight: '700',
+                marginBottom: '1rem',
+                color: '#ffffff',
+                letterSpacing: '-0.01em'
+              }}>
+                1:1 Technical Mentorship & Career Strategy
+              </h3>
+              <p style={{
+                fontSize: '1.05rem',
+                color: '#bbbbbb',
+                lineHeight: '1.7',
+                margin: 0
+              }}>
+                Personalized guidance for individuals looking to transition into tech or level up their cloud and AI skills. Focused on structured learning plans, technical skill development, and career positioning aligned with real-world expectations.
+              </p>
+            </div>
+            </div>
+          </div>
+
+          {/* For Organizations */}
+          <div>
+            <p style={{
+              fontSize: '0.85rem',
+              fontWeight: '600',
+              textTransform: 'uppercase',
+              letterSpacing: '0.15em',
+              color: '#00B140',
+              marginBottom: '1rem'
+            }}>
+              For Organizations
+            </p>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))',
+              gap: '1.75rem'
+            }}>
             {/* Service Card 2 */}
             <div style={{
               background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
@@ -512,6 +601,136 @@ ${formData.message}`;
                 Focused training programs that build operational capability in modern cloud environments and automation practices.
               </p>
             </div>
+
+            {/* Service Card 5 */}
+            <div style={{
+              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              borderRadius: '20px',
+              padding: '2rem',
+              transition: 'all 0.4s ease',
+              position: 'relative',
+              overflow: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center'
+            }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-8px)';
+                e.currentTarget.style.borderColor = 'rgba(76, 217, 100, 0.6)';
+                e.currentTarget.style.boxShadow = '0 12px 40px rgba(76, 217, 100, 0.2)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              <div style={{
+                width: '60px',
+                height: '60px',
+                borderRadius: '16px',
+                background: 'linear-gradient(135deg, #4CD964 0%, #00B140 100%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '1.5rem'
+              }}>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z" fill="#ffffff"/>
+                </svg>
+              </div>
+              <h3 style={{
+                fontSize: '1.5rem',
+                fontWeight: '700',
+                marginBottom: '1rem',
+                color: '#ffffff',
+                letterSpacing: '-0.01em'
+              }}>
+                Technical Advisory & Strategy Consulting
+              </h3>
+              <p style={{
+                fontSize: '1.05rem',
+                color: '#bbbbbb',
+                lineHeight: '1.7',
+                margin: 0
+              }}>
+                Strategic guidance that helps organizations align cloud and AI initiatives with business goals, define roadmaps, and make informed technology decisions without chasing trends.
+              </p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Tinted Technologies Section */}
+      <section id="why-us" style={{
+        padding: '5rem 1.5rem',
+        background: '#000000'
+      }}>
+        <div style={{
+          maxWidth: '900px',
+          width: '100%',
+          margin: '0 auto'
+        }}>
+          <h2 style={{
+            fontSize: 'clamp(2rem, 5vw, 3rem)',
+            fontWeight: '800',
+            marginBottom: '2.5rem',
+            color: '#ffffff',
+            letterSpacing: '-0.02em',
+            textAlign: 'center'
+          }}>
+            Why <span style={{ color: '#00B140' }}>Tinted Technologies</span>
+          </h2>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1.25rem'
+          }}>
+            {[
+              'Real-world practitioner-led instruction',
+              'Structured engagements with defined outcomes',
+              'Business-aligned cloud & AI strategy and enablement',
+              'Practical training — not theory',
+              'Clear scope, documentation, and delivery'
+            ].map((item, index) => (
+              <div key={index} style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem',
+                padding: '1.25rem 1.5rem',
+                background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                borderRadius: '14px',
+                backdropFilter: 'blur(10px)'
+              }}>
+                <div style={{
+                  width: '28px',
+                  height: '28px',
+                  minWidth: '28px',
+                  borderRadius: '50%',
+                  background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="#ffffff"/>
+                  </svg>
+                </div>
+                <p style={{
+                  fontSize: '1.1rem',
+                  color: '#ffffff',
+                  margin: 0,
+                  fontWeight: '500'
+                }}>
+                  {item}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -542,9 +761,10 @@ ${formData.message}`;
               marginBottom: '1.5rem',
               color: '#ffffff',
               textAlign: 'center',
-              letterSpacing: '-0.02em'
+              letterSpacing: '-0.02em',
+              whiteSpace: 'nowrap'
             }}>
-              Build <span style={{ color: '#00B140' }}>Your</span> Team&apos;s Cloud <span style={{ color: '#00B140' }}>&</span> AI <span style={{ color: '#00B140' }}>Capability</span>
+              Let&apos;s <span style={{ color: '#00B140' }}>Build</span> Your <span style={{ color: '#00B140' }}>Capability</span>
             </h2>
             
             <p style={{
