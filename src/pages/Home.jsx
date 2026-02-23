@@ -11,6 +11,8 @@ function Home() {
     description: 'Tinted Technologies helps individuals and small businesses build real skills and make smart technology decisions. Cloud & AI consulting, training, and workshops.',
     path: '/'
   });
+  const [engagementOpen, setEngagementOpen] = useState(false);
+  const [pricingOpen, setPricingOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -217,7 +219,7 @@ ${formData.message}`;
                 color: '#00B140',
                 letterSpacing: '-0.01em'
               }}>
-                About the Founder & CEO
+                Practitioner-Led Training
               </h3>
               <div style={{
                 display: 'flex',
@@ -237,7 +239,7 @@ ${formData.message}`;
                 margin: 0,
                 fontWeight: '400'
               }}>
-                Jay is the Founder & CEO of Tinted Technologies, a cloud & AI practitioner and technical educator with real world industry experience. He delivers structured, hands on training that builds job ready capability in cloud, AI, and programming for individuals and teams.
+                Tinted Technologies was founded to bridge the gap between theory and real-world technical capability. Led by an experienced multi-cloud and AI practitioner, the company delivers structured, hands-on training designed to build operational skill, not just conceptual knowledge.
               </p>
             </div>
           </div>
@@ -478,7 +480,7 @@ ${formData.message}`;
                 lineHeight: '1.7',
                 margin: 0
               }}>
-                Hands-on workshops that upskill teams in cloud, automation, and AI, focused on practical application and real world performance.
+                Hands-on workshops that upskill teams in cloud, automation, and AI. Focused on practical application, operational clarity, and measurable skill development.
               </p>
             </div>
 
@@ -529,7 +531,7 @@ ${formData.message}`;
                 color: '#ffffff',
                 letterSpacing: '-0.01em'
               }}>
-                Applied AI Training for Teams
+                AI & Cloud Capability Development
               </h3>
               <p style={{
                 fontSize: '1.05rem',
@@ -537,127 +539,7 @@ ${formData.message}`;
                 lineHeight: '1.7',
                 margin: 0
               }}>
-                Practical AI instruction that teaches teams how to responsibly and effectively integrate AI tools into everyday workflows.
-              </p>
-            </div>
-
-            {/* Service Card 4 */}
-            <div style={{
-              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              borderRadius: '20px',
-              padding: '2rem',
-              transition: 'all 0.4s ease',
-              position: 'relative',
-              overflow: 'hidden',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              textAlign: 'center'
-            }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.borderColor = 'rgba(76, 217, 100, 0.6)';
-                e.currentTarget.style.boxShadow = '0 12px 40px rgba(76, 217, 100, 0.2)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              <div style={{
-                width: '60px',
-                height: '60px',
-                borderRadius: '16px',
-                background: 'linear-gradient(135deg, #4CD964 0%, #00B140 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                marginBottom: '1.5rem'
-              }}>
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16 4L4 9.5L16 15L28 9.5L16 4Z" fill="#ffffff"/>
-                  <path d="M6 12.5V18.5C6 20.71 10.48 22.5 16 22.5C21.52 22.5 26 20.71 26 18.5V12.5L16 17L6 12.5Z" fill="#ffffff"/>
-                  <path d="M28 11V17C28 17.55 28.45 18 29 18C29.55 18 30 17.55 30 17V10L28 11Z" fill="#ffffff"/>
-                </svg>
-              </div>
-              <h3 style={{
-                fontSize: '1.5rem',
-                fontWeight: '700',
-                marginBottom: '1rem',
-                color: '#ffffff',
-                letterSpacing: '-0.01em'
-              }}>
-                Cloud & Automation Skills Development
-              </h3>
-              <p style={{
-                fontSize: '1.05rem',
-                color: '#bbbbbb',
-                lineHeight: '1.7',
-                margin: 0
-              }}>
-                Focused training programs that build operational capability in modern cloud environments and automation practices.
-              </p>
-            </div>
-
-            {/* Service Card 5 */}
-            <div style={{
-              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              borderRadius: '20px',
-              padding: '2rem',
-              transition: 'all 0.4s ease',
-              position: 'relative',
-              overflow: 'hidden',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              textAlign: 'center'
-            }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.borderColor = 'rgba(76, 217, 100, 0.6)';
-                e.currentTarget.style.boxShadow = '0 12px 40px rgba(76, 217, 100, 0.2)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              <div style={{
-                width: '60px',
-                height: '60px',
-                borderRadius: '16px',
-                background: 'linear-gradient(135deg, #4CD964 0%, #00B140 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                marginBottom: '1.5rem'
-              }}>
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z" fill="#ffffff"/>
-                </svg>
-              </div>
-              <h3 style={{
-                fontSize: '1.5rem',
-                fontWeight: '700',
-                marginBottom: '1rem',
-                color: '#ffffff',
-                letterSpacing: '-0.01em'
-              }}>
-                Technical Advisory & Strategy Consulting
-              </h3>
-              <p style={{
-                fontSize: '1.05rem',
-                color: '#bbbbbb',
-                lineHeight: '1.7',
-                margin: 0
-              }}>
-                Strategic guidance that helps organizations align cloud and AI initiatives with business goals, define roadmaps, and make informed technology decisions without chasing trends.
+                Structured training programs that build internal capability in modern cloud architecture, automation practices, and responsible AI integration. Designed to increase operational confidence,not create long-term dependency.
               </p>
             </div>
             </div>
@@ -693,7 +575,7 @@ ${formData.message}`;
             {[
               'Real-world practitioner-led instruction',
               'Structured engagements with defined outcomes',
-              'Business-aligned cloud & AI strategy and enablement',
+              'Cloud & AI skills aligned to business outcomes',
               'Practical training — not theory',
               'Clear scope, documentation, and delivery'
             ].map((item, index) => (
@@ -731,6 +613,48 @@ ${formData.message}`;
                 </p>
               </div>
             ))}
+          </div>
+          <div style={{
+            display: 'flex',
+            gap: '1rem',
+            justifyContent: 'center',
+            marginTop: '2.5rem',
+            flexWrap: 'wrap'
+          }}>
+            <button
+              onClick={() => setEngagementOpen(true)}
+              style={{
+                padding: '0.9rem 2rem',
+                borderRadius: '12px',
+                background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
+                color: '#ffffff',
+                fontSize: '1rem',
+                fontWeight: '600',
+                textDecoration: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              How Engagement Works
+            </button>
+            <button
+              onClick={() => setPricingOpen(true)}
+              style={{
+                padding: '0.9rem 2rem',
+                borderRadius: '12px',
+                background: 'transparent',
+                color: '#ffffff',
+                fontSize: '1rem',
+                fontWeight: '600',
+                textDecoration: 'none',
+                border: '1px solid rgba(0, 177, 64, 0.6)',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease'
+              }}
+            >
+              Training Packages & Pricing
+            </button>
           </div>
         </div>
       </section>
@@ -947,6 +871,421 @@ ${formData.message}`;
       </section>
 
       <Footer />
+
+      {/* Engagement Modal */}
+      {engagementOpen && (
+        <div
+          onClick={() => setEngagementOpen(false)}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0, 0, 0, 0.85)',
+            backdropFilter: 'blur(8px)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 9999,
+            padding: '1.5rem'
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              background: '#111111',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              borderRadius: '16px',
+              maxWidth: '860px',
+              width: '100%',
+              padding: '2.5rem'
+            }}
+          >
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '2rem' }}>
+              <h2 style={{
+                fontSize: '1.75rem',
+                fontWeight: '700',
+                color: '#ffffff',
+                margin: 0,
+                letterSpacing: '-0.01em'
+              }}>
+                How Engagement Works
+              </h2>
+              <button
+                onClick={() => setEngagementOpen(false)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: '#666',
+                  fontSize: '1.5rem',
+                  cursor: 'pointer',
+                  padding: '0.25rem',
+                  lineHeight: 1
+                }}
+              >
+                ✕
+              </button>
+            </div>
+
+            {[
+              {
+                step: '01',
+                title: 'Discovery Call',
+                desc: 'Clarify goals, audience, current capability, and business context.'
+              },
+              {
+                step: '02',
+                title: 'Scoped Proposal',
+                desc: 'Defined objectives, delivery format (virtual or on-site), duration, and documented learning materials and outcomes.'
+              },
+              {
+                step: '03',
+                title: 'Structured Delivery',
+                desc: 'Hands-on instruction, learning materials, practical exercises.'
+              },
+              {
+                step: '04',
+                title: 'Post-Training Support',
+                desc: 'Dedicated Q&A window, resource access, and optional follow-up sessions to reinforce learning and clarify implementation questions.'
+              }
+            ].map((item, index) => (
+              <div key={index} style={{
+                display: 'flex',
+                gap: '1.25rem',
+                alignItems: 'flex-start',
+                padding: '1.25rem 0',
+                borderBottom: index < 3 ? '1px solid rgba(255, 255, 255, 0.06)' : 'none'
+              }}>
+                <span style={{
+                  fontSize: '0.8rem',
+                  fontWeight: '700',
+                  color: '#00B140',
+                  fontFamily: 'monospace',
+                  minWidth: '28px',
+                  paddingTop: '2px'
+                }}>
+                  {item.step}
+                </span>
+                <div>
+                  <h3 style={{
+                    fontSize: '1.1rem',
+                    fontWeight: '600',
+                    color: '#ffffff',
+                    margin: '0 0 0.35rem 0'
+                  }}>
+                    {item.title}
+                  </h3>
+                  <p style={{
+                    fontSize: '0.95rem',
+                    color: '#999999',
+                    margin: 0,
+                    lineHeight: '1.5'
+                  }}>
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '0.75rem',
+              marginTop: '2rem',
+              paddingTop: '1.5rem',
+              borderTop: '1px solid rgba(255, 255, 255, 0.06)'
+            }}>
+              <button
+                onClick={() => {
+                  setEngagementOpen(false);
+                  setTimeout(() => {
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                }}
+                style={{
+                  padding: '0.9rem 2.5rem',
+                  borderRadius: '12px',
+                  background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
+                  color: '#ffffff',
+                  fontSize: '1rem',
+                  fontWeight: '600',
+                  border: 'none',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  width: '100%',
+                  maxWidth: '320px'
+                }}
+              >
+                Schedule Discovery Call →
+              </button>
+              <button
+                onClick={() => {
+                  setEngagementOpen(false);
+                  setPricingOpen(true);
+                }}
+                style={{
+                  fontSize: '0.9rem',
+                  color: '#666666',
+                  textDecoration: 'none',
+                  cursor: 'pointer',
+                  transition: 'color 0.2s ease',
+                  background: 'none',
+                  border: 'none'
+                }}
+                onMouseEnter={(e) => e.target.style.color = '#999999'}
+                onMouseLeave={(e) => e.target.style.color = '#666666'}
+              >
+                Explore Packages & Pricing
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* Pricing Modal */}
+      {pricingOpen && (
+        <div
+          onClick={() => setPricingOpen(false)}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0, 0, 0, 0.85)',
+            backdropFilter: 'blur(8px)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 9999,
+            padding: '1.5rem'
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              background: '#111111',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              borderRadius: '16px',
+              maxWidth: '960px',
+              width: '100%',
+              maxHeight: '92vh',
+              overflowY: 'auto',
+              padding: '2.5rem'
+            }}
+          >
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
+              <h2 style={{
+                fontSize: '1.75rem',
+                fontWeight: '700',
+                color: '#ffffff',
+                margin: 0,
+                letterSpacing: '-0.01em'
+              }}>
+                Training Packages & Pricing
+              </h2>
+              <button
+                onClick={() => setPricingOpen(false)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: '#666',
+                  fontSize: '1.5rem',
+                  cursor: 'pointer',
+                  padding: '0.25rem',
+                  lineHeight: 1
+                }}
+              >
+                ✕
+              </button>
+            </div>
+            <p style={{ fontSize: '0.95rem', color: '#888', margin: '0 0 2rem 0', lineHeight: '1.5' }}>
+              Structured engagement models for individuals and organizations.<br />
+              Custom scopes available upon request.
+            </p>
+
+            {/* For Individuals */}
+            <p style={{
+              fontSize: '0.8rem',
+              fontWeight: '600',
+              textTransform: 'uppercase',
+              letterSpacing: '0.15em',
+              color: '#00B140',
+              marginBottom: '1rem'
+            }}>
+              For Individuals
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+              {/* 1:1 Mentorship */}
+              <div style={{
+                background: 'rgba(17,17,17,0.8)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '14px',
+                padding: '1.5rem',
+                display: 'flex',
+                flexDirection: 'column'
+              }}>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#fff', margin: '0 0 0.75rem 0' }}>1:1 Technical Mentorship</h3>
+                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1rem 0', flex: 1 }}>
+                  {['Personalized skill development sessions', 'Structured learning roadmap', 'Technical review and applied guidance'].map((item, i) => (
+                    <li key={i} style={{ fontSize: '0.85rem', color: '#999', padding: '0.25rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
+                      <span style={{ color: '#00B140', fontSize: '0.7rem', marginTop: '3px' }}>●</span>{item}
+                    </li>
+                  ))}
+                </ul>
+                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.75rem', marginBottom: '0.75rem' }}>
+                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: 0 }}>$200 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>per session</span></p>
+                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: '0.15rem 0 0 0' }}>$1,000 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>for 6-session package</span></p>
+                </div>
+                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'Hello,\n\nI\'m interested in the 1:1 Technical Mentorship.' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
+              </div>
+
+              {/* Career Strategy */}
+              <div style={{
+                background: 'rgba(17,17,17,0.8)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '14px',
+                padding: '1.5rem',
+                display: 'flex',
+                flexDirection: 'column'
+              }}>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#fff', margin: '0 0 0.75rem 0' }}>Career Strategy Intensive</h3>
+                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1rem 0', flex: 1 }}>
+                  {['Four structured sessions', 'Career roadmap and positioning', 'Portfolio and resume review', 'Interview strategy guidance'].map((item, i) => (
+                    <li key={i} style={{ fontSize: '0.85rem', color: '#999', padding: '0.25rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
+                      <span style={{ color: '#00B140', fontSize: '0.7rem', marginTop: '3px' }}>●</span>{item}
+                    </li>
+                  ))}
+                </ul>
+                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.75rem', marginBottom: '0.75rem' }}>
+                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: 0 }}>$1,200 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>flat rate</span></p>
+                </div>
+                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'Hello,\n\nI\'m interested in the Career Strategy Intensive.' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
+              </div>
+            </div>
+
+            {/* For Organizations */}
+            <p style={{
+              fontSize: '0.8rem',
+              fontWeight: '600',
+              textTransform: 'uppercase',
+              letterSpacing: '0.15em',
+              color: '#00B140',
+              marginBottom: '1rem'
+            }}>
+              For Organizations
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+              {/* Half-Day */}
+              <div style={{
+                background: 'rgba(17,17,17,0.8)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '14px',
+                padding: '1.5rem',
+                display: 'flex',
+                flexDirection: 'column'
+              }}>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#fff', margin: '0 0 0.75rem 0' }}>Half-Day Technical Workshop</h3>
+                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1rem 0', flex: 1 }}>
+                  {['Up to 15 participants', 'Hands-on instruction aligned to your team\'s goals', 'Practical exercises and structured learning materials', 'Dedicated post-session Q&A window'].map((item, i) => (
+                    <li key={i} style={{ fontSize: '0.85rem', color: '#999', padding: '0.25rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
+                      <span style={{ color: '#00B140', fontSize: '0.7rem', marginTop: '3px' }}>●</span>{item}
+                    </li>
+                  ))}
+                </ul>
+                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.75rem', marginBottom: '0.75rem' }}>
+                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: 0 }}>Starting at $3,500 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>(virtual)</span></p>
+                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: '0.15rem 0 0 0' }}>$4,500 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>(onsite)</span></p>
+                </div>
+                <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'Hello,\n\nI\'m interested in the Half-Day Technical Workshop - Virtual.' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Virtual</button>
+                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'Hello,\n\nI\'m interested in the Half-Day Technical Workshop - Onsite.' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Onsite</button>
+                </div>
+              </div>
+
+              {/* Full-Day */}
+              <div style={{
+                background: 'rgba(17,17,17,0.8)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '14px',
+                padding: '1.5rem',
+                display: 'flex',
+                flexDirection: 'column'
+              }}>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#fff', margin: '0 0 0.75rem 0' }}>Full-Day Technical Workshop</h3>
+                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1rem 0', flex: 1 }}>
+                  {['Up to 20 participants', 'Deep technical instruction and applied exercises', 'Structured learning materials', 'Post-training support window'].map((item, i) => (
+                    <li key={i} style={{ fontSize: '0.85rem', color: '#999', padding: '0.25rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
+                      <span style={{ color: '#00B140', fontSize: '0.7rem', marginTop: '3px' }}>●</span>{item}
+                    </li>
+                  ))}
+                </ul>
+                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.75rem', marginBottom: '0.75rem' }}>
+                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: 0 }}>Starting at $6,500 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>(virtual)</span></p>
+                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: '0.15rem 0 0 0' }}>$8,500 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>(onsite)</span></p>
+                </div>
+                <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'Hello,\n\nI\'m interested in the Full-Day Technical Workshop - Virtual.' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Virtual</button>
+                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'Hello,\n\nI\'m interested in the Full-Day Technical Workshop - Onsite.' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Onsite</button>
+                </div>
+              </div>
+            </div>
+
+            {/* Important Notes */}
+            <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '1.25rem', marginBottom: '1.5rem' }}>
+              {['50% deposit required to secure workshop dates', 'Travel billed separately for onsite engagements', 'Training materials licensed for internal team use', 'Custom scopes available for larger teams'].map((note, i) => (
+                <p key={i} style={{ fontSize: '0.78rem', color: '#666', margin: '0.3rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
+                  <span style={{ color: '#444' }}>•</span>{note}
+                </p>
+              ))}
+            </div>
+
+            {/* CTAs */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem' }}>
+              <button
+                onClick={() => {
+                  setPricingOpen(false);
+                  setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100);
+                }}
+                style={{
+                  padding: '0.9rem 2.5rem',
+                  borderRadius: '12px',
+                  background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
+                  color: '#ffffff',
+                  fontSize: '1rem',
+                  fontWeight: '600',
+                  border: 'none',
+                  cursor: 'pointer',
+                  width: '100%',
+                  maxWidth: '320px'
+                }}
+              >
+                Schedule Discovery Call →
+              </button>
+              <button
+                onClick={() => {
+                  setPricingOpen(false);
+                  setFormData(prev => ({ ...prev, message: 'Hello,\n\nI\'m interested in a custom scope for my team. Here are some details:\n\n' }));
+                  setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100);
+                }}
+                style={{
+                  fontSize: '0.9rem',
+                  color: '#666666',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.target.style.color = '#999999'}
+                onMouseLeave={(e) => e.target.style.color = '#666666'}
+              >
+                Request Custom Scope
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
