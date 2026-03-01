@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import styles from '../App.module.css';
 import { useSEO } from '../utils/useSEO';
@@ -6,15 +7,27 @@ import { useSEO } from '../utils/useSEO';
 const Contact = () => {
   useSEO({
     title: 'Contact Us',
-    description: 'Get in touch with Tinted Technologies. Schedule a consultation for cloud consulting, AI advisory, tech training, or workshops.',
+    description: 'Get in touch with Tinted Technologies. Schedule a consultation for tech training, or workshops.',
     path: '/contact'
   });
+
+  const [searchParams] = useSearchParams();
 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
+
+  useEffect(() => {
+    const service = searchParams.get('service');
+    if (service) {
+      setFormData(prev => ({
+        ...prev,
+        message: `I'm interested in the ${service}.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n`
+      }));
+    }
+  }, [searchParams]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

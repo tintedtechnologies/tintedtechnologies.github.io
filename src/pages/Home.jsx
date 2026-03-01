@@ -92,6 +92,7 @@ ${formData.message}`;
             href="#contact"
             onClick={(e) => {
               e.preventDefault();
+              setFormData(prev => ({ ...prev, message: 'I\'m interested in training.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' }));
               const element = document.getElementById('contact');
               if (element) {
                 const navbarHeight = 80;
@@ -1138,7 +1139,7 @@ ${formData.message}`;
                   <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: 0 }}>$200 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>per session</span></p>
                   <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: '0.15rem 0 0 0' }}>$1,000 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>for 6-session package</span></p>
                 </div>
-                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'Hello,\n\nI\'m interested in the 1:1 Technical Mentorship.' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
+                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the 1:1 Technical Mentorship.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
               </div>
 
               {/* Career Strategy */}
@@ -1161,7 +1162,7 @@ ${formData.message}`;
                 <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.75rem', marginBottom: '0.75rem' }}>
                   <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: 0 }}>$1,200 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>flat rate</span></p>
                 </div>
-                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'Hello,\n\nI\'m interested in the Career Strategy Intensive.' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
+                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Career Strategy Intensive.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
               </div>
             </div>
 
@@ -1199,8 +1200,8 @@ ${formData.message}`;
                   <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: '0.15rem 0 0 0' }}>$4,500 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>(onsite)</span></p>
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'Hello,\n\nI\'m interested in the Half-Day Technical Workshop - Virtual.' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Virtual</button>
-                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'Hello,\n\nI\'m interested in the Half-Day Technical Workshop - Onsite.' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Onsite</button>
+                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Half-Day Technical Workshop - Virtual.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Virtual</button>
+                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Half-Day Technical Workshop - Onsite.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Onsite</button>
                 </div>
               </div>
 
@@ -1226,8 +1227,8 @@ ${formData.message}`;
                   <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: '0.15rem 0 0 0' }}>$8,500 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>(onsite)</span></p>
                 </div>
                 <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'Hello,\n\nI\'m interested in the Full-Day Technical Workshop - Virtual.' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Virtual</button>
-                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'Hello,\n\nI\'m interested in the Full-Day Technical Workshop - Onsite.' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Onsite</button>
+                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Full-Day Technical Workshop - Virtual.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Virtual</button>
+                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Full-Day Technical Workshop - Onsite.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Onsite</button>
                 </div>
               </div>
             </div>
@@ -1266,7 +1267,7 @@ ${formData.message}`;
               <button
                 onClick={() => {
                   setPricingOpen(false);
-                  setFormData(prev => ({ ...prev, message: 'Hello,\n\nI\'m interested in a custom scope for my team. Here are some details:\n\n' }));
+                  setFormData(prev => ({ ...prev, message: 'I\'m interested in a custom scope for my team.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' }));
                   setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100);
                 }}
                 style={{
