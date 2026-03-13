@@ -5,7 +5,7 @@ import { useSEO } from '../utils/useSEO';
 const Mission = () => {
   useSEO({
     title: 'Our Mission',
-    description: 'Our mission is to make technology human-centered, relevant, and empowering. Expert Cloud & AI architecture that helps organizations innovate with confidence.',
+    description: 'Our mission is to make technology human-centered, relevant, and empowering. Expert Cloud & AI training that helps individuals build skills with confidence.',
     path: '/mission'
   });
 

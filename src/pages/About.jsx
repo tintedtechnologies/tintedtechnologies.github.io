@@ -5,7 +5,7 @@ import { useSEO } from '../utils/useSEO';
 const About = () => {
   useSEO({
     title: 'About',
-    description: 'Learn about Tinted Technologies and our founder. We partner with startups and small businesses to design scalable cloud systems and apply AI responsibly.',
+    description: 'Learn about Tinted Technologies and our founder. We help individuals build real cloud and AI skills through practitioner-led training.',
     path: '/about'
   });
 

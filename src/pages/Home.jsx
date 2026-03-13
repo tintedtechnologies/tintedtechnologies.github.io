@@ -8,7 +8,7 @@ import { useSEO } from '../utils/useSEO';
 function Home() {
   useSEO({
     title: null,
-    description: 'Tinted Technologies helps individuals and small businesses build real skills and make smart technology decisions. Cloud & AI consulting, training, and workshops.',
+    description: 'Tinted Technologies helps individuals build real skills and make smart technology decisions. Cloud & AI training and workshops.',
     path: '/'
   });
   const [engagementOpen, setEngagementOpen] = useState(false);
@@ -86,7 +86,7 @@ ${formData.message}`;
             lineHeight: '1.5',
             fontWeight: '400'
           }}>
-            Develop Job-Ready Talent. Strengthen Technical Teams.
+            Develop Job-Ready Talent. Build Real Skills.
           </p>
           <a
             href="#contact"
@@ -268,7 +268,7 @@ ${formData.message}`;
               color: '#ffffff',
               letterSpacing: '-0.02em'
             }}>
-              Training  <span style={{ color: '#00B140' }}>&</span> Workforce Development
+              Training  <span style={{ color: '#00B140' }}>&</span> Skill Development
             </h2>
           </div>
 
@@ -409,7 +409,7 @@ ${formData.message}`;
             </div>
           </div>
 
-          {/* For Organizations */}
+          {/* For Organizations - commented out to focus on individuals
           <div>
             <p style={{
               fontSize: '0.85rem',
@@ -426,7 +426,6 @@ ${formData.message}`;
               gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))',
               gap: '1.75rem'
             }}>
-            {/* Service Card 2 */}
             <div style={{
               background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
               backdropFilter: 'blur(10px)',
@@ -485,7 +484,6 @@ ${formData.message}`;
               </p>
             </div>
 
-            {/* Service Card 3 */}
             <div style={{
               background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
               backdropFilter: 'blur(10px)',
@@ -540,11 +538,12 @@ ${formData.message}`;
                 lineHeight: '1.7',
                 margin: 0
               }}>
-                Structured training programs that build internal capability in modern cloud architecture, automation practices, and responsible AI integration. Designed to increase operational confidence,not create long-term dependency.
+                Structured training programs that build internal capability in modern cloud architecture, automation practices, and responsible AI integration. Designed to increase operational confidence, not create long-term dependency.
               </p>
             </div>
             </div>
           </div>
+          */}
         </div>
       </section>
 
@@ -576,7 +575,7 @@ ${formData.message}`;
             {[
               'Real-world practitioner-led instruction',
               'Structured engagements with defined outcomes',
-              'Cloud & AI skills aligned to business outcomes',
+              'Cloud & AI skills aligned to career outcomes',
               'Practical training — not theory',
               'Clear scope, documentation, and delivery'
             ].map((item, index) => (
@@ -1069,11 +1068,11 @@ ${formData.message}`;
               background: '#111111',
               border: '1px solid rgba(255, 255, 255, 0.1)',
               borderRadius: '16px',
-              maxWidth: '960px',
+              maxWidth: '1100px',
               width: '100%',
               maxHeight: '92vh',
-              overflowY: 'auto',
-              padding: '2.5rem'
+              overflowY: 'hidden',
+              padding: '2rem'
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
@@ -1101,8 +1100,8 @@ ${formData.message}`;
                 ✕
               </button>
             </div>
-            <p style={{ fontSize: '0.95rem', color: '#888', margin: '0 0 2rem 0', lineHeight: '1.5' }}>
-              Structured engagement models for individuals and organizations.<br />
+            <p style={{ fontSize: '0.9rem', color: '#888', margin: '0 0 1.25rem 0', lineHeight: '1.5' }}>
+              Structured engagement models for individuals.<br />
               Custom scopes available upon request.
             </p>
 
@@ -1113,33 +1112,57 @@ ${formData.message}`;
               textTransform: 'uppercase',
               letterSpacing: '0.15em',
               color: '#00B140',
-              marginBottom: '1rem'
+              marginBottom: '0.75rem'
             }}>
               For Individuals
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1.25rem', alignItems: 'stretch' }}>
               {/* 1:1 Mentorship */}
               <div style={{
                 background: 'rgba(17,17,17,0.8)',
                 border: '1px solid rgba(255,255,255,0.08)',
                 borderRadius: '14px',
-                padding: '1.5rem',
+                padding: '1.25rem',
                 display: 'flex',
                 flexDirection: 'column'
               }}>
-                <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#fff', margin: '0 0 0.75rem 0' }}>1:1 Technical Mentorship</h3>
-                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1rem 0', flex: 1 }}>
-                  {['Personalized skill development sessions', 'Structured learning roadmap', 'Technical review and applied guidance'].map((item, i) => (
-                    <li key={i} style={{ fontSize: '0.85rem', color: '#999', padding: '0.25rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: '#fff', margin: '0 0 0.5rem 0' }}>1:1 Technical Mentorship</h3>
+                <p style={{ fontSize: '0.8rem', color: '#777', margin: '0 0 0.5rem 0', lineHeight: '1.45' }}>Focused guidance to help you get unstuck, level up a specific skill, or work through a technical challenge with an experienced practitioner.</p>
+                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 0.75rem 0', flex: 1 }}>
+                  {['One-on-one sessions tailored to your exact goals', 'A clear learning roadmap you can follow between sessions', 'Flexible scheduling — book as needed or commit to a package'].map((item, i) => (
+                    <li key={i} style={{ fontSize: '0.8rem', color: '#999', padding: '0.2rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
                       <span style={{ color: '#00B140', fontSize: '0.7rem', marginTop: '3px' }}>●</span>{item}
                     </li>
                   ))}
                 </ul>
-                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.75rem', marginBottom: '0.75rem' }}>
+                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.6rem', marginBottom: '0.6rem', marginTop: 'auto' }}>
                   <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: 0 }}>$200 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>per session</span></p>
-                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: '0.15rem 0 0 0' }}>$1,000 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>for 6-session package</span></p>
                 </div>
                 <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the 1:1 Technical Mentorship.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
+              </div>
+
+              {/* Skill Builder */}
+              <div style={{
+                background: 'rgba(17,17,17,0.8)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '14px',
+                padding: '1.25rem',
+                display: 'flex',
+                flexDirection: 'column'
+              }}>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: '#fff', margin: '0 0 0.5rem 0' }}>Skill Builder Package</h3>
+                <p style={{ fontSize: '0.8rem', color: '#777', margin: '0 0 0.5rem 0', lineHeight: '1.45' }}>A structured 4-session program to build real, demonstrable skills in cloud or AI — with hands-on projects you can add to your portfolio.</p>
+                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 0.75rem 0', flex: 1 }}>
+                  {['Four deep-dive sessions on a focused topic (Python, cloud, or AI)', 'Hands-on projects you complete and keep as portfolio pieces', 'A personalized learning plan with milestones and checkpoints'].map((item, i) => (
+                    <li key={i} style={{ fontSize: '0.8rem', color: '#999', padding: '0.2rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
+                      <span style={{ color: '#00B140', fontSize: '0.7rem', marginTop: '3px' }}>●</span>{item}
+                    </li>
+                  ))}
+                </ul>
+                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.6rem', marginBottom: '0.6rem', marginTop: 'auto' }}>
+                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: 0 }}>$700 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>flat rate</span></p>
+                </div>
+                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Skill Builder Package.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
               </div>
 
               {/* Career Strategy */}
@@ -1147,26 +1170,27 @@ ${formData.message}`;
                 background: 'rgba(17,17,17,0.8)',
                 border: '1px solid rgba(255,255,255,0.08)',
                 borderRadius: '14px',
-                padding: '1.5rem',
+                padding: '1.25rem',
                 display: 'flex',
                 flexDirection: 'column'
               }}>
-                <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#fff', margin: '0 0 0.75rem 0' }}>Career Strategy Intensive</h3>
-                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1rem 0', flex: 1 }}>
-                  {['Four structured sessions', 'Career roadmap and positioning', 'Portfolio and resume review', 'Interview strategy guidance'].map((item, i) => (
-                    <li key={i} style={{ fontSize: '0.85rem', color: '#999', padding: '0.25rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: '#fff', margin: '0 0 0.5rem 0' }}>Career Strategy Intensive</h3>
+                <p style={{ fontSize: '0.8rem', color: '#777', margin: '0 0 0.5rem 0', lineHeight: '1.45' }}>The full package for career changers and job seekers — technical skill building plus the strategy, positioning, and preparation to land the role.</p>
+                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 0.75rem 0', flex: 1 }}>
+                  {['Four structured sessions covering skills, positioning, and interview prep', 'A personalized career roadmap aligned to your target roles', 'Portfolio, resume, and LinkedIn review with actionable feedback'].map((item, i) => (
+                    <li key={i} style={{ fontSize: '0.8rem', color: '#999', padding: '0.2rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
                       <span style={{ color: '#00B140', fontSize: '0.7rem', marginTop: '3px' }}>●</span>{item}
                     </li>
                   ))}
                 </ul>
-                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.75rem', marginBottom: '0.75rem' }}>
+                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.6rem', marginBottom: '0.6rem', marginTop: 'auto' }}>
                   <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: 0 }}>$1,200 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>flat rate</span></p>
                 </div>
                 <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Career Strategy Intensive.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
               </div>
             </div>
 
-            {/* For Organizations */}
+            {/* For Organizations - commented out to focus on individuals
             <p style={{
               fontSize: '0.8rem',
               fontWeight: '600',
@@ -1178,7 +1202,6 @@ ${formData.message}`;
               For Organizations
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
-              {/* Half-Day */}
               <div style={{
                 background: 'rgba(17,17,17,0.8)',
                 border: '1px solid rgba(255,255,255,0.08)',
@@ -1188,24 +1211,8 @@ ${formData.message}`;
                 flexDirection: 'column'
               }}>
                 <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#fff', margin: '0 0 0.75rem 0' }}>Half-Day Technical Workshop</h3>
-                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1rem 0', flex: 1 }}>
-                  {['Up to 15 participants', 'Hands-on instruction aligned to your team\'s goals', 'Practical exercises and structured learning materials', 'Dedicated post-session Q&A window'].map((item, i) => (
-                    <li key={i} style={{ fontSize: '0.85rem', color: '#999', padding: '0.25rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
-                      <span style={{ color: '#00B140', fontSize: '0.7rem', marginTop: '3px' }}>●</span>{item}
-                    </li>
-                  ))}
-                </ul>
-                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.75rem', marginBottom: '0.75rem' }}>
-                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: 0 }}>Starting at $3,500 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>(virtual)</span></p>
-                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: '0.15rem 0 0 0' }}>$4,500 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>(onsite)</span></p>
-                </div>
-                <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Half-Day Technical Workshop - Virtual.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Virtual</button>
-                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Half-Day Technical Workshop - Onsite.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Onsite</button>
-                </div>
+                ...
               </div>
-
-              {/* Full-Day */}
               <div style={{
                 background: 'rgba(17,17,17,0.8)',
                 border: '1px solid rgba(255,255,255,0.08)',
@@ -1215,42 +1222,20 @@ ${formData.message}`;
                 flexDirection: 'column'
               }}>
                 <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#fff', margin: '0 0 0.75rem 0' }}>Full-Day Technical Workshop</h3>
-                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1rem 0', flex: 1 }}>
-                  {['Up to 20 participants', 'Deep technical instruction and applied exercises', 'Structured learning materials', 'Post-training support window'].map((item, i) => (
-                    <li key={i} style={{ fontSize: '0.85rem', color: '#999', padding: '0.25rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
-                      <span style={{ color: '#00B140', fontSize: '0.7rem', marginTop: '3px' }}>●</span>{item}
-                    </li>
-                  ))}
-                </ul>
-                <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.75rem', marginBottom: '0.75rem' }}>
-                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: 0 }}>Starting at $6,500 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>(virtual)</span></p>
-                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: '0.15rem 0 0 0' }}>$8,500 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>(onsite)</span></p>
-                </div>
-                <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Full-Day Technical Workshop - Virtual.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Virtual</button>
-                  <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Full-Day Technical Workshop - Onsite.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500' }}>Onsite</button>
-                </div>
+                ...
               </div>
             </div>
-
-            {/* Important Notes */}
-            <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '1.25rem', marginBottom: '1.5rem' }}>
-              {['50% deposit required to secure workshop dates', 'Travel billed separately for onsite engagements', 'Training materials licensed for internal team use', 'Custom scopes available for larger teams'].map((note, i) => (
-                <p key={i} style={{ fontSize: '0.78rem', color: '#666', margin: '0.3rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
-                  <span style={{ color: '#444' }}>•</span>{note}
-                </p>
-              ))}
-            </div>
+            */}
 
             {/* CTAs */}
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '0.25rem' }}>
               <button
                 onClick={() => {
                   setPricingOpen(false);
                   setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100);
                 }}
                 style={{
-                  padding: '0.9rem 2.5rem',
+                  padding: '0.75rem 2.5rem',
                   borderRadius: '12px',
                   background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
                   color: '#ffffff',
@@ -1264,6 +1249,7 @@ ${formData.message}`;
               >
                 Schedule Discovery Call →
               </button>
+              {/* Request Custom Scope - commented out to focus on individuals
               <button
                 onClick={() => {
                   setPricingOpen(false);
@@ -1283,6 +1269,7 @@ ${formData.message}`;
               >
                 Request Custom Scope
               </button>
+              */}
             </div>
           </div>
         </div>

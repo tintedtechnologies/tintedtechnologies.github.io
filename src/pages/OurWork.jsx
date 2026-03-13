@@ -7,7 +7,7 @@ import { useSEO } from '../utils/useSEO';
 const OurWork = () => {
   useSEO({
     title: 'Our Work',
-    description: 'See how Tinted Technologies helps teams and individuals build with confidence through cloud consulting, AI integration, and tech education.',
+    description: 'See how Tinted Technologies helps individuals build with confidence through cloud training, AI education, and hands-on projects.',
     path: '/our-work'
   });
 
@@ -176,7 +176,7 @@ const OurWork = () => {
             marginBottom: '2rem',
             lineHeight: '1.7'
           }}>
-            Let&apos;s talk about how we can help you, your team, or your community build with confidence — whether you&apos;re learning, shipping, or scaling.
+            Let&apos;s talk about how we can help you build with confidence — whether you&apos;re learning, shipping, or scaling.
           </p>
           <Link to="/contact" style={{
             padding: '18px 48px',

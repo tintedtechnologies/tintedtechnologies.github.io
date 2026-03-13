@@ -7,7 +7,7 @@ import { useSEO } from '../utils/useSEO';
 const Services = () => {
   useSEO({
     title: 'Services',
-    description: 'Tech training, small business cloud & AI advisory, applied AI & automation consulting, and hands-on workshops from Tinted Technologies.',
+    description: 'Tech training, career enablement, and hands-on cloud & AI workshops for individuals from Tinted Technologies.',
     path: '/services'
   });
 
@@ -60,9 +60,11 @@ const Services = () => {
         }}>
           {[
             { title: 'Tech Foundations & Career Enablement', color: '#00B140', description: 'Train individuals to break into tech: cloud basics, AI literacy, real-world tooling, and career-ready skills. We make complex concepts accessible through project-based learning and real-world examples. Whether you\'re starting out or leveling up, our training covers everything from cloud fundamentals and AI literacy to hands-on tooling and career preparation.' },
+            /* Commented out to focus on individuals
             { title: 'Small Business Cloud & AI Advisory', color: '#4CD964', description: 'Practical consulting to help small businesses get online, modernize operations, and use cloud + AI responsibly. We offer hands-on guidance for getting your business into the cloud, improving workflows, and adopting AI tools that actually make sense for your size and budget, without the enterprise complexity.' },
             { title: 'Applied AI & Automation', color: '#00B140', description: 'Identify where AI actually helps. Process automation, internal tools, and efficiency, without overengineering. We work with teams to find practical AI opportunities, build automation that saves real time, and implement solutions that are maintainable and cost-effective.' },
-            { title: 'Workshops & Enablement', color: '#4CD964', description: 'Hands-on learning or internal upskilling on modern cloud + AI. We run focused workshops for teams and organizations looking to build practical skills in cloud infrastructure, AI tooling, and modern development practices.' }
+            */
+            { title: 'Workshops & Enablement', color: '#4CD964', description: 'Hands-on learning on modern cloud + AI. We run focused workshops for individuals looking to build practical skills in cloud infrastructure, AI tooling, and modern development practices.' }
           ].map((service, i) => (
             <div key={i} style={{
               background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
@@ -147,8 +149,10 @@ const Services = () => {
           </h2>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '2rem'
+            gridTemplateColumns: '1fr',
+            gap: '2rem',
+            maxWidth: '500px',
+            margin: '0 auto'
           }}>
             <div style={{
               background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
@@ -164,6 +168,7 @@ const Services = () => {
                 <li>Underrepresented groups in tech</li>
               </ul>
             </div>
+            {/* Organizations & Teams - commented out to focus on individuals
             <div style={{
               background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
               border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -178,6 +183,7 @@ const Services = () => {
                 <li>Educational institutions</li>
               </ul>
             </div>
+            */}
           </div>
         </div>
       </section>
@@ -204,7 +210,7 @@ const Services = () => {
             marginBottom: '2rem',
             lineHeight: '1.7'
           }}>
-            Let&apos;s discuss how we can help you or your organization build 
+            Let&apos;s discuss how we can help you build 
             the skills needed for the future of technology.
           </p>
           <Link to="/contact" style={{
