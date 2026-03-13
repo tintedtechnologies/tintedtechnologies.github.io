@@ -220,7 +220,7 @@ ${formData.message}`;
                 color: '#00B140',
                 letterSpacing: '-0.01em'
               }}>
-                Practitioner-Led Training
+                About the Founder
               </h3>
               <div style={{
                 display: 'flex',
@@ -229,7 +229,7 @@ ${formData.message}`;
               }}>
                 <img 
                   src={founderImage} 
-                  alt="Jay - Founder & CEO of Tinted Technologies" 
+                  alt="Founder of Tinted Technologies" 
                   className={styles.founderImage}
                 />
               </div>
@@ -240,7 +240,7 @@ ${formData.message}`;
                 margin: 0,
                 fontWeight: '400'
               }}>
-                Tinted Technologies was founded to bridge the gap between theory and real-world technical capability. Led by an experienced multi-cloud and AI practitioner, the company delivers structured, hands-on training designed to build operational skill, not just conceptual knowledge.
+                Tinted Technologies was founded on a simple belief: real skill comes from doing, not watching. After more than a decade in the industry, I created this to give people the practical, no-fluff training I wish existed when I was starting out.
               </p>
             </div>
           </div>
