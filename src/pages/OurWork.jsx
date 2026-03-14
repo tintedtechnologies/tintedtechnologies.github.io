@@ -17,29 +17,29 @@ const OurWork = () => {
 
       {/* Hero Section */}
       <section style={{
-        minHeight: 'calc(100vh - 80px)',
+        minHeight: 'calc(100dvh - 80px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '6rem 1.5rem 2rem',
+        padding: '6rem var(--space-section-x) 2rem',
         textAlign: 'center'
       }}>
         <div style={{ maxWidth: '800px', width: '100%' }}>
           <h1 style={{
-            fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+            fontSize: 'var(--font-title)',
             fontWeight: '800',
             marginBottom: '1.5rem',
-            color: '#ffffff',
+            color: 'var(--color-text)',
             letterSpacing: '-0.02em'
           }}>
-            Tech That <span style={{ color: '#00B140' }}>Teaches</span>. Tools That <span style={{ color: '#4CD964' }}>Include</span>.
+            Tech That <span style={{ color: 'var(--color-accent)' }}>Teaches</span>. Tools That <span style={{ color: 'var(--color-accent-light)' }}>Include</span>.
           </h1>
           <p style={{
-            fontSize: 'clamp(1.05rem, 2.2vw, 1.35rem)',
-            color: '#888888',
+            fontSize: 'var(--font-subtitle)',
+            color: 'var(--color-text-muted)',
             maxWidth: '800px',
             margin: '0 auto',
-            lineHeight: '1.7'
+            lineHeight: 'var(--line-height-relaxed)'
           }}>
             Everything we build is meant to teach, support, or empower.
           </p>
@@ -48,8 +48,8 @@ const OurWork = () => {
 
       {/* Projects Grid */}
       <section style={{
-        padding: '2rem 1.5rem 4rem',
-        background: 'linear-gradient(180deg, #0a0a0a 0%, #000000 100%)'
+        padding: '2rem var(--space-section-x) var(--space-section-y)',
+        background: 'linear-gradient(180deg, var(--color-panel) 0%, var(--color-bg) 100%)'
       }}>
         <div style={{
           display: 'grid',
@@ -63,9 +63,9 @@ const OurWork = () => {
             target="_blank" 
             rel="noopener noreferrer"
             style={{ 
-              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              borderRadius: '20px',
+              background: 'linear-gradient(135deg, var(--color-card-translucent) 0%, rgba(17, 17, 17, 0.4) 100%)',
+              border: '1px solid var(--color-border)',
+              borderRadius: 'var(--radius-card)',
               padding: '2rem',
               textDecoration: 'none', 
               color: 'inherit',
@@ -102,7 +102,7 @@ const OurWork = () => {
                 }} 
               />
             </div>
-            <p style={{ color: '#bbbbbb', fontSize: '1.05rem', margin: 0 }}>API resources and developer tools</p>
+            <p style={{ color: 'var(--color-text-secondary)', fontSize: 'var(--font-body)', margin: 0 }}>API resources and developer tools</p>
           </a>
 
           <a 
@@ -110,9 +110,9 @@ const OurWork = () => {
             target="_blank" 
             rel="noopener noreferrer"
             style={{ 
-              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              borderRadius: '20px',
+              background: 'linear-gradient(135deg, var(--color-card-translucent) 0%, rgba(17, 17, 17, 0.4) 100%)',
+              border: '1px solid var(--color-border)',
+              borderRadius: 'var(--radius-card)',
               padding: '2rem',
               textDecoration: 'none', 
               color: 'inherit',
@@ -149,47 +149,47 @@ const OurWork = () => {
                 }} 
               />
             </div>
-            <p style={{ color: '#bbbbbb', fontSize: '1.05rem', margin: 0 }}>Code repositories and collaboration</p>
+            <p style={{ color: 'var(--color-text-secondary)', fontSize: 'var(--font-body)', margin: 0 }}>Code repositories and collaboration</p>
           </a>
         </div>
       </section>
 
       {/* CTA Section */}
       <section style={{
-        padding: '4rem 1.5rem',
+        padding: 'var(--space-section-y) var(--space-section-x)',
         textAlign: 'center',
-        background: '#000000'
+        background: 'var(--color-bg)'
       }}>
         <div style={{ maxWidth: '700px', margin: '0 auto' }}>
           <h2 style={{
-            fontSize: 'clamp(2rem, 5vw, 3rem)',
+            fontSize: 'var(--font-heading)',
             fontWeight: '800',
-            color: '#ffffff',
+            color: 'var(--color-text)',
             marginBottom: '1.5rem',
             letterSpacing: '-0.02em'
           }}>
             Ready to Collaborate?
           </h2>
           <p style={{
-            fontSize: 'clamp(1.05rem, 2.2vw, 1.35rem)',
-            color: '#888888',
+            fontSize: 'var(--font-subtitle)',
+            color: 'var(--color-text-muted)',
             marginBottom: '2rem',
-            lineHeight: '1.7'
+            lineHeight: 'var(--line-height-relaxed)'
           }}>
             Let&apos;s talk about how we can help you build with confidence — whether you&apos;re learning, shipping, or scaling.
           </p>
           <Link to="/contact" style={{
             padding: '18px 48px',
-            borderRadius: '12px',
+            borderRadius: 'var(--radius-button)',
             border: 'none',
-            background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
-            color: '#ffffff',
+            background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+            color: 'var(--color-text)',
             fontSize: '1.15rem',
             fontWeight: '700',
             cursor: 'pointer',
             textDecoration: 'none',
             display: 'inline-block',
-            boxShadow: '0 4px 20px rgba(0, 177, 64, 0.3)'
+            boxShadow: 'var(--shadow-glow)'
           }}>
             Get in Touch
           </Link>

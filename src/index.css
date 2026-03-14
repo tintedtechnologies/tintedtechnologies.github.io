@@ -11,15 +11,56 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* ===== Design Tokens ===== */
+
+  /* Colors */
+  --color-bg: #000000;
+  --color-panel: #0a0a0a;
+  --color-card: #111111;
+  --color-card-translucent: rgba(17, 17, 17, 0.8);
+  --color-text: #ffffff;
+  --color-text-secondary: #cccccc;
+  --color-text-muted: #888888;
+  --color-text-dim: #666666;
+  --color-accent: #00B140;
+  --color-accent-light: #4CD964;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-accent: rgba(0, 177, 64, 0.2);
+
+  /* Typography */
+  --font-title: clamp(2.5rem, 6vw, 4rem);
+  --font-subtitle: clamp(1.15rem, 2.5vw, 1.5rem);
+  --font-heading: clamp(2rem, 5vw, 3rem);
+  --font-card-title: 1.5rem;
+  --font-body: 1.05rem;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+
+  /* Spacing */
+  --space-section-x: 1.5rem;
+  --space-section-y: 4rem;
+
+  /* Border Radius */
+  --radius-card: 20px;
+  --radius-button: 12px;
+  --radius-input: 12px;
+  --radius-sm: 8px;
+
+  /* Shadows */
+  --shadow-card: 0 4px 32px 0 rgba(0, 177, 64, 0.15);
+  --shadow-glow: 0 4px 20px rgba(0, 177, 64, 0.3);
+  --shadow-hover: 0 12px 40px rgba(0, 177, 64, 0.2);
 }
 
 a {
   font-weight: 500;
-  color: #00B140; /* Green from logo2 */
+  color: var(--color-accent);
   text-decoration: inherit;
 }
 a:hover {
-  color: #4CD964; /* Light green from logo2 */
+  color: var(--color-accent-light);
 }
 
 *, *::before, *::after {
@@ -35,14 +76,12 @@ html {
 @media (max-width: 768px) {
   html {
     font-size: 14px;
-    scroll-padding-top: 80px;
   }
 }
 
 @media (max-width: 480px) {
   html {
-    font-size: 13px;
-    scroll-padding-top: 80px;
+    font-size: 14px; /* Keep at 14px min to prevent iOS input zoom */
   }
 }
 
@@ -56,22 +95,16 @@ body {
 
 ::selection {
   background-color: rgba(0, 177, 64, 0.3);
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 ::-moz-selection {
   background-color: rgba(0, 177, 64, 0.3);
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 section {
   scroll-margin-top: 80px;
-}
-
-@media (max-width: 768px) {
-  section {
-    scroll-margin-top: 80px;
-  }
 }
 
 h1 {
@@ -80,7 +113,7 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -91,22 +124,55 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #00B140; /* Green from logo2 */
+  border-color: var(--color-accent);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Prevent iOS Safari zoom on input focus (font-size must be >= 16px) */
+@media (max-width: 480px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Safe area support for notched devices */
+@supports (padding: env(safe-area-inset-top)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    color: #ffffff;
-    background-color: #000000;
+    color: var(--color-text);
+    background-color: var(--color-bg);
   }
   a:hover {
-    color: #4CD964; /* Light green from logo2 */
+    color: var(--color-accent-light);
   }
   button {
-    background-color: #111111;
+    background-color: var(--color-card);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

@@ -19,9 +19,9 @@ const Mission = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        minHeight: 'calc(100vh - 80px)',
+        minHeight: 'calc(100dvh - 80px)',
         textAlign: 'center',
-        padding: '6rem 1.5rem 2rem'
+        padding: '6rem var(--space-section-x) 2rem'
       }}>
         <div style={{ 
           textAlign: 'center',
@@ -34,21 +34,21 @@ const Mission = () => {
         }}>
           {/* Mission Title */}
           <h1 style={{ 
-            fontSize: 'clamp(2.5rem, 6vw, 4rem)', 
+            fontSize: 'var(--font-title)', 
             fontWeight: '800', 
             margin: 0,
-            color: '#ffffff',
+            color: 'var(--color-text)',
             letterSpacing: '-0.02em'
           }}>
-            Our <span style={{ color: '#00B140' }}>Mission</span>
+            Our <span style={{ color: 'var(--color-accent)' }}>Mission</span>
           </h1>
           
           {/* Mission Statement */}
           <p style={{ 
-            fontSize: 'clamp(1.15rem, 2.5vw, 1.5rem)', 
+            fontSize: 'var(--font-subtitle)', 
             margin: 0,
-            color: '#cccccc',
-            lineHeight: '1.7',
+            color: 'var(--color-text-secondary)',
+            lineHeight: 'var(--line-height-relaxed)',
             textAlign: 'center',
             maxWidth: '800px',
             fontWeight: '400'

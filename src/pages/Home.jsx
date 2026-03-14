@@ -52,9 +52,9 @@ ${formData.message}`;
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        minHeight: '100vh',
+        minHeight: '100dvh',
         textAlign: 'center',
-        padding: '100px 1.5rem 4rem',
+        padding: '100px var(--space-section-x) 4rem',
         position: 'relative',
         overflow: 'hidden'
       }}>
@@ -68,22 +68,21 @@ ${formData.message}`;
           gap: '2.5rem'
         }}>
           <h1 style={{ 
-            fontSize: 'clamp(2.5rem, 5.5vw, 4.5rem)',
+            fontSize: 'var(--font-title)',
             fontWeight: '800',
             margin: 0,
             lineHeight: '1.05',
-            color: '#ffffff',
-            letterSpacing: '-0.02em',
-            whiteSpace: 'nowrap'
+            color: 'var(--color-text)',
+            letterSpacing: '-0.02em'
           }}>
-            Tinted <span style={{ color: '#00B140' }}>Technologies</span>
+            Tinted <span style={{ color: 'var(--color-accent)' }}>Technologies</span>
           </h1>
           <p style={{ 
-            fontSize: 'clamp(1.35rem, 3vw, 2rem)',
-            color: '#cccccc',
+            fontSize: 'var(--font-subtitle)',
+            color: 'var(--color-text-secondary)',
             margin: 0,
             maxWidth: '900px',
-            lineHeight: '1.5',
+            lineHeight: 'var(--line-height-relaxed)',
             fontWeight: '400'
           }}>
             Develop Job-Ready Talent. Build Real Skills.
@@ -108,17 +107,17 @@ ${formData.message}`;
             style={{
               marginTop: '1.5rem',
               padding: '18px 48px',
-              borderRadius: '12px',
+              borderRadius: 'var(--radius-button)',
               border: 'none',
-              background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
-              color: '#ffffff',
+              background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+              color: 'var(--color-text)',
               fontSize: '1.15rem',
               fontWeight: '700',
               cursor: 'pointer',
               textDecoration: 'none',
               display: 'inline-block',
               transition: 'all 0.3s ease',
-              boxShadow: '0 4px 20px rgba(0, 177, 64, 0.3)'
+              boxShadow: 'var(--shadow-glow)'
             }}
             onMouseEnter={(e) => {
               e.target.style.transform = 'translateY(-2px)';
@@ -126,7 +125,7 @@ ${formData.message}`;
             }}
             onMouseLeave={(e) => {
               e.target.style.transform = 'translateY(0)';
-              e.target.style.boxShadow = '0 4px 20px rgba(0, 177, 64, 0.3)';
+              e.target.style.boxShadow = 'var(--shadow-glow)';
             }}
           >
             Request Training →
@@ -136,12 +135,12 @@ ${formData.message}`;
 
       {/* Mission Section */}
       <section id="mission" style={{
-        minHeight: 'calc(100vh - 80px)',
+        minHeight: 'calc(100dvh - 80px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '2rem 1.5rem',
-        background: 'linear-gradient(180deg, #000000 0%, #0a0a0a 100%)',
+        padding: '2rem var(--space-section-x)',
+        background: 'linear-gradient(180deg, var(--color-bg) 0%, var(--color-panel) 100%)',
         position: 'relative'
       }}>
         <div style={{
@@ -150,19 +149,19 @@ ${formData.message}`;
           textAlign: 'center'
         }}>
           <h2 style={{
-            fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+            fontSize: 'var(--font-title)',
             fontWeight: '800',
             marginBottom: '2rem',
-            color: '#ffffff',
-            lineHeight: '1.2',
+            color: 'var(--color-text)',
+            lineHeight: 'var(--line-height-tight)',
             letterSpacing: '-0.02em'
           }}>
-            Our <span style={{ color: '#00B140' }}>Mission</span>
+            Our <span style={{ color: 'var(--color-accent)' }}>Mission</span>
           </h2>
           <p style={{
-            fontSize: 'clamp(1.15rem, 2.5vw, 1.5rem)',
-            color: '#cccccc',
-            lineHeight: '1.7',
+            fontSize: 'var(--font-subtitle)',
+            color: 'var(--color-text-secondary)',
+            lineHeight: 'var(--line-height-relaxed)',
             maxWidth: '900px',
             margin: '0 auto',
             fontWeight: '400',
@@ -175,12 +174,12 @@ ${formData.message}`;
 
       {/* About Section */}
       <section id="about" style={{
-        minHeight: 'calc(100vh - 80px)',
+        minHeight: 'calc(100dvh - 80px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '2rem 1.5rem',
-        background: 'linear-gradient(180deg, #0a0a0a 0%, #000000 100%)',
+        padding: '2rem var(--space-section-x)',
+        background: 'linear-gradient(180deg, var(--color-panel) 0%, var(--color-bg) 100%)',
         position: 'relative'
       }}>
         <div style={{
@@ -193,9 +192,9 @@ ${formData.message}`;
         }}>
           <div style={{
             background: 'linear-gradient(135deg, rgba(0, 177, 64, 0.05) 0%, rgba(76, 217, 100, 0.05) 100%)',
-            borderRadius: '20px',
+            borderRadius: 'var(--radius-card)',
             padding: 'clamp(2.5rem, 5vw, 4rem)',
-            border: '1px solid rgba(0, 177, 64, 0.2)',
+            border: '1px solid var(--color-border-accent)',
             boxShadow: '0 8px 32px rgba(0, 177, 64, 0.1)',
             position: 'relative',
             overflow: 'hidden',
@@ -217,7 +216,7 @@ ${formData.message}`;
                 fontSize: 'clamp(1.75rem, 4vw, 2.5rem)',
                 fontWeight: '700',
                 marginBottom: '2rem',
-                color: '#00B140',
+                color: 'var(--color-accent)',
                 letterSpacing: '-0.01em'
               }}>
                 About the Founder
@@ -235,12 +234,12 @@ ${formData.message}`;
               </div>
               <p style={{
                 fontSize: 'clamp(1.05rem, 2.2vw, 1.3rem)',
-                color: '#cccccc',
+                color: 'var(--color-text-secondary)',
                 lineHeight: '1.8',
                 margin: 0,
                 fontWeight: '400'
               }}>
-                Tinted Technologies was founded on a simple belief: real skill comes from doing, not watching. After more than a decade in the industry, I created this to give people the practical, no-fluff training I wish existed when I was starting out.
+                Tinted Technologies was founded on a simple belief: real skill comes from doing, not watching. After more than a decade in the industry, I created this company to provide the practical, straightforward training I wish had existed when I was starting out.
               </p>
             </div>
           </div>
@@ -249,12 +248,12 @@ ${formData.message}`;
 
       {/* Services Section */}
       <section id="services" style={{
-        minHeight: 'calc(100vh - 80px)',
+        minHeight: 'calc(100dvh - 80px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '2rem 1.5rem',
-        background: '#000000'
+        padding: '2rem var(--space-section-x)',
+        background: 'var(--color-bg)'
       }}>
         <div style={{
           maxWidth: '1300px',
@@ -262,13 +261,13 @@ ${formData.message}`;
         }}>
           <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
             <h2 style={{
-              fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+              fontSize: 'var(--font-title)',
               fontWeight: '800',
               marginBottom: '0.75rem',
-              color: '#ffffff',
+              color: 'var(--color-text)',
               letterSpacing: '-0.02em'
             }}>
-              Training  <span style={{ color: '#00B140' }}>&</span> Skill Development
+              Training  <span style={{ color: 'var(--color-accent)' }}>&</span> Skill Development
             </h2>
           </div>
 
@@ -279,7 +278,7 @@ ${formData.message}`;
               fontWeight: '600',
               textTransform: 'uppercase',
               letterSpacing: '0.15em',
-              color: '#00B140',
+              color: 'var(--color-accent)',
               marginBottom: '1rem'
             }}>
               For Individuals
@@ -291,10 +290,10 @@ ${formData.message}`;
             }}>
             {/* Service Card 1 */}
             <div style={{
-              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
+              background: 'linear-gradient(135deg, var(--color-card-translucent) 0%, rgba(17, 17, 17, 0.4) 100%)',
               backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              borderRadius: '20px',
+              border: '1px solid var(--color-border)',
+              borderRadius: 'var(--radius-card)',
               padding: '2rem',
               transition: 'all 0.4s ease',
               position: 'relative',
@@ -307,11 +306,11 @@ ${formData.message}`;
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
                 e.currentTarget.style.borderColor = 'rgba(0, 177, 64, 0.6)';
-                e.currentTarget.style.boxShadow = '0 12px 40px rgba(0, 177, 64, 0.2)';
+                e.currentTarget.style.boxShadow = 'var(--shadow-hover)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.borderColor = 'var(--color-border)';
                 e.currentTarget.style.boxShadow = 'none';
               }}
             >
@@ -319,7 +318,7 @@ ${formData.message}`;
                 width: '60px',
                 height: '60px',
                 borderRadius: '16px',
-                background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
+                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -330,18 +329,18 @@ ${formData.message}`;
                 </svg>
               </div>
               <h3 style={{
-                fontSize: '1.5rem',
+                fontSize: 'var(--font-card-title)',
                 fontWeight: '700',
                 marginBottom: '1rem',
-                color: '#ffffff',
+                color: 'var(--color-text)',
                 letterSpacing: '-0.01em'
               }}>
                 Tech Foundations & Career Readiness
               </h3>
               <p style={{
-                fontSize: '1.05rem',
-                color: '#bbbbbb',
-                lineHeight: '1.7',
+                fontSize: 'var(--font-body)',
+                color: 'var(--color-text-secondary)',
+                lineHeight: 'var(--line-height-relaxed)',
                 margin: 0
               }}>
                 Structured training in Python, cloud fundamentals, and AI designed to build strong technical foundations and prepare individuals for modern technical roles.
@@ -350,10 +349,10 @@ ${formData.message}`;
 
             {/* Service Card - 1:1 Mentorship */}
             <div style={{
-              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
+              background: 'linear-gradient(135deg, var(--color-card-translucent) 0%, rgba(17, 17, 17, 0.4) 100%)',
               backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              borderRadius: '20px',
+              border: '1px solid var(--color-border)',
+              borderRadius: 'var(--radius-card)',
               padding: '2rem',
               transition: 'all 0.4s ease',
               position: 'relative',
@@ -366,11 +365,11 @@ ${formData.message}`;
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
                 e.currentTarget.style.borderColor = 'rgba(0, 177, 64, 0.6)';
-                e.currentTarget.style.boxShadow = '0 12px 40px rgba(0, 177, 64, 0.2)';
+                e.currentTarget.style.boxShadow = 'var(--shadow-hover)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.borderColor = 'var(--color-border)';
                 e.currentTarget.style.boxShadow = 'none';
               }}
             >
@@ -378,7 +377,7 @@ ${formData.message}`;
                 width: '60px',
                 height: '60px',
                 borderRadius: '16px',
-                background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
+                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -389,18 +388,18 @@ ${formData.message}`;
                 </svg>
               </div>
               <h3 style={{
-                fontSize: '1.5rem',
+                fontSize: 'var(--font-card-title)',
                 fontWeight: '700',
                 marginBottom: '1rem',
-                color: '#ffffff',
+                color: 'var(--color-text)',
                 letterSpacing: '-0.01em'
               }}>
                 1:1 Technical Mentorship & Career Strategy
               </h3>
               <p style={{
-                fontSize: '1.05rem',
-                color: '#bbbbbb',
-                lineHeight: '1.7',
+                fontSize: 'var(--font-body)',
+                color: 'var(--color-text-secondary)',
+                lineHeight: 'var(--line-height-relaxed)',
                 margin: 0
               }}>
                 Personalized guidance for individuals looking to transition into tech or level up their cloud and AI skills. Focused on structured learning plans, technical skill development, and career positioning aligned with real-world expectations.
@@ -549,8 +548,8 @@ ${formData.message}`;
 
       {/* Why Tinted Technologies Section */}
       <section id="why-us" style={{
-        padding: '5rem 1.5rem',
-        background: '#000000'
+        padding: 'var(--space-section-y) var(--space-section-x)',
+        background: 'var(--color-bg)'
       }}>
         <div style={{
           maxWidth: '900px',
@@ -558,14 +557,14 @@ ${formData.message}`;
           margin: '0 auto'
         }}>
           <h2 style={{
-            fontSize: 'clamp(2rem, 5vw, 3rem)',
+            fontSize: 'var(--font-heading)',
             fontWeight: '800',
             marginBottom: '2.5rem',
-            color: '#ffffff',
+            color: 'var(--color-text)',
             letterSpacing: '-0.02em',
             textAlign: 'center'
           }}>
-            Why <span style={{ color: '#00B140' }}>Tinted Technologies</span>
+            Why <span style={{ color: 'var(--color-accent)' }}>Tinted Technologies</span>
           </h2>
           <div style={{
             display: 'flex',
@@ -584,8 +583,8 @@ ${formData.message}`;
                 alignItems: 'center',
                 gap: '1rem',
                 padding: '1.25rem 1.5rem',
-                background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
+                background: 'linear-gradient(135deg, var(--color-card-translucent) 0%, rgba(17, 17, 17, 0.4) 100%)',
+                border: '1px solid var(--color-border)',
                 borderRadius: '14px',
                 backdropFilter: 'blur(10px)'
               }}>
@@ -594,7 +593,7 @@ ${formData.message}`;
                   height: '28px',
                   minWidth: '28px',
                   borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
+                  background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
@@ -605,7 +604,7 @@ ${formData.message}`;
                 </div>
                 <p style={{
                   fontSize: '1.1rem',
-                  color: '#ffffff',
+                  color: 'var(--color-text)',
                   margin: 0,
                   fontWeight: '500'
                 }}>
@@ -625,9 +624,9 @@ ${formData.message}`;
               onClick={() => setEngagementOpen(true)}
               style={{
                 padding: '0.9rem 2rem',
-                borderRadius: '12px',
-                background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
-                color: '#ffffff',
+                borderRadius: 'var(--radius-button)',
+                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+                color: 'var(--color-text)',
                 fontSize: '1rem',
                 fontWeight: '600',
                 textDecoration: 'none',
@@ -642,9 +641,9 @@ ${formData.message}`;
               onClick={() => setPricingOpen(true)}
               style={{
                 padding: '0.9rem 2rem',
-                borderRadius: '12px',
+                borderRadius: 'var(--radius-button)',
                 background: 'transparent',
-                color: '#ffffff',
+                color: 'var(--color-text)',
                 fontSize: '1rem',
                 fontWeight: '600',
                 textDecoration: 'none',
@@ -661,12 +660,12 @@ ${formData.message}`;
 
       {/* Contact Section */}
       <section id="contact" style={{
-        minHeight: 'calc(100vh - 80px)',
+        minHeight: 'calc(100dvh - 80px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '2rem 1.5rem',
-        background: 'linear-gradient(180deg, #000000 0%, #0a0a0a 100%)',
+        padding: '2rem var(--space-section-x)',
+        background: 'linear-gradient(180deg, var(--color-bg) 0%, var(--color-panel) 100%)',
         overflow: 'auto'
       }}>
         <div style={{
@@ -679,24 +678,23 @@ ${formData.message}`;
         }}>
           <div style={{ textAlign: 'center' }}>
             <h2 style={{ 
-              fontSize: 'clamp(2.5rem, 6vw, 4rem)', 
+              fontSize: 'var(--font-title)', 
               fontWeight: '800', 
               margin: 0,
               marginBottom: '1.5rem',
-              color: '#ffffff',
+              color: 'var(--color-text)',
               textAlign: 'center',
-              letterSpacing: '-0.02em',
-              whiteSpace: 'nowrap'
+              letterSpacing: '-0.02em'
             }}>
-              Let&apos;s <span style={{ color: '#00B140' }}>Build</span> Your <span style={{ color: '#00B140' }}>Capability</span>
+              Let&apos;s <span style={{ color: 'var(--color-accent)' }}>Build</span> Your <span style={{ color: 'var(--color-accent)' }}>Capability</span>
             </h2>
             
             <p style={{
-              fontSize: 'clamp(1.05rem, 2.2vw, 1.35rem)',
-              color: '#888888',
+              fontSize: 'var(--font-subtitle)',
+              color: 'var(--color-text-muted)',
               textAlign: 'center',
               margin: 0,
-              lineHeight: '1.7'
+              lineHeight: 'var(--line-height-relaxed)'
             }}>
               Tell us about your team’s training goals.
             </p>
@@ -710,8 +708,8 @@ ${formData.message}`;
             gap: '2rem',
             background: 'linear-gradient(135deg, rgba(0, 177, 64, 0.03) 0%, rgba(76, 217, 100, 0.03) 100%)',
             padding: 'clamp(2rem, 5vw, 3rem)',
-            borderRadius: '20px',
-            border: '1px solid rgba(0, 177, 64, 0.2)',
+            borderRadius: 'var(--radius-card)',
+            border: '1px solid var(--color-border-accent)',
             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
           }}>
             <div style={{
@@ -720,9 +718,9 @@ ${formData.message}`;
               gap: '0.75rem'
             }}>
               <label style={{ 
-                color: '#ffffff', 
+                color: 'var(--color-text)', 
                 fontWeight: '600',
-                fontSize: '1.05rem',
+                fontSize: 'var(--font-body)',
                 letterSpacing: '0.01em'
               }}>
                 Name *
@@ -736,20 +734,20 @@ ${formData.message}`;
                 placeholder="Your name"
                 style={{
                   padding: '16px 20px',
-                  borderRadius: '12px',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  background: 'rgba(17, 17, 17, 0.8)',
-                  color: '#ffffff',
-                  fontSize: '1.05rem',
+                  borderRadius: 'var(--radius-input)',
+                  border: '1px solid var(--color-border)',
+                  background: 'var(--color-card-translucent)',
+                  color: 'var(--color-text)',
+                  fontSize: 'var(--font-body)',
                   transition: 'all 0.3s ease',
                   outline: 'none'
                 }}
                 onFocus={(e) => {
-                  e.target.style.borderColor = '#00B140';
+                  e.target.style.borderColor = 'var(--color-accent)';
                   e.target.style.boxShadow = '0 0 0 3px rgba(0, 177, 64, 0.1)';
                 }}
                 onBlur={(e) => {
-                  e.target.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                  e.target.style.borderColor = 'var(--color-border)';
                   e.target.style.boxShadow = 'none';
                 }}
               />
@@ -761,9 +759,9 @@ ${formData.message}`;
               gap: '0.75rem'
             }}>
               <label style={{ 
-                color: '#ffffff', 
+                color: 'var(--color-text)', 
                 fontWeight: '600',
-                fontSize: '1.05rem',
+                fontSize: 'var(--font-body)',
                 letterSpacing: '0.01em'
               }}>
                 Email *
@@ -777,20 +775,20 @@ ${formData.message}`;
                 placeholder="your.email@example.com"
                 style={{
                   padding: '16px 20px',
-                  borderRadius: '12px',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  background: 'rgba(17, 17, 17, 0.8)',
-                  color: '#ffffff',
-                  fontSize: '1.05rem',
+                  borderRadius: 'var(--radius-input)',
+                  border: '1px solid var(--color-border)',
+                  background: 'var(--color-card-translucent)',
+                  color: 'var(--color-text)',
+                  fontSize: 'var(--font-body)',
                   transition: 'all 0.3s ease',
                   outline: 'none'
                 }}
                 onFocus={(e) => {
-                  e.target.style.borderColor = '#00B140';
+                  e.target.style.borderColor = 'var(--color-accent)';
                   e.target.style.boxShadow = '0 0 0 3px rgba(0, 177, 64, 0.1)';
                 }}
                 onBlur={(e) => {
-                  e.target.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                  e.target.style.borderColor = 'var(--color-border)';
                   e.target.style.boxShadow = 'none';
                 }}
               />
@@ -802,9 +800,9 @@ ${formData.message}`;
               gap: '0.75rem'
             }}>
               <label style={{ 
-                color: '#ffffff', 
+                color: 'var(--color-text)', 
                 fontWeight: '600',
-                fontSize: '1.05rem',
+                fontSize: 'var(--font-body)',
                 letterSpacing: '0.01em'
               }}>
                 Message *
@@ -818,11 +816,11 @@ ${formData.message}`;
                 rows="6"
                 style={{
                   padding: '16px 20px',
-                  borderRadius: '12px',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  background: 'rgba(17, 17, 17, 0.8)',
-                  color: '#ffffff',
-                  fontSize: '1.05rem',
+                  borderRadius: 'var(--radius-input)',
+                  border: '1px solid var(--color-border)',
+                  background: 'var(--color-card-translucent)',
+                  color: 'var(--color-text)',
+                  fontSize: 'var(--font-body)',
                   resize: 'vertical',
                   fontFamily: 'inherit',
                   lineHeight: '1.6',
@@ -830,11 +828,11 @@ ${formData.message}`;
                   outline: 'none'
                 }}
                 onFocus={(e) => {
-                  e.target.style.borderColor = '#00B140';
+                  e.target.style.borderColor = 'var(--color-accent)';
                   e.target.style.boxShadow = '0 0 0 3px rgba(0, 177, 64, 0.1)';
                 }}
                 onBlur={(e) => {
-                  e.target.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                  e.target.style.borderColor = 'var(--color-border)';
                   e.target.style.boxShadow = 'none';
                 }}
               />
@@ -844,16 +842,16 @@ ${formData.message}`;
               type="submit"
               style={{
                 padding: '18px 40px',
-                borderRadius: '12px',
+                borderRadius: 'var(--radius-button)',
                 border: 'none',
-                background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
-                color: '#ffffff',
+                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+                color: 'var(--color-text)',
                 fontSize: '1.15rem',
                 fontWeight: '700',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
                 marginTop: '0.5rem',
-                boxShadow: '0 4px 20px rgba(0, 177, 64, 0.3)'
+                boxShadow: 'var(--shadow-glow)'
               }}
               onMouseEnter={(e) => {
                 e.target.style.transform = 'translateY(-2px)';
@@ -861,7 +859,7 @@ ${formData.message}`;
               }}
               onMouseLeave={(e) => {
                 e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = '0 4px 20px rgba(0, 177, 64, 0.3)';
+                e.target.style.boxShadow = 'var(--shadow-glow)';
               }}
             >
               Request Training →
@@ -894,19 +892,19 @@ ${formData.message}`;
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: '#111111',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              background: 'var(--color-card)',
+              border: '1px solid var(--color-border)',
               borderRadius: '16px',
               maxWidth: '860px',
               width: '100%',
-              padding: '2.5rem'
+              padding: 'clamp(1.5rem, 3vw, 2.5rem)'
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '2rem' }}>
               <h2 style={{
                 fontSize: '1.75rem',
                 fontWeight: '700',
-                color: '#ffffff',
+                color: 'var(--color-text)',
                 margin: 0,
                 letterSpacing: '-0.01em'
               }}>
@@ -917,10 +915,10 @@ ${formData.message}`;
                 style={{
                   background: 'none',
                   border: 'none',
-                  color: '#666',
+                  color: 'var(--color-text-dim)',
                   fontSize: '1.5rem',
                   cursor: 'pointer',
-                  padding: '0.25rem',
+                  padding: '0.5rem',
                   lineHeight: 1
                 }}
               >
@@ -960,7 +958,7 @@ ${formData.message}`;
                 <span style={{
                   fontSize: '0.8rem',
                   fontWeight: '700',
-                  color: '#00B140',
+                  color: 'var(--color-accent)',
                   fontFamily: 'monospace',
                   minWidth: '28px',
                   paddingTop: '2px'
@@ -971,14 +969,14 @@ ${formData.message}`;
                   <h3 style={{
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    color: '#ffffff',
+                    color: 'var(--color-text)',
                     margin: '0 0 0.35rem 0'
                   }}>
                     {item.title}
                   </h3>
                   <p style={{
                     fontSize: '0.95rem',
-                    color: '#999999',
+                    color: 'var(--color-text-muted)',
                     margin: 0,
                     lineHeight: '1.5'
                   }}>
@@ -1006,9 +1004,9 @@ ${formData.message}`;
                 }}
                 style={{
                   padding: '0.9rem 2.5rem',
-                  borderRadius: '12px',
-                  background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
-                  color: '#ffffff',
+                  borderRadius: 'var(--radius-button)',
+                  background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+                  color: 'var(--color-text)',
                   fontSize: '1rem',
                   fontWeight: '600',
                   border: 'none',
@@ -1027,15 +1025,15 @@ ${formData.message}`;
                 }}
                 style={{
                   fontSize: '0.9rem',
-                  color: '#666666',
+                  color: 'var(--color-text-dim)',
                   textDecoration: 'none',
                   cursor: 'pointer',
                   transition: 'color 0.2s ease',
                   background: 'none',
                   border: 'none'
                 }}
-                onMouseEnter={(e) => e.target.style.color = '#999999'}
-                onMouseLeave={(e) => e.target.style.color = '#666666'}
+                onMouseEnter={(e) => e.target.style.color = 'var(--color-text-muted)'}
+                onMouseLeave={(e) => e.target.style.color = 'var(--color-text-dim)'}
               >
                 Explore Packages & Pricing
               </button>
@@ -1065,21 +1063,21 @@ ${formData.message}`;
           <div
             onClick={(e) => e.stopPropagation()}
             style={{
-              background: '#111111',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              background: 'var(--color-card)',
+              border: '1px solid var(--color-border)',
               borderRadius: '16px',
               maxWidth: '1100px',
               width: '100%',
               maxHeight: '92vh',
-              overflowY: 'hidden',
-              padding: '2rem'
+              overflowY: 'auto',
+              padding: 'clamp(1rem, 3vw, 2rem)'
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
               <h2 style={{
                 fontSize: '1.75rem',
                 fontWeight: '700',
-                color: '#ffffff',
+                color: 'var(--color-text)',
                 margin: 0,
                 letterSpacing: '-0.01em'
               }}>
@@ -1090,17 +1088,17 @@ ${formData.message}`;
                 style={{
                   background: 'none',
                   border: 'none',
-                  color: '#666',
+                  color: 'var(--color-text-dim)',
                   fontSize: '1.5rem',
                   cursor: 'pointer',
-                  padding: '0.25rem',
+                  padding: '0.5rem',
                   lineHeight: 1
                 }}
               >
                 ✕
               </button>
             </div>
-            <p style={{ fontSize: '0.9rem', color: '#888', margin: '0 0 1.25rem 0', lineHeight: '1.5' }}>
+            <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', margin: '0 0 1.25rem 0', lineHeight: '1.5' }}>
               Structured engagement models for individuals.<br />
               Custom scopes available upon request.
             </p>
@@ -1111,82 +1109,82 @@ ${formData.message}`;
               fontWeight: '600',
               textTransform: 'uppercase',
               letterSpacing: '0.15em',
-              color: '#00B140',
+              color: 'var(--color-accent)',
               marginBottom: '0.75rem'
             }}>
               For Individuals
             </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1.25rem', alignItems: 'stretch' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '1rem', marginBottom: '1.25rem', alignItems: 'stretch' }}>
               {/* 1:1 Mentorship */}
               <div style={{
-                background: 'rgba(17,17,17,0.8)',
+                background: 'var(--color-card-translucent)',
                 border: '1px solid rgba(255,255,255,0.08)',
-                borderRadius: '14px',
+                borderRadius: 'var(--radius-card)',
                 padding: '1.25rem',
                 display: 'flex',
                 flexDirection: 'column'
               }}>
-                <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: '#fff', margin: '0 0 0.5rem 0' }}>1:1 Technical Mentorship</h3>
-                <p style={{ fontSize: '0.8rem', color: '#777', margin: '0 0 0.5rem 0', lineHeight: '1.45' }}>Focused guidance to help you get unstuck, level up a specific skill, or work through a technical challenge with an experienced practitioner.</p>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: 'var(--color-text)', margin: '0 0 0.5rem 0' }}>1:1 Technical Mentorship</h3>
+                <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', margin: '0 0 0.5rem 0', lineHeight: '1.45' }}>Focused guidance to help you get unstuck, level up a specific skill, or work through a technical challenge with an experienced practitioner.</p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 0.75rem 0', flex: 1 }}>
                   {['One-on-one sessions tailored to your exact goals', 'A clear learning roadmap you can follow between sessions', 'Flexible scheduling — book as needed or commit to a package'].map((item, i) => (
-                    <li key={i} style={{ fontSize: '0.8rem', color: '#999', padding: '0.2rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
-                      <span style={{ color: '#00B140', fontSize: '0.7rem', marginTop: '3px' }}>●</span>{item}
+                    <li key={i} style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', padding: '0.2rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
+                      <span style={{ color: 'var(--color-accent)', fontSize: '0.7rem', marginTop: '3px' }}>●</span>{item}
                     </li>
                   ))}
                 </ul>
                 <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.6rem', marginBottom: '0.6rem', marginTop: 'auto' }}>
-                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: 0 }}>$200 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>per session</span></p>
+                  <p style={{ fontSize: '0.95rem', color: 'var(--color-text)', fontWeight: '600', margin: 0 }}>$200 <span style={{ color: 'var(--color-text-muted)', fontWeight: '400', fontSize: '0.85rem' }}>per session</span></p>
                 </div>
-                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the 1:1 Technical Mentorship.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
+                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the 1:1 Technical Mentorship.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.6rem 1.25rem', borderRadius: 'var(--radius-sm)', background: 'rgba(0,177,64,0.15)', color: 'var(--color-accent)', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
               </div>
 
               {/* Skill Builder */}
               <div style={{
-                background: 'rgba(17,17,17,0.8)',
+                background: 'var(--color-card-translucent)',
                 border: '1px solid rgba(255,255,255,0.08)',
-                borderRadius: '14px',
+                borderRadius: 'var(--radius-card)',
                 padding: '1.25rem',
                 display: 'flex',
                 flexDirection: 'column'
               }}>
-                <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: '#fff', margin: '0 0 0.5rem 0' }}>Skill Builder Package</h3>
-                <p style={{ fontSize: '0.8rem', color: '#777', margin: '0 0 0.5rem 0', lineHeight: '1.45' }}>A structured 4-session program to build real, demonstrable skills in cloud or AI — with hands-on projects you can add to your portfolio.</p>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: 'var(--color-text)', margin: '0 0 0.5rem 0' }}>Skill Builder Package</h3>
+                <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', margin: '0 0 0.5rem 0', lineHeight: '1.45' }}>A structured 4-session program to build real, demonstrable skills in cloud or AI — with hands-on projects you can add to your portfolio.</p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 0.75rem 0', flex: 1 }}>
                   {['Four deep-dive sessions on a focused topic (Python, cloud, or AI)', 'Hands-on projects you complete and keep as portfolio pieces', 'A personalized learning plan with milestones and checkpoints'].map((item, i) => (
-                    <li key={i} style={{ fontSize: '0.8rem', color: '#999', padding: '0.2rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
-                      <span style={{ color: '#00B140', fontSize: '0.7rem', marginTop: '3px' }}>●</span>{item}
+                    <li key={i} style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', padding: '0.2rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
+                      <span style={{ color: 'var(--color-accent)', fontSize: '0.7rem', marginTop: '3px' }}>●</span>{item}
                     </li>
                   ))}
                 </ul>
                 <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.6rem', marginBottom: '0.6rem', marginTop: 'auto' }}>
-                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: 0 }}>$700 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>flat rate</span></p>
+                  <p style={{ fontSize: '0.95rem', color: 'var(--color-text)', fontWeight: '600', margin: 0 }}>$700 <span style={{ color: 'var(--color-text-muted)', fontWeight: '400', fontSize: '0.85rem' }}>flat rate</span></p>
                 </div>
-                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Skill Builder Package.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
+                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Skill Builder Package.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.6rem 1.25rem', borderRadius: 'var(--radius-sm)', background: 'rgba(0,177,64,0.15)', color: 'var(--color-accent)', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
               </div>
 
               {/* Career Strategy */}
               <div style={{
-                background: 'rgba(17,17,17,0.8)',
+                background: 'var(--color-card-translucent)',
                 border: '1px solid rgba(255,255,255,0.08)',
-                borderRadius: '14px',
+                borderRadius: 'var(--radius-card)',
                 padding: '1.25rem',
                 display: 'flex',
                 flexDirection: 'column'
               }}>
-                <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: '#fff', margin: '0 0 0.5rem 0' }}>Career Strategy Intensive</h3>
-                <p style={{ fontSize: '0.8rem', color: '#777', margin: '0 0 0.5rem 0', lineHeight: '1.45' }}>The full package for career changers and job seekers — technical skill building plus the strategy, positioning, and preparation to land the role.</p>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: 'var(--color-text)', margin: '0 0 0.5rem 0' }}>Career Strategy Intensive</h3>
+                <p style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', margin: '0 0 0.5rem 0', lineHeight: '1.45' }}>The full package for career changers and job seekers — technical skill building plus the strategy, positioning, and preparation to land the role.</p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 0.75rem 0', flex: 1 }}>
                   {['Four structured sessions covering skills, positioning, and interview prep', 'A personalized career roadmap aligned to your target roles', 'Portfolio, resume, and LinkedIn review with actionable feedback'].map((item, i) => (
-                    <li key={i} style={{ fontSize: '0.8rem', color: '#999', padding: '0.2rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
-                      <span style={{ color: '#00B140', fontSize: '0.7rem', marginTop: '3px' }}>●</span>{item}
+                    <li key={i} style={{ fontSize: '0.8rem', color: 'var(--color-text-muted)', padding: '0.2rem 0', display: 'flex', gap: '0.5rem', alignItems: 'flex-start' }}>
+                      <span style={{ color: 'var(--color-accent)', fontSize: '0.7rem', marginTop: '3px' }}>●</span>{item}
                     </li>
                   ))}
                 </ul>
                 <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.6rem', marginBottom: '0.6rem', marginTop: 'auto' }}>
-                  <p style={{ fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: 0 }}>$1,200 <span style={{ color: '#888', fontWeight: '400', fontSize: '0.85rem' }}>flat rate</span></p>
+                  <p style={{ fontSize: '0.95rem', color: 'var(--color-text)', fontWeight: '600', margin: 0 }}>$1,200 <span style={{ color: 'var(--color-text-muted)', fontWeight: '400', fontSize: '0.85rem' }}>flat rate</span></p>
                 </div>
-                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Career Strategy Intensive.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.4rem 0.75rem', borderRadius: '8px', background: 'rgba(0,177,64,0.15)', color: '#00B140', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
+                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Career Strategy Intensive.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.6rem 1.25rem', borderRadius: 'var(--radius-sm)', background: 'rgba(0,177,64,0.15)', color: 'var(--color-accent)', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
               </div>
             </div>
 
@@ -1236,9 +1234,9 @@ ${formData.message}`;
                 }}
                 style={{
                   padding: '0.75rem 2.5rem',
-                  borderRadius: '12px',
-                  background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
-                  color: '#ffffff',
+                  borderRadius: 'var(--radius-button)',
+                  background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+                  color: 'var(--color-text)',
                   fontSize: '1rem',
                   fontWeight: '600',
                   border: 'none',

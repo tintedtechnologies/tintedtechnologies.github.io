@@ -1,14 +1,15 @@
 const Footer = () => {
   return (
     <footer style={{
-      background: 'linear-gradient(180deg, #0a0a0a 0%, #000000 100%)',
-      borderTop: '1px solid rgba(0, 177, 64, 0.2)',
+      background: 'linear-gradient(180deg, var(--color-panel) 0%, var(--color-bg) 100%)',
+      borderTop: '1px solid var(--color-border-accent)',
       padding: '1.5rem 2rem',
+      paddingBottom: 'max(1.5rem, env(safe-area-inset-bottom))',
       textAlign: 'center'
     }}>
       <p style={{
         fontSize: '0.95rem',
-        color: '#666666',
+        color: 'var(--color-text-dim)',
         margin: 0
       }}>
         &copy; 2026 Tinted Technologies LLC. All rights reserved.

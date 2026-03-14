@@ -17,29 +17,29 @@ const Services = () => {
       
       {/* Hero Section */}
       <section style={{
-        minHeight: 'calc(100vh - 80px)',
+        minHeight: 'calc(100dvh - 80px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '6rem 1.5rem 2rem',
+        padding: '6rem var(--space-section-x) 2rem',
         textAlign: 'center'
       }}>
         <div style={{ maxWidth: '800px', width: '100%' }}>
           <h1 style={{
-            fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+            fontSize: 'var(--font-title)',
             fontWeight: '800',
             marginBottom: '1.5rem',
-            color: '#ffffff',
+            color: 'var(--color-text)',
             letterSpacing: '-0.02em'
           }}>
-            We Create <span style={{ color: '#00B140' }}>Tools</span> and <span style={{ color: '#4CD964' }}>Training</span> That Make Tech More Equitable.
+            We Create <span style={{ color: 'var(--color-accent)' }}>Tools</span> and <span style={{ color: 'var(--color-accent-light)' }}>Training</span> That Make Tech More Equitable.
           </h1>
           <p style={{
-            fontSize: 'clamp(1.05rem, 2.2vw, 1.35rem)',
-            color: '#888888',
+            fontSize: 'var(--font-subtitle)',
+            color: 'var(--color-text-muted)',
             maxWidth: '800px',
             margin: '0 auto',
-            lineHeight: '1.7'
+            lineHeight: 'var(--line-height-relaxed)'
           }}>
             Everything we build is meant to teach, support, or empower.
           </p>
@@ -48,8 +48,8 @@ const Services = () => {
 
       {/* Services Stack */}
       <section style={{
-        padding: '2rem 1.5rem 4rem',
-        background: 'linear-gradient(180deg, #0a0a0a 0%, #000000 100%)'
+        padding: '2rem var(--space-section-x) var(--space-section-y)',
+        background: 'linear-gradient(180deg, var(--color-panel) 0%, var(--color-bg) 100%)'
       }}>
         <div style={{ 
           display: 'flex', 
@@ -59,22 +59,22 @@ const Services = () => {
           margin: '0 auto' 
         }}>
           {[
-            { title: 'Tech Foundations & Career Enablement', color: '#00B140', description: 'Train individuals to break into tech: cloud basics, AI literacy, real-world tooling, and career-ready skills. We make complex concepts accessible through project-based learning and real-world examples. Whether you\'re starting out or leveling up, our training covers everything from cloud fundamentals and AI literacy to hands-on tooling and career preparation.' },
+            { title: 'Tech Foundations & Career Enablement', color: 'var(--color-accent)', description: 'Train individuals to break into tech: cloud basics, AI literacy, real-world tooling, and career-ready skills. We make complex concepts accessible through project-based learning and real-world examples. Whether you\'re starting out or leveling up, our training covers everything from cloud fundamentals and AI literacy to hands-on tooling and career preparation.' },
             /* Commented out to focus on individuals
             { title: 'Small Business Cloud & AI Advisory', color: '#4CD964', description: 'Practical consulting to help small businesses get online, modernize operations, and use cloud + AI responsibly. We offer hands-on guidance for getting your business into the cloud, improving workflows, and adopting AI tools that actually make sense for your size and budget, without the enterprise complexity.' },
             { title: 'Applied AI & Automation', color: '#00B140', description: 'Identify where AI actually helps. Process automation, internal tools, and efficiency, without overengineering. We work with teams to find practical AI opportunities, build automation that saves real time, and implement solutions that are maintainable and cost-effective.' },
             */
-            { title: 'Workshops & Enablement', color: '#4CD964', description: 'Hands-on learning on modern cloud + AI. We run focused workshops for individuals looking to build practical skills in cloud infrastructure, AI tooling, and modern development practices.' }
+            { title: 'Workshops & Enablement', color: 'var(--color-accent-light)', description: 'Hands-on learning on modern cloud + AI. We run focused workshops for individuals looking to build practical skills in cloud infrastructure, AI tooling, and modern development practices.' }
           ].map((service, i) => (
             <div key={i} style={{
-              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              borderRadius: '20px',
+              background: 'linear-gradient(135deg, var(--color-card-translucent) 0%, rgba(17, 17, 17, 0.4) 100%)',
+              border: '1px solid var(--color-border)',
+              borderRadius: 'var(--radius-card)',
               padding: '2rem',
               transition: 'all 0.3s ease'
             }}>
-              <h3 style={{ color: service.color, fontSize: '1.5rem', fontWeight: '700', marginBottom: '1rem' }}>{service.title}</h3>
-              <p style={{ color: '#bbbbbb', lineHeight: '1.7', fontSize: '1.05rem', margin: 0 }}>{service.description}</p>
+              <h3 style={{ color: service.color, fontSize: 'var(--font-card-title)', fontWeight: '700', marginBottom: '1rem' }}>{service.title}</h3>
+              <p style={{ color: 'var(--color-text-secondary)', lineHeight: 'var(--line-height-relaxed)', fontSize: 'var(--font-body)', margin: 0 }}>{service.description}</p>
             </div>
           ))}
         </div>
@@ -82,15 +82,15 @@ const Services = () => {
 
       {/* Approach Section */}
       <section style={{
-        padding: '4rem 1.5rem',
-        background: '#000000'
+        padding: 'var(--space-section-y) var(--space-section-x)',
+        background: 'var(--color-bg)'
       }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <h2 style={{
             textAlign: 'center',
-            fontSize: 'clamp(2rem, 5vw, 3rem)',
+            fontSize: 'var(--font-heading)',
             fontWeight: '800',
-            color: '#ffffff',
+            color: 'var(--color-text)',
             marginBottom: '2.5rem',
             letterSpacing: '-0.02em'
           }}>
@@ -102,26 +102,26 @@ const Services = () => {
             gap: '2rem'
           }}>
             <div style={{
-              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              borderRadius: '20px',
+              background: 'linear-gradient(135deg, var(--color-card-translucent) 0%, rgba(17, 17, 17, 0.4) 100%)',
+              border: '1px solid var(--color-border)',
+              borderRadius: 'var(--radius-card)',
               padding: '2rem'
             }}>
-              <h3 style={{ color: '#4CD964', fontSize: '1.5rem', fontWeight: '700', marginBottom: '1rem' }}>Inclusive by Design</h3>
-              <p style={{ color: '#bbbbbb', lineHeight: '1.7', fontSize: '1.05rem', margin: 0 }}>
+              <h3 style={{ color: 'var(--color-accent-light)', fontSize: 'var(--font-card-title)', fontWeight: '700', marginBottom: '1rem' }}>Inclusive by Design</h3>
+              <p style={{ color: 'var(--color-text-secondary)', lineHeight: 'var(--line-height-relaxed)', fontSize: 'var(--font-body)', margin: 0 }}>
                 Every program we create prioritizes accessibility, diverse learning styles, 
                 and real-world application. We believe technology education should be 
                 welcoming and empowering for everyone.
               </p>
             </div>
             <div style={{
-              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              borderRadius: '20px',
+              background: 'linear-gradient(135deg, var(--color-card-translucent) 0%, rgba(17, 17, 17, 0.4) 100%)',
+              border: '1px solid var(--color-border)',
+              borderRadius: 'var(--radius-card)',
               padding: '2rem'
             }}>
-              <h3 style={{ color: '#00B140', fontSize: '1.5rem', fontWeight: '700', marginBottom: '1rem' }}>Hands-On Learning</h3>
-              <p style={{ color: '#bbbbbb', lineHeight: '1.7', fontSize: '1.05rem', margin: 0 }}>
+              <h3 style={{ color: 'var(--color-accent)', fontSize: 'var(--font-card-title)', fontWeight: '700', marginBottom: '1rem' }}>Hands-On Learning</h3>
+              <p style={{ color: 'var(--color-text-secondary)', lineHeight: 'var(--line-height-relaxed)', fontSize: 'var(--font-body)', margin: 0 }}>
                 Theory is important, but practice makes perfect. Our training emphasizes 
                 project-based learning, giving participants the confidence to apply their 
                 new skills immediately.
@@ -133,15 +133,15 @@ const Services = () => {
 
       {/* Who We Serve */}
       <section style={{
-        padding: '4rem 1.5rem',
-        background: 'linear-gradient(180deg, #000000 0%, #0a0a0a 100%)'
+        padding: 'var(--space-section-y) var(--space-section-x)',
+        background: 'linear-gradient(180deg, var(--color-bg) 0%, var(--color-panel) 100%)'
       }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <h2 style={{
             textAlign: 'center',
-            fontSize: 'clamp(2rem, 5vw, 3rem)',
+            fontSize: 'var(--font-heading)',
             fontWeight: '800',
-            color: '#ffffff',
+            color: 'var(--color-text)',
             marginBottom: '2.5rem',
             letterSpacing: '-0.02em'
           }}>
@@ -155,13 +155,13 @@ const Services = () => {
             margin: '0 auto'
           }}>
             <div style={{
-              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
-              borderRadius: '20px',
+              background: 'linear-gradient(135deg, var(--color-card-translucent) 0%, rgba(17, 17, 17, 0.4) 100%)',
+              border: '1px solid var(--color-border)',
+              borderRadius: 'var(--radius-card)',
               padding: '2rem'
             }}>
-              <h3 style={{ color: '#4CD964', fontSize: '1.5rem', fontWeight: '700', marginBottom: '1rem' }}>Individuals & Students</h3>
-              <ul style={{ color: '#bbbbbb', lineHeight: '2', fontSize: '1.05rem', margin: 0, paddingLeft: '1.25rem' }}>
+              <h3 style={{ color: 'var(--color-accent-light)', fontSize: 'var(--font-card-title)', fontWeight: '700', marginBottom: '1rem' }}>Individuals & Students</h3>
+              <ul style={{ color: 'var(--color-text-secondary)', lineHeight: '2', fontSize: 'var(--font-body)', margin: 0, paddingLeft: '1.25rem' }}>
                 <li>Career changers entering tech</li>
                 <li>Students and bootcamp graduates</li>
                 <li>Professionals upskilling in AI/cloud</li>
@@ -190,41 +190,41 @@ const Services = () => {
 
       {/* CTA Section */}
       <section style={{
-        padding: '4rem 1.5rem',
+        padding: 'var(--space-section-y) var(--space-section-x)',
         textAlign: 'center',
-        background: '#000000'
+        background: 'var(--color-bg)'
       }}>
         <div style={{ maxWidth: '700px', margin: '0 auto' }}>
           <h2 style={{
-            fontSize: 'clamp(2rem, 5vw, 3rem)',
+            fontSize: 'var(--font-heading)',
             fontWeight: '800',
-            color: '#ffffff',
+            color: 'var(--color-text)',
             marginBottom: '1.5rem',
             letterSpacing: '-0.02em'
           }}>
             Ready to Get Started?
           </h2>
           <p style={{
-            fontSize: 'clamp(1.05rem, 2.2vw, 1.35rem)',
-            color: '#888888',
+            fontSize: 'var(--font-subtitle)',
+            color: 'var(--color-text-muted)',
             marginBottom: '2rem',
-            lineHeight: '1.7'
+            lineHeight: 'var(--line-height-relaxed)'
           }}>
             Let&apos;s discuss how we can help you build 
             the skills needed for the future of technology.
           </p>
           <Link to="/contact" style={{
             padding: '18px 48px',
-            borderRadius: '12px',
+            borderRadius: 'var(--radius-button)',
             border: 'none',
-            background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
-            color: '#ffffff',
+            background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+            color: 'var(--color-text)',
             fontSize: '1.15rem',
             fontWeight: '700',
             cursor: 'pointer',
             textDecoration: 'none',
             display: 'inline-block',
-            boxShadow: '0 4px 20px rgba(0, 177, 64, 0.3)'
+            boxShadow: 'var(--shadow-glow)'
           }}>
             Schedule a Consultation
           </Link>

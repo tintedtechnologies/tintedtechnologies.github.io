@@ -65,9 +65,9 @@ function Blog() {
           <div className={styles.blogSection}>
             <div className={styles.blogHeader}>
               <h2 style={{
-                fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+                fontSize: 'var(--font-heading)',
                 fontWeight: '800',
-                color: '#ffffff',
+                color: 'var(--color-text)',
                 letterSpacing: '-0.02em'
               }}>Loading Posts...</h2>
             </div>
@@ -88,13 +88,13 @@ function Blog() {
           marginBottom: '40px'
         }}>
           <h1 style={{ 
-            fontSize: 'clamp(2.5rem, 6vw, 4rem)', 
+            fontSize: 'var(--font-title)', 
             fontWeight: '800', 
             margin: 0,
-            color: '#ffffff',
+            color: 'var(--color-text)',
             letterSpacing: '-0.02em'
           }}>
-            Latest <span style={{ color: '#00B140' }}>Posts</span>
+            Latest <span style={{ color: 'var(--color-accent)' }}>Posts</span>
           </h1>
         </div>
         <div className={styles.blogGrid}>

@@ -58,11 +58,11 @@ ${formData.message}`;
       
       {/* Single Page Contact Content */}
       <section style={{
-        minHeight: 'calc(100vh - 80px)',
+        minHeight: 'calc(100dvh - 80px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '6rem 1.5rem 2rem'
+        padding: '6rem var(--space-section-x) 2rem'
       }}>
         <div style={{
           width: '100%',
@@ -74,14 +74,14 @@ ${formData.message}`;
         }}>
           {/* Contact Us Title */}
           <h1 style={{ 
-            fontSize: 'clamp(2.5rem, 6vw, 4rem)', 
+            fontSize: 'var(--font-title)', 
             fontWeight: '800', 
             margin: 0,
-            color: '#ffffff',
+            color: 'var(--color-text)',
             textAlign: 'center',
             letterSpacing: '-0.02em'
           }}>
-            Contact <span style={{ color: '#00B140' }}>Us</span>
+            Contact <span style={{ color: 'var(--color-accent)' }}>Us</span>
           </h1>
           
           {/* Contact Form */}
@@ -97,9 +97,9 @@ ${formData.message}`;
               gap: '0.5rem'
             }}>
               <label style={{ 
-                color: 'var(--text)', 
+                color: 'var(--color-text)', 
                 fontWeight: '600',
-                fontSize: '1.05rem'
+                fontSize: 'var(--font-body)'
               }}>
                 Name *
               </label>
@@ -111,12 +111,12 @@ ${formData.message}`;
                 required
                 placeholder="Your name"
                 style={{
-                  padding: '14px 18px',
-                  borderRadius: '10px',
-                  border: '1px solid var(--border)',
-                  background: 'var(--card-bg)',
-                  color: 'var(--text)',
-                  fontSize: '1.05rem'
+                  padding: '16px 20px',
+                  borderRadius: 'var(--radius-input)',
+                  border: '1px solid var(--color-border)',
+                  background: 'var(--color-card-translucent)',
+                  color: 'var(--color-text)',
+                  fontSize: 'var(--font-body)'
                 }}
               />
             </div>
@@ -127,9 +127,9 @@ ${formData.message}`;
               gap: '0.5rem'
             }}>
               <label style={{ 
-                color: 'var(--text)', 
+                color: 'var(--color-text)', 
                 fontWeight: '600',
-                fontSize: '1.05rem'
+                fontSize: 'var(--font-body)'
               }}>
                 Email *
               </label>
@@ -141,12 +141,12 @@ ${formData.message}`;
                 required
                 placeholder="your.email@example.com"
                 style={{
-                  padding: '14px 18px',
-                  borderRadius: '10px',
-                  border: '1px solid var(--border)',
-                  background: 'var(--card-bg)',
-                  color: 'var(--text)',
-                  fontSize: '1.05rem'
+                  padding: '16px 20px',
+                  borderRadius: 'var(--radius-input)',
+                  border: '1px solid var(--color-border)',
+                  background: 'var(--color-card-translucent)',
+                  color: 'var(--color-text)',
+                  fontSize: 'var(--font-body)'
                 }}
               />
             </div>
@@ -157,9 +157,9 @@ ${formData.message}`;
               gap: '0.5rem'
             }}>
               <label style={{ 
-                color: 'var(--text)', 
+                color: 'var(--color-text)', 
                 fontWeight: '600',
-                fontSize: '1.05rem'
+                fontSize: 'var(--font-body)'
               }}>
                 Message *
               </label>
@@ -171,12 +171,12 @@ ${formData.message}`;
                 placeholder="Tell us how we can help..."
                 rows="5"
                 style={{
-                  padding: '14px 18px',
-                  borderRadius: '10px',
-                  border: '1px solid var(--border)',
-                  background: 'var(--card-bg)',
-                  color: 'var(--text)',
-                  fontSize: '1.05rem',
+                  padding: '16px 20px',
+                  borderRadius: 'var(--radius-input)',
+                  border: '1px solid var(--color-border)',
+                  background: 'var(--color-card-translucent)',
+                  color: 'var(--color-text)',
+                  fontSize: 'var(--font-body)',
                   resize: 'vertical',
                   fontFamily: 'inherit'
                 }}
@@ -187,16 +187,16 @@ ${formData.message}`;
               type="submit"
               style={{
                 padding: '16px 36px',
-                borderRadius: '12px',
+                borderRadius: 'var(--radius-button)',
                 border: 'none',
-                background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
-                color: '#fff',
+                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+                color: 'var(--color-text)',
                 fontSize: '1.15rem',
                 fontWeight: '700',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
                 marginTop: '1rem',
-                boxShadow: '0 4px 20px rgba(0, 177, 64, 0.3)'
+                boxShadow: 'var(--shadow-glow)'
               }}
               onMouseEnter={(e) => {
                 e.target.style.transform = 'translateY(-2px)';
@@ -204,7 +204,7 @@ ${formData.message}`;
               }}
               onMouseLeave={(e) => {
                 e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = '0 4px 20px rgba(0, 177, 64, 0.3)';
+                e.target.style.boxShadow = 'var(--shadow-glow)';
               }}
             >
               Send Message →
