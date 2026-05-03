@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Tinted Technologies | Cloud & AI Architecture</title>
+    <title>Tinted Technologies</title>
 
     <!-- SEO Meta Tags -->
     <meta name="description" content="Tinted Technologies helps individuals, small businesses, and teams build real skills and make smart technology decisions. Cloud & AI consulting, training, and workshops." />
@@ -13,10 +13,22 @@
     <meta name="theme-color" content="#00B140" />
     <link rel="canonical" href="https://tintedtechnologies.com/" />
 
+    <!-- Theme flash prevention: set data-theme before React renders -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme');
+          if (saved === 'light' || saved === 'dark') {
+            document.documentElement.setAttribute('data-theme', saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tintedtechnologies.com/" />
-    <meta property="og:title" content="Tinted Technologies | Cloud & AI Architecture" />
+    <meta property="og:title" content="Tinted Technologies" />
     <meta property="og:description" content="Cloud & AI architecture for teams building what's next. Training, consulting, and workshops for individuals and small businesses." />
     <meta property="og:image" content="https://tintedtechnologies.com/logo.png" />
     <meta property="og:site_name" content="Tinted Technologies" />
@@ -24,7 +36,7 @@
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Tinted Technologies | Cloud & AI Architecture" />
+    <meta name="twitter:title" content="Tinted Technologies" />
     <meta name="twitter:description" content="Cloud & AI architecture for teams building what's next. Training, consulting, and workshops for individuals and small businesses." />
     <meta name="twitter:image" content="https://tintedtechnologies.com/logo.png" />
 
@@ -56,8 +68,8 @@
         }
       })();
     </script>
-    <script type="module" crossorigin src="/assets/index-By9RzidN.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-D0xl1Rg5.css">
+    <script type="module" crossorigin src="/assets/index-Cuct4UyT.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CBjkyt1D.css">
   </head>
   <body>
     <div id="root"></div>
