@@ -29,11 +29,30 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--color-nav-bg);
   backdrop-filter: blur(12px);
   transition: all 0.3s ease;
   border-bottom: 1px solid var(--color-border-accent);
   min-height: 80px;
+}
+
+.navBrandTitle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  margin-right: auto;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.navBrandTitle:hover {
+  color: var(--color-text);
+}
+
+.navBrandTitle:hover span {
+  color: var(--color-accent);
 }
 
 /* Navigation logo */
@@ -92,6 +111,7 @@
   display: flex;
   align-items: center;
   gap: 32px;
+  margin-left: auto;
 }
 
 .navLink {
@@ -139,6 +159,32 @@
 .startBtn:hover {
   background: #009933;
   transform: translateY(-2px);
+}
+
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid var(--color-border-accent);
+  border-radius: var(--radius-sm);
+  padding: 0;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.themeToggle:hover {
+  color: var(--color-accent);
+  border-color: var(--color-border-accent);
+  background-color: rgba(0, 177, 64, 0.08);
+}
+
+.themeToggle:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .hero {
@@ -440,7 +486,7 @@
     top: 80px;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.97);
+    background: var(--color-nav-mobile-bg);
     backdrop-filter: blur(16px);
     padding: 20px 24px 32px;
     gap: 0;

@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import styles from '../App.module.css';
-import founderImage from '../assets/founder.png';
 import { useSEO } from '../utils/useSEO';
 
 function Home() {
@@ -172,80 +171,6 @@ ${formData.message}`;
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" style={{
-        minHeight: 'calc(100dvh - 80px)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '2rem var(--space-section-x)',
-        background: 'linear-gradient(180deg, var(--color-panel) 0%, var(--color-bg) 100%)',
-        position: 'relative'
-      }}>
-        <div style={{
-          maxWidth: '1100px',
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '2rem'
-        }}>
-          <div style={{
-            background: 'linear-gradient(135deg, rgba(0, 177, 64, 0.05) 0%, rgba(76, 217, 100, 0.05) 100%)',
-            borderRadius: 'var(--radius-card)',
-            padding: 'clamp(2.5rem, 5vw, 4rem)',
-            border: '1px solid var(--color-border-accent)',
-            boxShadow: '0 8px 32px rgba(0, 177, 64, 0.1)',
-            position: 'relative',
-            overflow: 'hidden',
-            maxWidth: '900px',
-            width: '100%'
-          }}>
-            <div style={{
-              position: 'absolute',
-              top: '-50%',
-              right: '-10%',
-              width: '400px',
-              height: '400px',
-              background: 'radial-gradient(circle, rgba(0, 177, 64, 0.1) 0%, transparent 70%)',
-              borderRadius: '50%',
-              pointerEvents: 'none'
-            }}></div>
-            <div style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
-              <h3 style={{
-                fontSize: 'clamp(1.75rem, 4vw, 2.5rem)',
-                fontWeight: '700',
-                marginBottom: '2rem',
-                color: 'var(--color-accent)',
-                letterSpacing: '-0.01em'
-              }}>
-                About the Founder
-              </h3>
-              <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                marginBottom: '2rem'
-              }}>
-                <img 
-                  src={founderImage} 
-                  alt="Founder of Tinted Technologies" 
-                  className={styles.founderImage}
-                />
-              </div>
-              <p style={{
-                fontSize: 'clamp(1.05rem, 2.2vw, 1.3rem)',
-                color: 'var(--color-text-secondary)',
-                lineHeight: '1.8',
-                margin: 0,
-                fontWeight: '400'
-              }}>
-                Tinted Technologies was founded on a simple belief: real skill comes from doing, not watching. After more than a decade in the industry, I created this company to provide the practical, straightforward training I wish had existed when I was starting out.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Services Section */}
       <section id="services" style={{
         minHeight: 'calc(100dvh - 80px)',
@@ -290,7 +215,7 @@ ${formData.message}`;
             }}>
             {/* Service Card 1 */}
             <div style={{
-              background: 'linear-gradient(135deg, var(--color-card-translucent) 0%, rgba(17, 17, 17, 0.4) 100%)',
+              background: 'var(--color-card-gradient)',
               backdropFilter: 'blur(10px)',
               border: '1px solid var(--color-border)',
               borderRadius: 'var(--radius-card)',
@@ -349,7 +274,7 @@ ${formData.message}`;
 
             {/* Service Card - 1:1 Mentorship */}
             <div style={{
-              background: 'linear-gradient(135deg, var(--color-card-translucent) 0%, rgba(17, 17, 17, 0.4) 100%)',
+              background: 'var(--color-card-gradient)',
               backdropFilter: 'blur(10px)',
               border: '1px solid var(--color-border)',
               borderRadius: 'var(--radius-card)',
@@ -548,7 +473,11 @@ ${formData.message}`;
 
       {/* Why Tinted Technologies Section */}
       <section id="why-us" style={{
-        padding: 'var(--space-section-y) var(--space-section-x)',
+        minHeight: 'calc(100dvh - 80px)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '2rem var(--space-section-x)',
         background: 'var(--color-bg)'
       }}>
         <div style={{
@@ -583,7 +512,7 @@ ${formData.message}`;
                 alignItems: 'center',
                 gap: '1rem',
                 padding: '1.25rem 1.5rem',
-                background: 'linear-gradient(135deg, var(--color-card-translucent) 0%, rgba(17, 17, 17, 0.4) 100%)',
+                background: 'var(--color-card-gradient)',
                 border: '1px solid var(--color-border)',
                 borderRadius: '14px',
                 backdropFilter: 'blur(10px)'

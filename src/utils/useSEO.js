@@ -48,7 +48,7 @@ export function useSEO({
 } = {}) {
   useEffect(() => {
     // Title
-    const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Cloud & AI Architecture`;
+    const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
     document.title = fullTitle;
 
     // Standard meta
@@ -81,15 +81,15 @@ export function useSEO({
 
     // Cleanup: reset to defaults on unmount
     return () => {
-      document.title = `${SITE_NAME} | Cloud & AI Architecture`;
+      document.title = SITE_NAME;
       setMetaTag('description', DEFAULT_DESCRIPTION, true);
       setCanonical(BASE_URL + '/');
-      setMetaTag('og:title', `${SITE_NAME} | Cloud & AI Architecture`);
+      setMetaTag('og:title', SITE_NAME);
       setMetaTag('og:description', DEFAULT_DESCRIPTION);
       setMetaTag('og:url', BASE_URL + '/');
       setMetaTag('og:image', DEFAULT_IMAGE);
       setMetaTag('og:type', 'website');
-      setMetaTag('twitter:title', `${SITE_NAME} | Cloud & AI Architecture`, true);
+      setMetaTag('twitter:title', SITE_NAME, true);
       setMetaTag('twitter:description', DEFAULT_DESCRIPTION, true);
       setMetaTag('twitter:image', DEFAULT_IMAGE, true);
     };

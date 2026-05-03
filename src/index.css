@@ -19,6 +19,7 @@
   --color-panel: #0a0a0a;
   --color-card: #111111;
   --color-card-translucent: rgba(17, 17, 17, 0.8);
+  --color-card-gradient: linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%);
   --color-text: #ffffff;
   --color-text-secondary: #cccccc;
   --color-text-muted: #888888;
@@ -52,6 +53,31 @@
   --shadow-card: 0 4px 32px 0 rgba(0, 177, 64, 0.15);
   --shadow-glow: 0 4px 20px rgba(0, 177, 64, 0.3);
   --shadow-hover: 0 12px 40px rgba(0, 177, 64, 0.2);
+
+  /* Nav backgrounds */
+  --color-nav-bg: rgba(0, 0, 0, 0.9);
+  --color-nav-mobile-bg: rgba(0, 0, 0, 0.97);
+}
+
+/* ===== Light Mode ===== */
+[data-theme="light"] {
+  color-scheme: light;
+  color: #0a0a0a;
+  background-color: #ffffff;
+
+  --color-bg: #ffffff;
+  --color-panel: #ffffff;
+  --color-card: #ffffff;
+  --color-card-translucent: rgba(255, 255, 255, 0.85);
+  --color-card-gradient: var(--color-card-translucent);
+  --color-text: #0a0a0a;
+  --color-text-secondary: #333333;
+  --color-text-muted: #555555;
+  --color-text-dim: #777777;
+  --color-border: rgba(0, 0, 0, 0.1);
+
+  --color-nav-bg: rgba(255, 255, 255, 0.92);
+  --color-nav-mobile-bg: rgba(242, 242, 242, 0.98);
 }
 
 a {
