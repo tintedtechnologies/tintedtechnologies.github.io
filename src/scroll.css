@@ -25,9 +25,9 @@
 }
 
 .scrollIndicator:hover {
-  background-color: var(--color-accent-light);
+  background-color: var(--color-accent);
   transform: translateX(-50%) translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 177, 64, 0.3);
+  box-shadow: 0 8px 20px rgba(107, 79, 187, 0.2);
 }
 
 .scrollIndicator:hover svg {

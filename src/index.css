@@ -24,10 +24,11 @@
   --color-text-secondary: #cccccc;
   --color-text-muted: #888888;
   --color-text-dim: #666666;
-  --color-accent: #00B140;
-  --color-accent-light: #4CD964;
+  --color-text-on-accent: #ffffff;
+  --color-accent: #6B4FBB;
+  --color-accent-light: #6B4FBB;
   --color-border: rgba(255, 255, 255, 0.1);
-  --color-border-accent: rgba(0, 177, 64, 0.2);
+  --color-border-accent: rgba(107, 79, 187, 0.2);
 
   /* Typography */
   --font-title: clamp(2.5rem, 6vw, 4rem);
@@ -50,9 +51,9 @@
   --radius-sm: 8px;
 
   /* Shadows */
-  --shadow-card: 0 4px 32px 0 rgba(0, 177, 64, 0.15);
-  --shadow-glow: 0 4px 20px rgba(0, 177, 64, 0.3);
-  --shadow-hover: 0 12px 40px rgba(0, 177, 64, 0.2);
+  --shadow-card: 0 4px 32px 0 rgba(107, 79, 187, 0.2);
+  --shadow-glow: 0 4px 20px rgba(107, 79, 187, 0.2);
+  --shadow-hover: 0 12px 40px rgba(107, 79, 187, 0.2);
 
   /* Nav backgrounds */
   --color-nav-bg: rgba(0, 0, 0, 0.9);
@@ -74,6 +75,7 @@
   --color-text-secondary: #333333;
   --color-text-muted: #555555;
   --color-text-dim: #777777;
+  --color-text-on-accent: #ffffff;
   --color-border: rgba(0, 0, 0, 0.1);
 
   --color-nav-bg: rgba(255, 255, 255, 0.92);
@@ -86,7 +88,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: var(--color-accent-light);
+  color: var(--color-accent);
 }
 
 *, *::before, *::after {
@@ -120,12 +122,12 @@ body {
 }
 
 ::selection {
-  background-color: rgba(0, 177, 64, 0.3);
+  background-color: rgba(107, 79, 187, 0.2);
   color: var(--color-text);
 }
 
 ::-moz-selection {
-  background-color: rgba(0, 177, 64, 0.3);
+  background-color: rgba(107, 79, 187, 0.2);
   color: var(--color-text);
 }
 
@@ -157,6 +159,11 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+[data-theme="light"] button[style*="background"][style*="var(--color-accent)"],
+[data-theme="light"] a[style*="background"][style*="var(--color-accent)"] {
+  color: var(--color-text-on-accent) !important;
+}
+
 /* Prevent iOS Safari zoom on input focus (font-size must be >= 16px) */
 @media (max-width: 480px) {
   input[type="text"],
@@ -185,7 +192,7 @@ button:focus-visible {
     background-color: var(--color-bg);
   }
   a:hover {
-    color: var(--color-accent-light);
+    color: var(--color-accent);
   }
   button {
     background-color: var(--color-card);

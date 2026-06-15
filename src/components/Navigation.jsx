@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from '../App.module.css';
-import { useTheme } from '../App';
+import { useTheme } from '../context/themeContext';
 
 const Navigation = () => {
   const location = useLocation();

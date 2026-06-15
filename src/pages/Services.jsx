@@ -32,7 +32,7 @@ const Services = () => {
             color: 'var(--color-text)',
             letterSpacing: '-0.02em'
           }}>
-            We Create <span style={{ color: 'var(--color-accent)' }}>Tools</span> and <span style={{ color: 'var(--color-accent-light)' }}>Training</span> That Make Tech More Equitable.
+            We Create <span style={{ color: 'var(--color-accent)' }}>Tools</span> and <span style={{ color: 'var(--color-accent)' }}>Training</span> That Make Tech More Equitable.
           </h1>
           <p style={{
             fontSize: 'var(--font-subtitle)',
@@ -61,10 +61,10 @@ const Services = () => {
           {[
             { title: 'Tech Foundations & Career Enablement', color: 'var(--color-accent)', description: 'Train individuals to break into tech: cloud basics, AI literacy, real-world tooling, and career-ready skills. We make complex concepts accessible through project-based learning and real-world examples. Whether you\'re starting out or leveling up, our training covers everything from cloud fundamentals and AI literacy to hands-on tooling and career preparation.' },
             /* Commented out to focus on individuals
-            { title: 'Small Business Cloud & AI Advisory', color: '#4CD964', description: 'Practical consulting to help small businesses get online, modernize operations, and use cloud + AI responsibly. We offer hands-on guidance for getting your business into the cloud, improving workflows, and adopting AI tools that actually make sense for your size and budget, without the enterprise complexity.' },
-            { title: 'Applied AI & Automation', color: '#00B140', description: 'Identify where AI actually helps. Process automation, internal tools, and efficiency, without overengineering. We work with teams to find practical AI opportunities, build automation that saves real time, and implement solutions that are maintainable and cost-effective.' },
+            { title: 'Small Business Cloud & AI Advisory', color: '#6B4FBB', description: 'Practical consulting to help small businesses get online, modernize operations, and use cloud + AI responsibly. We offer hands-on guidance for getting your business into the cloud, improving workflows, and adopting AI tools that actually make sense for your size and budget, without the enterprise complexity.' },
+            { title: 'Applied AI & Automation', color: '#6B4FBB', description: 'Identify where AI actually helps. Process automation, internal tools, and efficiency, without overengineering. We work with teams to find practical AI opportunities, build automation that saves real time, and implement solutions that are maintainable and cost-effective.' },
             */
-            { title: 'Workshops & Enablement', color: 'var(--color-accent-light)', description: 'Hands-on learning on modern cloud + AI. We run focused workshops for individuals looking to build practical skills in cloud infrastructure, AI tooling, and modern development practices.' }
+            { title: 'Workshops & Enablement', color: 'var(--color-accent)', description: 'Hands-on learning on modern cloud + AI. We run focused workshops for individuals looking to build practical skills in cloud infrastructure, AI tooling, and modern development practices.' }
           ].map((service, i) => (
             <div key={i} style={{
               background: 'linear-gradient(135deg, var(--color-card-translucent) 0%, rgba(17, 17, 17, 0.4) 100%)',
@@ -107,7 +107,7 @@ const Services = () => {
               borderRadius: 'var(--radius-card)',
               padding: '2rem'
             }}>
-              <h3 style={{ color: 'var(--color-accent-light)', fontSize: 'var(--font-card-title)', fontWeight: '700', marginBottom: '1rem' }}>Inclusive by Design</h3>
+              <h3 style={{ color: 'var(--color-accent)', fontSize: 'var(--font-card-title)', fontWeight: '700', marginBottom: '1rem' }}>Inclusive by Design</h3>
               <p style={{ color: 'var(--color-text-secondary)', lineHeight: 'var(--line-height-relaxed)', fontSize: 'var(--font-body)', margin: 0 }}>
                 Every program we create prioritizes accessibility, diverse learning styles, 
                 and real-world application. We believe technology education should be 
@@ -160,7 +160,7 @@ const Services = () => {
               borderRadius: 'var(--radius-card)',
               padding: '2rem'
             }}>
-              <h3 style={{ color: 'var(--color-accent-light)', fontSize: 'var(--font-card-title)', fontWeight: '700', marginBottom: '1rem' }}>Individuals & Students</h3>
+              <h3 style={{ color: 'var(--color-accent)', fontSize: 'var(--font-card-title)', fontWeight: '700', marginBottom: '1rem' }}>Individuals & Students</h3>
               <ul style={{ color: 'var(--color-text-secondary)', lineHeight: '2', fontSize: 'var(--font-body)', margin: 0, paddingLeft: '1.25rem' }}>
                 <li>Career changers entering tech</li>
                 <li>Students and bootcamp graduates</li>
@@ -175,7 +175,7 @@ const Services = () => {
               borderRadius: '20px',
               padding: '2rem'
             }}>
-              <h3 style={{ color: '#00B140', fontSize: '1.5rem', fontWeight: '700', marginBottom: '1rem' }}>Organizations & Teams</h3>
+              <h3 style={{ color: '#6B4FBB', fontSize: '1.5rem', fontWeight: '700', marginBottom: '1rem' }}>Organizations & Teams</h3>
               <ul style={{ color: '#bbbbbb', lineHeight: '2', fontSize: '1.05rem', margin: 0, paddingLeft: '1.25rem' }}>
                 <li>Startups implementing AI solutions</li>
                 <li>Non-profits leveraging technology</li>
@@ -217,7 +217,7 @@ const Services = () => {
             padding: '18px 48px',
             borderRadius: 'var(--radius-button)',
             border: 'none',
-            background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+            background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%)',
             color: 'var(--color-text)',
             fontSize: '1.15rem',
             fontWeight: '700',

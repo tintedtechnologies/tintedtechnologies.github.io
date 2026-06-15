@@ -189,7 +189,7 @@ ${formData.message}`;
                 padding: '16px 36px',
                 borderRadius: 'var(--radius-button)',
                 border: 'none',
-                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%)',
                 color: 'var(--color-text)',
                 fontSize: '1.15rem',
                 fontWeight: '700',
@@ -200,7 +200,7 @@ ${formData.message}`;
               }}
               onMouseEnter={(e) => {
                 e.target.style.transform = 'translateY(-2px)';
-                e.target.style.boxShadow = '0 6px 30px rgba(0, 177, 64, 0.4)';
+                e.target.style.boxShadow = '0 6px 30px rgba(107, 79, 187, 0.2)';
               }}
               onMouseLeave={(e) => {
                 e.target.style.transform = 'translateY(0)';

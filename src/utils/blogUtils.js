@@ -41,7 +41,7 @@ export function parseFrontmatter(content) {
 
 // Dynamic blog post loading
 async function loadBlogPosts() {
-  const blogModules = import.meta.glob('../blogs/*.md', { as: 'raw' });
+  const blogModules = import.meta.glob('../blogs/*.md', { query: '?raw', import: 'default' });
   const posts = [];
   
   for (const path in blogModules) {
@@ -79,7 +79,7 @@ export async function getBlogPosts() {
 
 // Function to get a single blog post content
 export async function getBlogPostContent(slug) {
-  const blogModules = import.meta.glob('../blogs/*.md', { as: 'raw' });
+  const blogModules = import.meta.glob('../blogs/*.md', { query: '?raw', import: 'default' });
   
   for (const path in blogModules) {
     const filename = path.split('/').pop().replace('.md', '');

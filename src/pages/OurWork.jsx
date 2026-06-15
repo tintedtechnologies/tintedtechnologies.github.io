@@ -32,7 +32,7 @@ const OurWork = () => {
             color: 'var(--color-text)',
             letterSpacing: '-0.02em'
           }}>
-            Tech That <span style={{ color: 'var(--color-accent)' }}>Teaches</span>. Tools That <span style={{ color: 'var(--color-accent-light)' }}>Include</span>.
+            Tech That <span style={{ color: 'var(--color-accent)' }}>Teaches</span>. Tools That <span style={{ color: 'var(--color-accent)' }}>Include</span>.
           </h1>
           <p style={{
             fontSize: 'var(--font-subtitle)',
@@ -74,7 +74,7 @@ const OurWork = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 177, 64, 0.2)';
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(107, 79, 187, 0.2)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
@@ -93,7 +93,7 @@ const OurWork = () => {
               overflow: 'hidden'
             }}>
               <img 
-                src="https://placehold.co/300x200/1a1a1a/00B140?text=BlackEndpoints" 
+                src="https://placehold.co/300x200/1a1a1a/6B4FBB?text=BlackEndpoints" 
                 alt="BlackEndpoints" 
                 style={{ 
                   width: '100%', 
@@ -121,7 +121,7 @@ const OurWork = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 177, 64, 0.2)';
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(107, 79, 187, 0.2)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
@@ -140,7 +140,7 @@ const OurWork = () => {
               overflow: 'hidden'
             }}>
               <img 
-                src="https://placehold.co/300x200/1a1a1a/4CD964?text=GitHub" 
+                src="https://placehold.co/300x200/1a1a1a/6B4FBB?text=GitHub" 
                 alt="GitHub" 
                 style={{ 
                   width: '100%', 
@@ -182,7 +182,7 @@ const OurWork = () => {
             padding: '18px 48px',
             borderRadius: 'var(--radius-button)',
             border: 'none',
-            background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+            background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%)',
             color: 'var(--color-text)',
             fontSize: '1.15rem',
             fontWeight: '700',

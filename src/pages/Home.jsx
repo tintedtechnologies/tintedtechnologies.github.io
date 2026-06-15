@@ -108,7 +108,7 @@ ${formData.message}`;
               padding: '18px 48px',
               borderRadius: 'var(--radius-button)',
               border: 'none',
-              background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+              background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%)',
               color: 'var(--color-text)',
               fontSize: '1.15rem',
               fontWeight: '700',
@@ -120,7 +120,7 @@ ${formData.message}`;
             }}
             onMouseEnter={(e) => {
               e.target.style.transform = 'translateY(-2px)';
-              e.target.style.boxShadow = '0 6px 30px rgba(0, 177, 64, 0.4)';
+              e.target.style.boxShadow = '0 6px 30px rgba(107, 79, 187, 0.2)';
             }}
             onMouseLeave={(e) => {
               e.target.style.transform = 'translateY(0)';
@@ -230,7 +230,7 @@ ${formData.message}`;
             }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.borderColor = 'rgba(0, 177, 64, 0.6)';
+                e.currentTarget.style.borderColor = 'rgba(107, 79, 187, 0.2)';
                 e.currentTarget.style.boxShadow = 'var(--shadow-hover)';
               }}
               onMouseLeave={(e) => {
@@ -243,7 +243,7 @@ ${formData.message}`;
                 width: '60px',
                 height: '60px',
                 borderRadius: '16px',
-                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -289,7 +289,7 @@ ${formData.message}`;
             }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.borderColor = 'rgba(0, 177, 64, 0.6)';
+                e.currentTarget.style.borderColor = 'rgba(107, 79, 187, 0.2)';
                 e.currentTarget.style.boxShadow = 'var(--shadow-hover)';
               }}
               onMouseLeave={(e) => {
@@ -302,7 +302,7 @@ ${formData.message}`;
                 width: '60px',
                 height: '60px',
                 borderRadius: '16px',
-                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -333,14 +333,13 @@ ${formData.message}`;
             </div>
           </div>
 
-          {/* For Organizations - commented out to focus on individuals
           <div>
             <p style={{
               fontSize: '0.85rem',
               fontWeight: '600',
               textTransform: 'uppercase',
               letterSpacing: '0.15em',
-              color: '#00B140',
+              color: 'var(--color-accent)',
               marginBottom: '1rem'
             }}>
               For Organizations
@@ -351,9 +350,9 @@ ${formData.message}`;
               gap: '1.75rem'
             }}>
             <div style={{
-              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
+              background: 'var(--color-card-gradient)',
               backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              border: '1px solid var(--color-border)',
               borderRadius: '20px',
               padding: '2rem',
               transition: 'all 0.4s ease',
@@ -366,12 +365,12 @@ ${formData.message}`;
             }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.borderColor = 'rgba(0, 177, 64, 0.6)';
-                e.currentTarget.style.boxShadow = '0 12px 40px rgba(0, 177, 64, 0.2)';
+                e.currentTarget.style.borderColor = 'rgba(107, 79, 187, 0.2)';
+                e.currentTarget.style.boxShadow = '0 12px 40px rgba(107, 79, 187, 0.2)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.borderColor = 'var(--color-border)';
                 e.currentTarget.style.boxShadow = 'none';
               }}
             >
@@ -379,7 +378,7 @@ ${formData.message}`;
                 width: '60px',
                 height: '60px',
                 borderRadius: '16px',
-                background: 'linear-gradient(135deg, #00B140 0%, #4CD964 100%)',
+                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -393,14 +392,14 @@ ${formData.message}`;
                 fontSize: '1.5rem',
                 fontWeight: '700',
                 marginBottom: '1rem',
-                color: '#ffffff',
+                color: 'var(--color-text)',
                 letterSpacing: '-0.01em'
               }}>
                 Corporate Technical Workshops
               </h3>
               <p style={{
                 fontSize: '1.05rem',
-                color: '#bbbbbb',
+                color: 'var(--color-text-secondary)',
                 lineHeight: '1.7',
                 margin: 0
               }}>
@@ -409,9 +408,9 @@ ${formData.message}`;
             </div>
 
             <div style={{
-              background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%)',
+              background: 'var(--color-card-gradient)',
               backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              border: '1px solid var(--color-border)',
               borderRadius: '20px',
               padding: '2rem',
               transition: 'all 0.4s ease',
@@ -424,12 +423,12 @@ ${formData.message}`;
             }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.borderColor = 'rgba(76, 217, 100, 0.6)';
-                e.currentTarget.style.boxShadow = '0 12px 40px rgba(76, 217, 100, 0.2)';
+                e.currentTarget.style.borderColor = 'rgba(107, 79, 187, 0.2)';
+                e.currentTarget.style.boxShadow = '0 12px 40px rgba(107, 79, 187, 0.2)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.borderColor = 'var(--color-border)';
                 e.currentTarget.style.boxShadow = 'none';
               }}
             >
@@ -437,7 +436,7 @@ ${formData.message}`;
                 width: '60px',
                 height: '60px',
                 borderRadius: '16px',
-                background: 'linear-gradient(135deg, #4CD964 0%, #00B140 100%)',
+                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -451,14 +450,14 @@ ${formData.message}`;
                 fontSize: '1.5rem',
                 fontWeight: '700',
                 marginBottom: '1rem',
-                color: '#ffffff',
+                color: 'var(--color-text)',
                 letterSpacing: '-0.01em'
               }}>
                 AI & Cloud Capability Development
               </h3>
               <p style={{
                 fontSize: '1.05rem',
-                color: '#bbbbbb',
+                color: 'var(--color-text-secondary)',
                 lineHeight: '1.7',
                 margin: 0
               }}>
@@ -467,7 +466,7 @@ ${formData.message}`;
             </div>
             </div>
           </div>
-          */}
+            
         </div>
       </section>
 
@@ -522,7 +521,7 @@ ${formData.message}`;
                   height: '28px',
                   minWidth: '28px',
                   borderRadius: '50%',
-                  background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+                  background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
@@ -554,7 +553,7 @@ ${formData.message}`;
               style={{
                 padding: '0.9rem 2rem',
                 borderRadius: 'var(--radius-button)',
-                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%)',
                 color: 'var(--color-text)',
                 fontSize: '1rem',
                 fontWeight: '600',
@@ -576,7 +575,7 @@ ${formData.message}`;
                 fontSize: '1rem',
                 fontWeight: '600',
                 textDecoration: 'none',
-                border: '1px solid rgba(0, 177, 64, 0.6)',
+                border: '1px solid rgba(107, 79, 187, 0.2)',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease'
               }}
@@ -635,7 +634,7 @@ ${formData.message}`;
             display: 'flex',
             flexDirection: 'column',
             gap: '2rem',
-            background: 'linear-gradient(135deg, rgba(0, 177, 64, 0.03) 0%, rgba(76, 217, 100, 0.03) 100%)',
+            background: 'linear-gradient(135deg, rgba(107, 79, 187, 0.2) 0%, rgba(107, 79, 187, 0.2) 100%)',
             padding: 'clamp(2rem, 5vw, 3rem)',
             borderRadius: 'var(--radius-card)',
             border: '1px solid var(--color-border-accent)',
@@ -673,7 +672,7 @@ ${formData.message}`;
                 }}
                 onFocus={(e) => {
                   e.target.style.borderColor = 'var(--color-accent)';
-                  e.target.style.boxShadow = '0 0 0 3px rgba(0, 177, 64, 0.1)';
+                  e.target.style.boxShadow = '0 0 0 3px rgba(107, 79, 187, 0.2)';
                 }}
                 onBlur={(e) => {
                   e.target.style.borderColor = 'var(--color-border)';
@@ -714,7 +713,7 @@ ${formData.message}`;
                 }}
                 onFocus={(e) => {
                   e.target.style.borderColor = 'var(--color-accent)';
-                  e.target.style.boxShadow = '0 0 0 3px rgba(0, 177, 64, 0.1)';
+                  e.target.style.boxShadow = '0 0 0 3px rgba(107, 79, 187, 0.2)';
                 }}
                 onBlur={(e) => {
                   e.target.style.borderColor = 'var(--color-border)';
@@ -758,7 +757,7 @@ ${formData.message}`;
                 }}
                 onFocus={(e) => {
                   e.target.style.borderColor = 'var(--color-accent)';
-                  e.target.style.boxShadow = '0 0 0 3px rgba(0, 177, 64, 0.1)';
+                  e.target.style.boxShadow = '0 0 0 3px rgba(107, 79, 187, 0.2)';
                 }}
                 onBlur={(e) => {
                   e.target.style.borderColor = 'var(--color-border)';
@@ -773,7 +772,7 @@ ${formData.message}`;
                 padding: '18px 40px',
                 borderRadius: 'var(--radius-button)',
                 border: 'none',
-                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+                background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%)',
                 color: 'var(--color-text)',
                 fontSize: '1.15rem',
                 fontWeight: '700',
@@ -784,7 +783,7 @@ ${formData.message}`;
               }}
               onMouseEnter={(e) => {
                 e.target.style.transform = 'translateY(-2px)';
-                e.target.style.boxShadow = '0 6px 30px rgba(0, 177, 64, 0.4)';
+                e.target.style.boxShadow = '0 6px 30px rgba(107, 79, 187, 0.2)';
               }}
               onMouseLeave={(e) => {
                 e.target.style.transform = 'translateY(0)';
@@ -934,7 +933,7 @@ ${formData.message}`;
                 style={{
                   padding: '0.9rem 2.5rem',
                   borderRadius: 'var(--radius-button)',
-                  background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+                  background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%)',
                   color: 'var(--color-text)',
                   fontSize: '1rem',
                   fontWeight: '600',
@@ -1065,7 +1064,7 @@ ${formData.message}`;
                 <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.6rem', marginBottom: '0.6rem', marginTop: 'auto' }}>
                   <p style={{ fontSize: '0.95rem', color: 'var(--color-text)', fontWeight: '600', margin: 0 }}>$200 <span style={{ color: 'var(--color-text-muted)', fontWeight: '400', fontSize: '0.85rem' }}>per session</span></p>
                 </div>
-                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the 1:1 Technical Mentorship.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.6rem 1.25rem', borderRadius: 'var(--radius-sm)', background: 'rgba(0,177,64,0.15)', color: 'var(--color-accent)', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
+                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the 1:1 Technical Mentorship.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.6rem 1.25rem', borderRadius: 'var(--radius-sm)', background: 'var(--color-accent)', color: 'var(--color-text-on-accent)', border: '1px solid var(--color-accent)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
               </div>
 
               {/* Skill Builder */}
@@ -1089,7 +1088,7 @@ ${formData.message}`;
                 <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.6rem', marginBottom: '0.6rem', marginTop: 'auto' }}>
                   <p style={{ fontSize: '0.95rem', color: 'var(--color-text)', fontWeight: '600', margin: 0 }}>$700 <span style={{ color: 'var(--color-text-muted)', fontWeight: '400', fontSize: '0.85rem' }}>flat rate</span></p>
                 </div>
-                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Skill Builder Package.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.6rem 1.25rem', borderRadius: 'var(--radius-sm)', background: 'rgba(0,177,64,0.15)', color: 'var(--color-accent)', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
+                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Skill Builder Package.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.6rem 1.25rem', borderRadius: 'var(--radius-sm)', background: 'var(--color-accent)', color: 'var(--color-text-on-accent)', border: '1px solid var(--color-accent)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
               </div>
 
               {/* Career Strategy */}
@@ -1113,46 +1112,90 @@ ${formData.message}`;
                 <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '0.6rem', marginBottom: '0.6rem', marginTop: 'auto' }}>
                   <p style={{ fontSize: '0.95rem', color: 'var(--color-text)', fontWeight: '600', margin: 0 }}>$1,200 <span style={{ color: 'var(--color-text-muted)', fontWeight: '400', fontSize: '0.85rem' }}>flat rate</span></p>
                 </div>
-                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Career Strategy Intensive.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.6rem 1.25rem', borderRadius: 'var(--radius-sm)', background: 'rgba(0,177,64,0.15)', color: 'var(--color-accent)', border: '1px solid rgba(0,177,64,0.3)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
+                <button onClick={() => { setPricingOpen(false); setFormData(prev => ({ ...prev, message: 'I\'m interested in the Career Strategy Intensive.\n\nCurrent technical level:\nTarget outcome:\nBiggest challenge right now:\nTimeline (if any):\n' })); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100); }} style={{ fontSize: '0.8rem', padding: '0.6rem 1.25rem', borderRadius: 'var(--radius-sm)', background: 'var(--color-accent)', color: 'var(--color-text-on-accent)', border: '1px solid var(--color-accent)', cursor: 'pointer', fontWeight: '500', alignSelf: 'flex-start' }}>Get Started</button>
               </div>
             </div>
 
-            {/* For Organizations - commented out to focus on individuals
             <p style={{
               fontSize: '0.8rem',
               fontWeight: '600',
               textTransform: 'uppercase',
               letterSpacing: '0.15em',
-              color: '#00B140',
+              color: 'var(--color-accent)',
               marginBottom: '1rem'
             }}>
               For Organizations
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
               <div style={{
-                background: 'rgba(17,17,17,0.8)',
+                background: 'var(--color-card-translucent)',
                 border: '1px solid rgba(255,255,255,0.08)',
                 borderRadius: '14px',
                 padding: '1.5rem',
                 display: 'flex',
                 flexDirection: 'column'
               }}>
-                <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#fff', margin: '0 0 0.75rem 0' }}>Half-Day Technical Workshop</h3>
-                ...
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--color-text)', margin: '0 0 0.75rem 0' }}>Half-Day Technical Workshop</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', margin: '0 0 0.9rem 0', lineHeight: '1.6' }}>
+                  Focused team training on cloud, AI, or automation foundations with practical exercises and role-aligned outcomes.
+                </p>
+                <button
+                  onClick={() => {
+                    setPricingOpen(false);
+                    setFormData(prev => ({ ...prev, message: 'I am interested in the Half-Day Technical Workshop for my organization.\n\nTeam size:\nPrimary focus area:\nDesired outcomes:\nTimeline:\nBudget range:\n\nPlease email me more details and next steps.' }));
+                    setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100);
+                  }}
+                  style={{
+                    fontSize: '0.8rem',
+                    padding: '0.6rem 1.25rem',
+                    borderRadius: 'var(--radius-sm)',
+                    background: 'var(--color-accent)',
+                    color: 'var(--color-text-on-accent)',
+                    border: '1px solid var(--color-accent)',
+                    cursor: 'pointer',
+                    fontWeight: '500',
+                    alignSelf: 'flex-start',
+                    marginTop: 'auto'
+                  }}
+                >
+                  Email for Details
+                </button>
               </div>
               <div style={{
-                background: 'rgba(17,17,17,0.8)',
+                background: 'var(--color-card-translucent)',
                 border: '1px solid rgba(255,255,255,0.08)',
                 borderRadius: '14px',
                 padding: '1.5rem',
                 display: 'flex',
                 flexDirection: 'column'
               }}>
-                <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#fff', margin: '0 0 0.75rem 0' }}>Full-Day Technical Workshop</h3>
-                ...
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: 'var(--color-text)', margin: '0 0 0.75rem 0' }}>Full-Day Technical Workshop</h3>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', margin: '0 0 0.9rem 0', lineHeight: '1.6' }}>
+                  End-to-end capability sessions for teams, including strategy, implementation guidance, and hands-on delivery plans.
+                </p>
+                <button
+                  onClick={() => {
+                    setPricingOpen(false);
+                    setFormData(prev => ({ ...prev, message: 'I am interested in the Full-Day Technical Workshop for my organization.\n\nTeam size:\nPrimary focus area:\nDesired outcomes:\nTimeline:\nBudget range:\n\nPlease email me more details and next steps.' }));
+                    setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100);
+                  }}
+                  style={{
+                    fontSize: '0.8rem',
+                    padding: '0.6rem 1.25rem',
+                    borderRadius: 'var(--radius-sm)',
+                    background: 'var(--color-accent)',
+                    color: 'var(--color-text-on-accent)',
+                    border: '1px solid var(--color-accent)',
+                    cursor: 'pointer',
+                    fontWeight: '500',
+                    alignSelf: 'flex-start',
+                    marginTop: 'auto'
+                  }}
+                >
+                  Email for Details
+                </button>
               </div>
             </div>
-            */}
 
             {/* CTAs */}
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '0.25rem' }}>
@@ -1164,7 +1207,7 @@ ${formData.message}`;
                 style={{
                   padding: '0.75rem 2.5rem',
                   borderRadius: 'var(--radius-button)',
-                  background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%)',
+                  background: 'linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%)',
                   color: 'var(--color-text)',
                   fontSize: '1rem',
                   fontWeight: '600',
