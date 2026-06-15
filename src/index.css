@@ -15,11 +15,11 @@
   /* ===== Design Tokens ===== */
 
   /* Colors */
-  --color-bg: #000000;
-  --color-panel: #0a0a0a;
-  --color-card: #111111;
-  --color-card-translucent: rgba(17, 17, 17, 0.8);
-  --color-card-gradient: linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(17, 17, 17, 0.4) 100%);
+  --color-bg: #09070f;
+  --color-panel: #0f0c19;
+  --color-card: #151127;
+  --color-card-translucent: rgba(21, 17, 39, 0.82);
+  --color-card-gradient: linear-gradient(135deg, rgba(21, 17, 39, 0.84) 0%, rgba(21, 17, 39, 0.46) 100%);
   --color-text: #ffffff;
   --color-text-secondary: #cccccc;
   --color-text-muted: #888888;
@@ -29,6 +29,8 @@
   --color-accent-light: #6B4FBB;
   --color-border: rgba(255, 255, 255, 0.1);
   --color-border-accent: rgba(107, 79, 187, 0.2);
+  --bg-pattern-line: rgba(196, 182, 236, 0.14);
+  --bg-pattern-opacity: 0.2;
 
   /* Typography */
   --font-title: clamp(2.5rem, 6vw, 4rem);
@@ -66,8 +68,8 @@
   color: #0a0a0a;
   background-color: #ffffff;
 
-  --color-bg: #ffffff;
-  --color-panel: #ffffff;
+  --color-bg: #faf8ff;
+  --color-panel: #f5f1ff;
   --color-card: #ffffff;
   --color-card-translucent: rgba(255, 255, 255, 0.85);
   --color-card-gradient: var(--color-card-translucent);
@@ -77,6 +79,8 @@
   --color-text-dim: #777777;
   --color-text-on-accent: #ffffff;
   --color-border: rgba(0, 0, 0, 0.1);
+  --bg-pattern-line: rgba(140, 116, 204, 0.13);
+  --bg-pattern-opacity: 0.2;
 
   --color-nav-bg: rgba(255, 255, 255, 0.92);
   --color-nav-mobile-bg: rgba(242, 242, 242, 0.98);
@@ -119,6 +123,46 @@ body {
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 8% 82%, rgba(107, 79, 187, 0.14), transparent 36%),
+    radial-gradient(circle at 92% 18%, rgba(107, 79, 187, 0.12), transparent 34%),
+    radial-gradient(circle at 50% 110%, rgba(107, 79, 187, 0.08), transparent 40%),
+    var(--color-bg);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: var(--bg-pattern-opacity);
+  background-image:
+    linear-gradient(30deg, transparent 24%, var(--bg-pattern-line) 24.7%, var(--bg-pattern-line) 25.3%, transparent 26%),
+    linear-gradient(150deg, transparent 24%, var(--bg-pattern-line) 24.7%, var(--bg-pattern-line) 25.3%, transparent 26%),
+    linear-gradient(90deg, transparent 48.8%, var(--bg-pattern-line) 49.4%, var(--bg-pattern-line) 50%, transparent 50.6%);
+  background-size: 72px 124px;
+  background-position: 0 0, 0 0, 36px 62px;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.18;
+  background:
+    radial-gradient(circle at 8% 82%, rgba(107, 79, 187, 0.22), transparent 36%),
+    radial-gradient(circle at 92% 18%, rgba(107, 79, 187, 0.2), transparent 34%),
+    radial-gradient(circle at 50% 110%, rgba(107, 79, 187, 0.14), transparent 40%);
+}
+
+#root {
+  position: relative;
+  z-index: 1;
 }
 
 ::selection {

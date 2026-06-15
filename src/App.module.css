@@ -5,7 +5,17 @@
 .appContainer {
   min-height: 100vh;
   width: 100%;
-  background: var(--color-bg);
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(circle at 6% 80%, rgba(107, 79, 187, 0.16), transparent 34%),
+    radial-gradient(circle at 95% 15%, rgba(107, 79, 187, 0.14), transparent 33%),
+    radial-gradient(circle at 50% 110%, rgba(107, 79, 187, 0.08), transparent 40%),
+    linear-gradient(30deg, transparent 24%, var(--bg-pattern-line) 24.7%, var(--bg-pattern-line) 25.3%, transparent 26%),
+    linear-gradient(150deg, transparent 24%, var(--bg-pattern-line) 24.7%, var(--bg-pattern-line) 25.3%, transparent 26%),
+    linear-gradient(90deg, transparent 48.8%, var(--bg-pattern-line) 49.4%, var(--bg-pattern-line) 50%, transparent 50.6%);
+  background-size: auto, auto, auto, 72px 124px, 72px 124px, 72px 124px;
+  background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 36px 62px;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat, repeat, repeat;
   color: var(--color-text);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   padding: 0;
@@ -13,6 +23,20 @@
   box-sizing: border-box;
   overflow-x: hidden;
   position: relative;
+}
+
+.appContainer::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: none;
+}
+
+.appContainer > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Background halo effect removed as requested */
