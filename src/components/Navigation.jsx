@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from '../App.module.css';
 import { useTheme } from '../context/themeContext';
+import logo from '../assets/logo.png';
 
 const Navigation = () => {
   const location = useLocation();
@@ -53,7 +54,8 @@ const Navigation = () => {
           }
         }}
       >
-        Tinted <span style={{ color: 'var(--color-accent)', transition: 'none' }}>Technologies</span>
+        <img src={logo} alt="" className={styles.navLogo} aria-hidden="true" />
+        <span>Tinted <span style={{ color: 'var(--color-accent)', transition: 'none' }}>Technologies</span></span>
       </Link>
 
       {/* Hamburger button - visible on mobile only */}

@@ -61,8 +61,8 @@ const Services = () => {
           {[
             { title: 'Tech Foundations & Career Enablement', color: 'var(--color-accent)', description: 'Train individuals to break into tech: cloud basics, AI literacy, real-world tooling, and career-ready skills. We make complex concepts accessible through project-based learning and real-world examples. Whether you\'re starting out or leveling up, our training covers everything from cloud fundamentals and AI literacy to hands-on tooling and career preparation.' },
             /* Commented out to focus on individuals
-            { title: 'Small Business Cloud & AI Advisory', color: '#6B4FBB', description: 'Practical consulting to help small businesses get online, modernize operations, and use cloud + AI responsibly. We offer hands-on guidance for getting your business into the cloud, improving workflows, and adopting AI tools that actually make sense for your size and budget, without the enterprise complexity.' },
-            { title: 'Applied AI & Automation', color: '#6B4FBB', description: 'Identify where AI actually helps. Process automation, internal tools, and efficiency, without overengineering. We work with teams to find practical AI opportunities, build automation that saves real time, and implement solutions that are maintainable and cost-effective.' },
+            { title: 'Small Business Cloud & AI Advisory', color: 'var(--color-accent)', description: 'Practical consulting to help small businesses get online, modernize operations, and use cloud + AI responsibly. We offer hands-on guidance for getting your business into the cloud, improving workflows, and adopting AI tools that actually make sense for your size and budget, without the enterprise complexity.' },
+            { title: 'Applied AI & Automation', color: 'var(--color-accent)', description: 'Identify where AI actually helps. Process automation, internal tools, and efficiency, without overengineering. We work with teams to find practical AI opportunities, build automation that saves real time, and implement solutions that are maintainable and cost-effective.' },
             */
             { title: 'Workshops & Enablement', color: 'var(--color-accent)', description: 'Hands-on learning on modern cloud + AI. We run focused workshops for individuals looking to build practical skills in cloud infrastructure, AI tooling, and modern development practices.' }
           ].map((service, i) => (
@@ -175,7 +175,7 @@ const Services = () => {
               borderRadius: '20px',
               padding: '2rem'
             }}>
-              <h3 style={{ color: '#6B4FBB', fontSize: '1.5rem', fontWeight: '700', marginBottom: '1rem' }}>Organizations & Teams</h3>
+              <h3 style={{ color: 'var(--color-accent)', fontSize: '1.5rem', fontWeight: '700', marginBottom: '1rem' }}>Organizations & Teams</h3>
               <ul style={{ color: '#bbbbbb', lineHeight: '2', fontSize: '1.05rem', margin: 0, paddingLeft: '1.25rem' }}>
                 <li>Startups implementing AI solutions</li>
                 <li>Non-profits leveraging technology</li>

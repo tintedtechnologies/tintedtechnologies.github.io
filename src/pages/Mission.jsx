@@ -54,7 +54,7 @@ const Mission = () => {
             fontWeight: '400'
           }}>
             Making technology <span style={{ color: '#4A90E2' }}>simple</span>, <span style={{ color: '#FFD700' }}>accessible</span>, and{' '}
-            <span style={{ color: '#9B59B6' }}>inclusive</span>, creating experiences that{' '}
+            <span style={{ color: 'var(--color-accent)' }}>inclusive</span>, creating experiences that{' '}
             spark learning, fuel creativity, and strengthen connection in the digital age.
           </p>
         </div>

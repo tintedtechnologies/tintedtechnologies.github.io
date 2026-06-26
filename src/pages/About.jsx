@@ -49,7 +49,7 @@ const About = () => {
             maxWidth: '800px',
             fontWeight: '400'
           }}>
-            Building technology that's <span style={{ color: '#9B59B6' }}>inclusive</span> and <span style={{ color: '#FFD700' }}>accessible</span>, empowering everyone to learn, create, and shape the future.
+            Building technology that's <span style={{ color: 'var(--color-accent)' }}>inclusive</span> and <span style={{ color: '#FFD700' }}>accessible</span>, empowering everyone to learn, create, and shape the future.
           </p>
         </div>
       </section>

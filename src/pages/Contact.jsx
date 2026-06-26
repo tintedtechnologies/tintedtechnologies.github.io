@@ -200,7 +200,7 @@ ${formData.message}`;
               }}
               onMouseEnter={(e) => {
                 e.target.style.transform = 'translateY(-2px)';
-                e.target.style.boxShadow = '0 6px 30px rgba(107, 79, 187, 0.2)';
+                e.target.style.boxShadow = '0 6px 30px rgba(var(--color-accent-rgb), 0.2)';
               }}
               onMouseLeave={(e) => {
                 e.target.style.transform = 'translateY(0)';

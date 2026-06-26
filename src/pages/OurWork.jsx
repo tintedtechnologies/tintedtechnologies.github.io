@@ -74,7 +74,7 @@ const OurWork = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.boxShadow = '0 10px 30px rgba(107, 79, 187, 0.2)';
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(var(--color-accent-rgb), 0.2)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
@@ -93,7 +93,7 @@ const OurWork = () => {
               overflow: 'hidden'
             }}>
               <img 
-                src="https://placehold.co/300x200/1a1a1a/6B4FBB?text=BlackEndpoints" 
+                src="https://placehold.co/300x200/1a1a1a/6b56f1?text=BlackEndpoints" 
                 alt="BlackEndpoints" 
                 style={{ 
                   width: '100%', 
@@ -121,7 +121,7 @@ const OurWork = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-5px)';
-              e.currentTarget.style.boxShadow = '0 10px 30px rgba(107, 79, 187, 0.2)';
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(var(--color-accent-rgb), 0.2)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
@@ -140,7 +140,7 @@ const OurWork = () => {
               overflow: 'hidden'
             }}>
               <img 
-                src="https://placehold.co/300x200/1a1a1a/6B4FBB?text=GitHub" 
+                src="https://placehold.co/300x200/1a1a1a/6b56f1?text=GitHub" 
                 alt="GitHub" 
                 style={{ 
                   width: '100%', 

@@ -45,7 +45,7 @@
 
 .gradientButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(107, 79, 187, 0.2);
+  box-shadow: 0 6px 30px rgba(var(--color-accent-rgb), 0.2);
 }
 
 .heroSection {
@@ -206,7 +206,7 @@
 
 .serviceCard:hover {
   transform: translateY(-8px);
-  border-color: rgba(107, 79, 187, 0.2);
+  border-color: rgba(var(--color-accent-rgb), 0.2);
   box-shadow: var(--shadow-hover);
 }
 
@@ -357,11 +357,11 @@
   background: var(--color-card-gradient);
   padding: clamp(2rem, 5vw, 3rem);
   border-radius: var(--radius-card);
-  border: 1px solid rgba(107, 79, 187, 0.38);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.38);
   box-shadow:
     0 18px 50px rgba(0, 0, 0, 0.45),
-    0 0 0 1px rgba(107, 79, 187, 0.18),
-    0 0 36px rgba(107, 79, 187, 0.12);
+    0 0 0 1px rgba(var(--color-accent-rgb), 0.18),
+    0 0 36px rgba(var(--color-accent-rgb), 0.12);
   backdrop-filter: blur(8px);
 }
 
@@ -382,7 +382,7 @@
 .formTextarea {
   padding: 16px 20px;
   border-radius: var(--radius-input);
-  border: 1px solid rgba(107, 79, 187, 0.24);
+  border: 1px solid rgba(var(--color-accent-rgb), 0.24);
   background: var(--color-bg);
   color: var(--color-text);
   font-size: var(--font-body);
@@ -393,7 +393,7 @@
 .formInput:focus,
 .formTextarea:focus {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(107, 79, 187, 0.2);
+  box-shadow: 0 0 0 3px rgba(var(--color-accent-rgb), 0.2);
 }
 
 .formTextarea {

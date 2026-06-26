@@ -25,11 +25,12 @@
   --color-text-muted: #888888;
   --color-text-dim: #666666;
   --color-text-on-accent: #ffffff;
-  --color-accent: #6B4FBB;
-  --color-accent-light: #6B4FBB;
+  --color-accent: #6b56f1;
+  --color-accent-rgb: 107, 86, 241;
+  --color-accent-light: #6b56f1;
   --color-border: rgba(255, 255, 255, 0.1);
-  --color-border-accent: rgba(107, 79, 187, 0.2);
-  --bg-pattern-line: rgba(196, 182, 236, 0.14);
+  --color-border-accent: rgba(var(--color-accent-rgb), 0.2);
+  --bg-pattern-line: rgba(var(--color-accent-rgb), 0.14);
   --bg-pattern-opacity: 0.2;
 
   /* Typography */
@@ -53,9 +54,9 @@
   --radius-sm: 8px;
 
   /* Shadows */
-  --shadow-card: 0 4px 32px 0 rgba(107, 79, 187, 0.2);
-  --shadow-glow: 0 4px 20px rgba(107, 79, 187, 0.2);
-  --shadow-hover: 0 12px 40px rgba(107, 79, 187, 0.2);
+  --shadow-card: 0 4px 32px 0 rgba(var(--color-accent-rgb), 0.2);
+  --shadow-glow: 0 4px 20px rgba(var(--color-accent-rgb), 0.2);
+  --shadow-hover: 0 12px 40px rgba(var(--color-accent-rgb), 0.2);
 
   /* Nav backgrounds */
   --color-nav-bg: rgba(0, 0, 0, 0.9);
@@ -79,7 +80,7 @@
   --color-text-dim: #777777;
   --color-text-on-accent: #ffffff;
   --color-border: rgba(0, 0, 0, 0.1);
-  --bg-pattern-line: rgba(140, 116, 204, 0.13);
+  --bg-pattern-line: rgba(var(--color-accent-rgb), 0.13);
   --bg-pattern-opacity: 0.2;
 
   --color-nav-bg: rgba(255, 255, 255, 0.92);
@@ -126,9 +127,9 @@ body {
   position: relative;
   isolation: isolate;
   background:
-    radial-gradient(circle at 8% 82%, rgba(107, 79, 187, 0.14), transparent 36%),
-    radial-gradient(circle at 92% 18%, rgba(107, 79, 187, 0.12), transparent 34%),
-    radial-gradient(circle at 50% 110%, rgba(107, 79, 187, 0.08), transparent 40%),
+    radial-gradient(circle at 8% 82%, rgba(var(--color-accent-rgb), 0.14), transparent 36%),
+    radial-gradient(circle at 92% 18%, rgba(var(--color-accent-rgb), 0.12), transparent 34%),
+    radial-gradient(circle at 50% 110%, rgba(var(--color-accent-rgb), 0.08), transparent 40%),
     var(--color-bg);
 }
 
@@ -155,9 +156,9 @@ body::after {
   z-index: 0;
   opacity: 0.18;
   background:
-    radial-gradient(circle at 8% 82%, rgba(107, 79, 187, 0.22), transparent 36%),
-    radial-gradient(circle at 92% 18%, rgba(107, 79, 187, 0.2), transparent 34%),
-    radial-gradient(circle at 50% 110%, rgba(107, 79, 187, 0.14), transparent 40%);
+    radial-gradient(circle at 8% 82%, rgba(var(--color-accent-rgb), 0.22), transparent 36%),
+    radial-gradient(circle at 92% 18%, rgba(var(--color-accent-rgb), 0.2), transparent 34%),
+    radial-gradient(circle at 50% 110%, rgba(var(--color-accent-rgb), 0.14), transparent 40%);
 }
 
 #root {
@@ -166,12 +167,12 @@ body::after {
 }
 
 ::selection {
-  background-color: rgba(107, 79, 187, 0.2);
+  background-color: rgba(var(--color-accent-rgb), 0.2);
   color: var(--color-text);
 }
 
 ::-moz-selection {
-  background-color: rgba(107, 79, 187, 0.2);
+  background-color: rgba(var(--color-accent-rgb), 0.2);
   color: var(--color-text);
 }
 
