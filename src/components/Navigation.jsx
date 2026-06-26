@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from '../App.module.css';
 import { useTheme } from '../context/themeContext';
-import logo from '../assets/logo.png';
+import logo from '../assets/transparentLogo.png';
 
 const Navigation = () => {
   const location = useLocation();
