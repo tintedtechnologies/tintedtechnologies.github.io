@@ -93,7 +93,7 @@ const OurWork = () => {
               overflow: 'hidden'
             }}>
               <img 
-                src="https://placehold.co/300x200/1a1a1a/6b56f1?text=BlackEndpoints" 
+                src="https://placehold.co/300x200/1a1a1a/0047ab?text=BlackEndpoints" 
                 alt="BlackEndpoints" 
                 style={{ 
                   width: '100%', 
@@ -140,7 +140,7 @@ const OurWork = () => {
               overflow: 'hidden'
             }}>
               <img 
-                src="https://placehold.co/300x200/1a1a1a/6b56f1?text=GitHub" 
+                src="https://placehold.co/300x200/1a1a1a/0047ab?text=GitHub" 
                 alt="GitHub" 
                 style={{ 
                   width: '100%', 

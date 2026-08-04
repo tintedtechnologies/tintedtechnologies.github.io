@@ -1,11 +1,11 @@
 :root {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
 
-  color-scheme: dark;
-  color: #ffffff;
-  background-color: #000000;
+  color-scheme: light;
+  color: #0a0a0a;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,23 +15,22 @@
   /* ===== Design Tokens ===== */
 
   /* Colors */
-  --color-bg: #09070f;
-  --color-panel: #0f0c19;
-  --color-card: #151127;
-  --color-card-translucent: rgba(21, 17, 39, 0.82);
-  --color-card-gradient: linear-gradient(135deg, rgba(21, 17, 39, 0.84) 0%, rgba(21, 17, 39, 0.46) 100%);
-  --color-text: #ffffff;
-  --color-text-secondary: #cccccc;
-  --color-text-muted: #888888;
-  --color-text-dim: #666666;
+  --color-bg: #f5f9ff;
+  --color-panel: #edf3ff;
+  --color-card: #ffffff;
+  --color-card-translucent: rgba(255, 255, 255, 0.85);
+  --color-card-gradient: var(--color-card-translucent);
+  --color-text: #0a0a0a;
+  --color-text-secondary: #333333;
+  --color-text-muted: #555555;
+  --color-text-dim: #777777;
   --color-text-on-accent: #ffffff;
-  --color-accent: #6b56f1;
-  --color-accent-rgb: 107, 86, 241;
-  --color-accent-light: #6b56f1;
-  --color-border: rgba(255, 255, 255, 0.1);
+  --color-accent: #0047ab;
+  --color-accent-rgb: 0, 71, 171;
+  --color-accent-light: #0047ab;
+  --color-brand: #0047ab;
+  --color-border: rgba(0, 0, 0, 0.1);
   --color-border-accent: rgba(var(--color-accent-rgb), 0.2);
-  --bg-pattern-line: rgba(var(--color-accent-rgb), 0.14);
-  --bg-pattern-opacity: 0.2;
 
   /* Typography */
   --font-title: clamp(2.5rem, 6vw, 4rem);
@@ -59,30 +58,6 @@
   --shadow-hover: 0 12px 40px rgba(var(--color-accent-rgb), 0.2);
 
   /* Nav backgrounds */
-  --color-nav-bg: rgba(0, 0, 0, 0.9);
-  --color-nav-mobile-bg: rgba(0, 0, 0, 0.97);
-}
-
-/* ===== Light Mode ===== */
-[data-theme="light"] {
-  color-scheme: light;
-  color: #0a0a0a;
-  background-color: #ffffff;
-
-  --color-bg: #faf8ff;
-  --color-panel: #f5f1ff;
-  --color-card: #ffffff;
-  --color-card-translucent: rgba(255, 255, 255, 0.85);
-  --color-card-gradient: var(--color-card-translucent);
-  --color-text: #0a0a0a;
-  --color-text-secondary: #333333;
-  --color-text-muted: #555555;
-  --color-text-dim: #777777;
-  --color-text-on-accent: #ffffff;
-  --color-border: rgba(0, 0, 0, 0.1);
-  --bg-pattern-line: rgba(var(--color-accent-rgb), 0.13);
-  --bg-pattern-opacity: 0.2;
-
   --color-nav-bg: rgba(255, 255, 255, 0.92);
   --color-nav-mobile-bg: rgba(242, 242, 242, 0.98);
 }
@@ -133,21 +108,6 @@ body {
     var(--color-bg);
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: var(--bg-pattern-opacity);
-  background-image:
-    linear-gradient(30deg, transparent 24%, var(--bg-pattern-line) 24.7%, var(--bg-pattern-line) 25.3%, transparent 26%),
-    linear-gradient(150deg, transparent 24%, var(--bg-pattern-line) 24.7%, var(--bg-pattern-line) 25.3%, transparent 26%),
-    linear-gradient(90deg, transparent 48.8%, var(--bg-pattern-line) 49.4%, var(--bg-pattern-line) 50%, transparent 50.6%);
-  background-size: 72px 124px;
-  background-position: 0 0, 0 0, 36px 62px;
-}
-
 body::after {
   content: '';
   position: fixed;
@@ -190,7 +150,7 @@ button {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 600;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
@@ -204,8 +164,8 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-[data-theme="light"] button[style*="background"][style*="var(--color-accent)"],
-[data-theme="light"] a[style*="background"][style*="var(--color-accent)"] {
+button[style*="background"][style*="var(--color-accent)"],
+a[style*="background"][style*="var(--color-accent)"] {
   color: var(--color-text-on-accent) !important;
 }
 
@@ -228,19 +188,6 @@ button:focus-visible {
   body {
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: var(--color-text);
-    background-color: var(--color-bg);
-  }
-  a:hover {
-    color: var(--color-accent);
-  }
-  button {
-    background-color: var(--color-card);
   }
 }
 

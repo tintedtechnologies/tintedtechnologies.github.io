@@ -45,8 +45,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px clamp(24px, 5vw, 80px);
-  padding-top: max(20px, env(safe-area-inset-top));
+  padding: 15px clamp(24px, 5vw, 80px);
+  padding-top: max(15px, env(safe-area-inset-top));
   width: 100%;
   position: fixed;
   top: 0;
@@ -84,8 +84,8 @@
 
 /* Navigation logo */
 .navLogo {
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
   flex-shrink: 0;
   cursor: pointer;
@@ -187,32 +187,6 @@
 .startBtn:hover {
   background: var(--color-accent);
   transform: translateY(-2px);
-}
-
-.themeToggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  border: 1px solid var(--color-border-accent);
-  border-radius: var(--radius-sm);
-  padding: 0;
-  color: var(--color-text);
-  cursor: pointer;
-  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
-  flex-shrink: 0;
-}
-
-.themeToggle:hover {
-  color: var(--color-accent);
-  border-color: var(--color-border-accent);
-  background-color: rgba(var(--color-accent-rgb), 0.2);
-}
-
-.themeToggle:focus:not(:focus-visible) {
-  outline: none;
 }
 
 .hero {
@@ -547,8 +521,8 @@
   }
 
   .navLogo {
-    width: 38px;
-    height: 38px;
+    width: 44px;
+    height: 44px;
   }
 
   .founderImage {
@@ -815,15 +789,28 @@
 
 .blogPostHeader {
   margin-bottom: 40px;
-  max-width: 1200px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--color-border);
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+}
+
+.blogPostCategory {
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 8px;
 }
 
 .blogPostTitle {
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 700;
-  margin: 30px 0;
+  margin: 18px 0 20px;
   line-height: var(--line-height-tight);
   color: var(--color-accent);
   text-align: center;
@@ -833,11 +820,23 @@
   padding: 0 2rem;
 }
 
+.blogPostTopMeta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.blogPostMetaDot {
+  color: var(--color-text-secondary);
+}
+
 .blogPostFooter {
   margin-top: 50px;
   padding-top: 30px;
   border-top: 1px solid var(--color-border);
-  max-width: 1200px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -847,29 +846,15 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  justify-content: flex-start;
+  margin-bottom: 30px;
   transition: color 0.3s ease;
 }
 
 .backToBlog:hover {
   color: var(--color-accent);
-}
-
-.blogPostMeta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.blogPostCategory {
-  color: var(--color-accent);
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .blogPostMetaInfo {
@@ -905,7 +890,7 @@
 
 .blogPostArticle {
   line-height: 1.8;
-  color: #e0e0e0;
+  color: var(--color-text);
   text-align: left;
   font-size: 1.25rem;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -950,7 +935,7 @@
 .blogPostArticle p {
   margin: 1.75rem 0;
   text-align: left;
-  color: #e0e0e0;
+  color: var(--color-text);
   font-size: 1.25rem;
 }
 
@@ -963,7 +948,7 @@
 
 .blogPostArticle li {
   margin: 0.75rem 0;
-  color: #e0e0e0;
+  color: var(--color-text);
 }
 
 .blogPostArticle ul {
@@ -991,8 +976,8 @@
 }
 
 .blogPostArticle code {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #e0e0e0;
+  background-color: rgba(var(--color-accent-rgb), 0.08);
+  color: var(--color-accent);
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   font-family: 'Courier New', monospace;
@@ -1082,8 +1067,8 @@
   }
   
   .navLogo {
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
   }
 
   .navLinks {

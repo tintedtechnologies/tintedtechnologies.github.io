@@ -51,3 +51,8 @@ Generative AI is a powerful tool but not a silver bullet that every startup need
 ## Summary
 
 Generative AI offers startups the ability to unlock speed automation and creativity when it is applied to real business problems with clear expectations and governance. Use it for tasks that accelerate workflows leverage your own data and can tolerate iteration. Avoid applying it where errors can have serious business consequences or where the technology does not yet add measurable value. Beginning with small projects and involving human oversight leads to better results and positions startups to scale generative AI adoption responsibly.
+
+## Sources
+
+- [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
+- [What is Microsoft Foundry?](https://learn.microsoft.com/en-us/azure/foundry/what-is-foundry)

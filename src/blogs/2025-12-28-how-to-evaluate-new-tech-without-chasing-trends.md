@@ -6,7 +6,7 @@ date: "December 28 2025"
 tags: ["Technology","Strategy","Cloud","AI","Decision Making"]
 category: "Tech + Strategy"
 image: "/images/evaluate-technology.jpg"
-featured: true
+featured: false
 ---
 
 New technologies can be exciting and inspiring, but not every innovation deserves a spot in your roadmap. Adopting the latest tool because it is trending can lead to wasted effort technical debt and disruptions to your team’s productivity. Instead of following hype you want a structured, business-aligned approach that ensures new technology genuinely contributes to your goals.
@@ -64,3 +64,8 @@ Effective technology decisions are not made in isolation. They should fit into a
 Evaluating new technology without chasing trends means putting business value first, using clear criteria, understanding your team’s capabilities, testing before committing and documenting decisions. These practices help you avoid distraction and focus on technology that truly supports growth and productivity.
 
 This approach keeps your company adaptive without being reactive, and it positions you to adopt technology in a way that aligns with your long-term strategy rather than short-term hype.
+
+## Sources
+
+- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Microsoft Learn Training](https://learn.microsoft.com/en-us/training/)

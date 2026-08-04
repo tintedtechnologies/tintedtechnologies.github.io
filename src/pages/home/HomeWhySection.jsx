@@ -2,7 +2,7 @@ import ui from './HomeSections.module.css';
 
 function HomeWhySection({ onOpenEngagement, onOpenPricing }) {
   return (
-    <section id="why-us" className={`${ui.sectionBase} ${ui.whySection}`}>
+    <section id="why-us" className={`${ui.sectionBase} ${ui.whySection} ${ui.onWhite}`}>
       <div className={ui.whyInner}>
         <h2 className={`${ui.sectionTitle} ${ui.whyTitle}`}>
           Why <span className={ui.accent}>Tinted Technologies</span>
@@ -13,7 +13,8 @@ function HomeWhySection({ onOpenEngagement, onOpenPricing }) {
             'Structured engagements with defined outcomes',
             'Cloud & AI skills aligned to career outcomes',
             'Practical training — not theory',
-            'Clear scope, documentation, and delivery'
+            'Clear scope, documentation, and delivery',
+            'Deep Azure PaaS expertise from real enterprise deployment work'
           ].map((item, index) => (
             <div key={index} className={ui.whyItem}>
               <div className={ui.whyCheck}>

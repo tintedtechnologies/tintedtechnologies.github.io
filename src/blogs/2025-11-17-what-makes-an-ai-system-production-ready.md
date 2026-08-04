@@ -58,3 +58,8 @@ These aspects transform a prototype into a reliable system that can adapt to new
 ## Summary
 
 An AI system is production-ready when it extends beyond research code and becomes a system that is tested, automated, monitored, and governed throughout its lifecycle. Leveraging MLOps practices such as CI/CD pipelines, version control for models and data, continuous monitoring, and scalable infrastructure ensures reliability and business value. Treating AI with disciplined engineering practices makes it possible to deliver systems that are not just smart but dependable.
+
+## Sources
+
+- [MLOps: Model management, deployment, and monitoring with Azure Machine Learning](https://learn.microsoft.com/en-us/azure/machine-learning/concept-model-management-and-deployment)
+- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)

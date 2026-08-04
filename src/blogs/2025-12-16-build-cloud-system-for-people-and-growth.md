@@ -6,7 +6,7 @@ date: "December 16 2025"
 tags: ["Cloud","Architecture","Teams","Scalability","Business"]
 category: "Tech + Strategy"
 image: "/images/cloud-systems-for-growth.jpg"
-featured: true
+featured: false
 ---
 
 When businesses talk about cloud systems they often focus on raw scalability and performance. Handling millions of users is important, but cloud architecture should also be built around the people who use it and the teams who maintain it. A system that scales only for traffic but not for human workflows or organizational growth will rapidly become a bottleneck.
@@ -76,3 +76,8 @@ These practices reduce time spent on firefighting and free up resources for inno
 ## People First Cloud Architecture
 
 Traffic performance matters, but cloud systems should ultimately support the people building and operating them. Teams that can understand, change and extend infrastructure are teams that can grow with confidence. When architecture aligns with workflows and business priorities cloud becomes not just a platform for scale but a foundation for sustainable growth.
+
+## Sources
+
+- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Microsoft Learn Training](https://learn.microsoft.com/en-us/training/)

@@ -2,7 +2,7 @@ import ui from './HomeSections.module.css';
 
 function HomeHeroSection({ onRequestTraining }) {
   return (
-    <section id="hero" className={ui.heroSection}>
+    <section id="hero" className={`${ui.heroSection} ${ui.onBlue}`}>
       <div className={ui.heroInner}>
         <p className={ui.heroBadge}>Training for Organizations. Growth for Individuals.</p>
         <h1 className={`${ui.heroTitle} ${ui.sectionTitle}`}>

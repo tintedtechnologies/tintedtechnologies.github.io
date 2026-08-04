@@ -6,6 +6,51 @@
   padding: clamp(3.5rem, 8vw, 6rem) var(--space-section-x);
 }
 
+/* ===== Alternating blue/white section surfaces ===== */
+.onBlue {
+  background: var(--color-brand);
+  --color-text: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.9);
+  --color-text-muted: rgba(255, 255, 255, 0.72);
+  --color-accent: #ffffff;
+  --color-text-on-accent: var(--color-brand);
+  --color-card: rgba(255, 255, 255, 0.12);
+  --color-card-translucent: rgba(255, 255, 255, 0.12);
+  --color-border: rgba(255, 255, 255, 0.3);
+  --color-border-accent: rgba(255, 255, 255, 0.4);
+}
+
+.onWhite {
+  background: #ffffff;
+  --color-text: #06254f;
+  --color-text-secondary: #1f3a63;
+  --color-text-muted: #4a5f82;
+  --color-accent: var(--color-brand);
+  --color-text-on-accent: #ffffff;
+  --color-border: rgba(0, 71, 171, 0.16);
+  --color-border-accent: rgba(0, 71, 171, 0.25);
+}
+
+/* Cards that sit on top of a blue section become their own white surface */
+.onBlue .serviceCard,
+.onBlue .contactForm {
+  --color-text: #06254f;
+  --color-text-secondary: #1f3a63;
+  --color-text-muted: #4a5f82;
+  --color-accent: var(--color-brand);
+  --color-text-on-accent: #ffffff;
+  --color-border: rgba(0, 71, 171, 0.16);
+  --color-card-gradient: #ffffff;
+  --color-card-translucent: #ffffff;
+}
+
+/* Emphasize accent words on blue backgrounds without breaking the white-on-blue rule */
+.onBlue .accent {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 3px;
+}
+
 .sectionTitle {
   color: var(--color-text);
   letter-spacing: -0.02em;
@@ -115,10 +160,6 @@
   display: inline-block;
 }
 
-.missionSection {
-  background: transparent;
-}
-
 .missionInner {
   max-width: 1120px;
   width: 100%;
@@ -139,10 +180,6 @@
   line-height: 1.6;
   max-width: 860px;
   margin: 0 auto;
-}
-
-.servicesSection {
-  background: transparent;
 }
 
 .servicesInner {
@@ -221,6 +258,7 @@
 .serviceCardText {
   font-size: var(--font-body);
   color: var(--color-text-secondary);
+  font-weight: 600;
   line-height: var(--line-height-relaxed);
   margin: 0;
 }
@@ -229,7 +267,7 @@
   width: 60px;
   height: 60px;
   border-radius: 16px;
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-brand) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,10 +276,6 @@
 
 .iconTile svg path {
   fill: #ffffff;
-}
-
-.whySection {
-  background: transparent;
 }
 
 .whyInner {
@@ -279,7 +313,7 @@
   height: 28px;
   min-width: 28px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-brand) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -321,7 +355,6 @@
 }
 
 .contactSection {
-  background: transparent;
   overflow: auto;
 }
 
@@ -344,6 +377,7 @@
 .contactIntro {
   font-size: clamp(1rem, 1.7vw, 1.25rem);
   color: var(--color-text-muted);
+  font-weight: 600;
   text-align: center;
   margin: 0;
   line-height: 1.55;

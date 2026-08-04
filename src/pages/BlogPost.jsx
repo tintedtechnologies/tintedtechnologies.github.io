@@ -88,7 +88,13 @@ function BlogPost() {
         <div className={styles.blogPostContent}>
           <div className={styles.blogPostHeader}>
             <Link to="/blog" className={styles.backToBlog}>← Back to Blog</Link>
+            <span className={styles.blogPostCategory}>{post.category}</span>
             <h1 className={styles.blogPostTitle}>{post.title}</h1>
+            <div className={styles.blogPostTopMeta}>
+              <span className={styles.blogPostAuthor}>{post.author}</span>
+              <span className={styles.blogPostMetaDot}>•</span>
+              <span className={styles.blogPostDate}>{post.date}</span>
+            </div>
           </div>
           
           <article 
@@ -97,13 +103,6 @@ function BlogPost() {
           />
 
           <div className={styles.blogPostFooter}>
-            <div className={styles.blogPostMeta}>
-              <span className={styles.blogPostCategory}>{post.category}</span>
-              <div className={styles.blogPostMetaInfo}>
-                <span className={styles.blogPostAuthor}>{post.author}</span>
-                <span className={styles.blogPostDate}>{post.date}</span>
-              </div>
-            </div>
             {post.tags && (
               <div className={styles.blogPostTags}>
                 {post.tags.map((tag, index) => (

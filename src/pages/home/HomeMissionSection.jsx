@@ -2,7 +2,7 @@ import ui from './HomeSections.module.css';
 
 function HomeMissionSection() {
   return (
-    <section id="mission" className={`${ui.sectionBase} ${ui.missionSection}`}>
+    <section id="mission" className={`${ui.sectionBase} ${ui.missionSection} ${ui.onWhite}`}>
       <div className={ui.missionInner}>
         <h2 className={`${ui.sectionTitle} ${ui.missionTitle}`}>
           Our <span className={ui.accent}>Mission</span>

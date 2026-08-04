@@ -2,7 +2,7 @@ import ui from './HomeSections.module.css';
 
 function HomeContactSection({ formData, onChange, onSubmit }) {
   return (
-    <section id="contact" className={`${ui.sectionBase} ${ui.contactSection}`}>
+    <section id="contact" className={`${ui.sectionBase} ${ui.contactSection} ${ui.onBlue}`}>
       <div className={ui.contactInner}>
         <div className={ui.textCenter}>
           <h2 className={`${ui.sectionTitle} ${ui.contactTitle}`}>

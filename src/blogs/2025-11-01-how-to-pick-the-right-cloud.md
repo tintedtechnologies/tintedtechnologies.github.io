@@ -49,3 +49,8 @@ Whatever platform you decide on today should support your ability to evolve. Clo
 There is no universally best cloud provider. AWS Microsoft Azure and Google Cloud Platform each provide compelling capabilities and potential benefits depending on your business context. A decision based on careful evaluation of your technical team skills growth plans current tooling and long term cost will outperform a choice driven by marketing or hype.
 
 By approaching this decision strategically you avoid expensive migration later and position your organization to leverage the right cloud capabilities for long term success.
+
+## Sources
+
+- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Microsoft Learn Training](https://learn.microsoft.com/en-us/training/)
