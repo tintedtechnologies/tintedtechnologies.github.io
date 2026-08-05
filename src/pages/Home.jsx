@@ -17,7 +17,7 @@ const GOOGLE_FORM_ENDPOINT = 'https://docs.google.com/forms/d/e/1FAIpQLScCMAq3tR
 function Home() {
   useSEO({
     title: null,
-    description: 'Tinted Technologies helps individuals build real skills and make smart technology decisions. Cloud & AI training and workshops.',
+    description: 'Tinted Technologies provides Azure PaaS architecture consulting, implementation support, cloud cost and governance guidance, Microsoft Foundry AI solutions, technical training, workshops, and mentorship for organizations and professionals.',
     path: '/'
   });
   const [engagementOpen, setEngagementOpen] = useState(false);

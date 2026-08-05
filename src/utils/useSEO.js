@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 
 const SITE_NAME = 'Tinted Technologies';
-const DEFAULT_DESCRIPTION = 'Cloud & AI architecture for teams building what\'s next. Training, consulting, and workshops for individuals and small businesses.';
+const DEFAULT_TITLE = 'Tinted Technologies | Azure PaaS, AI Consulting & Technical Training';
+const DEFAULT_DESCRIPTION = 'Tinted Technologies provides Azure PaaS architecture consulting, implementation support, cloud cost and governance guidance, Microsoft Foundry AI solutions, technical training, workshops, and mentorship for organizations and professionals.';
 const DEFAULT_IMAGE = 'https://tintedtechnologies.com/logo.png';
 const BASE_URL = 'https://tintedtechnologies.com';
 
@@ -48,7 +49,7 @@ export function useSEO({
 } = {}) {
   useEffect(() => {
     // Title
-    const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
+    const fullTitle = title ? `${title} | ${SITE_NAME}` : DEFAULT_TITLE;
     document.title = fullTitle;
 
     // Standard meta
@@ -81,15 +82,15 @@ export function useSEO({
 
     // Cleanup: reset to defaults on unmount
     return () => {
-      document.title = SITE_NAME;
+      document.title = DEFAULT_TITLE;
       setMetaTag('description', DEFAULT_DESCRIPTION, true);
       setCanonical(BASE_URL + '/');
-      setMetaTag('og:title', SITE_NAME);
+      setMetaTag('og:title', DEFAULT_TITLE);
       setMetaTag('og:description', DEFAULT_DESCRIPTION);
       setMetaTag('og:url', BASE_URL + '/');
       setMetaTag('og:image', DEFAULT_IMAGE);
       setMetaTag('og:type', 'website');
-      setMetaTag('twitter:title', SITE_NAME, true);
+      setMetaTag('twitter:title', DEFAULT_TITLE, true);
       setMetaTag('twitter:description', DEFAULT_DESCRIPTION, true);
       setMetaTag('twitter:image', DEFAULT_IMAGE, true);
     };
