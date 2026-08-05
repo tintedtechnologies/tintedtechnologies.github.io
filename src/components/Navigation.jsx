@@ -84,11 +84,11 @@ const Navigation = () => {
               Mission
             </a>
             <a 
-              href="#services"
-              onClick={(e) => handleAnchorClick(e, 'services')}
+              href="#training"
+              onClick={(e) => handleAnchorClick(e, 'training')}
               className={styles.navLink}
             >
-              Services
+              Training
             </a>
             <a 
               href="#why-us"
@@ -96,6 +96,13 @@ const Navigation = () => {
               className={styles.navLink}
             >
               Why Us
+            </a>
+            <a
+              href="#consulting"
+              onClick={(e) => handleAnchorClick(e, 'consulting')}
+              className={styles.navLink}
+            >
+              Consulting
             </a>
             <a 
               href="#contact"

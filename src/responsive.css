@@ -25,7 +25,7 @@
   }
 
   /* Override inline grid styles for service cards */
-  section#services > div > div:last-child {
+  section#training > div > div:last-child {
     display: grid !important;
     grid-template-columns: 1fr !important;
     gap: 1.5rem !important;

@@ -9,10 +9,10 @@ function HomeWhySection({ onOpenEngagement, onOpenPricing }) {
         </h2>
         <div className={ui.whyList}>
           {[
-            'Real-world practitioner-led instruction',
-            'Structured engagements with defined outcomes',
-            'Cloud & AI skills aligned to career outcomes',
-            'Practical training — not theory',
+            'Real-world practitioner-led expertise',
+            'Training and consulting from the same practitioner, no handoffs',
+            'Cloud and AI skills aligned to real outcomes',
+            'Practical work, not theory',
             'Clear scope, documentation, and delivery',
             'Deep Azure PaaS expertise from real enterprise deployment work'
           ].map((item, index) => (

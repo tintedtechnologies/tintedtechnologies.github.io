@@ -2,14 +2,14 @@ import ui from './HomeSections.module.css';
 
 function HomeContactSection({ formData, isSubmitting, submitStatus, onChange, onSubmit }) {
   return (
-    <section id="contact" className={`${ui.sectionBase} ${ui.contactSection} ${ui.onBlue}`}>
+    <section id="contact" className={`${ui.sectionBase} ${ui.contactSection} ${ui.onWhite}`}>
       <div className={ui.contactInner}>
         <div className={ui.textCenter}>
           <h2 className={`${ui.sectionTitle} ${ui.contactTitle}`}>
             Let&apos;s <span className={ui.accent}>Build</span> Your <span className={ui.accent}>Capability</span>
           </h2>
           <p className={ui.contactIntro}>
-            Tell us about your team’s training goals.
+            Tell us about your training goals or consulting needs.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ function HomeContactSection({ formData, isSubmitting, submitStatus, onChange, on
             className={`${ui.gradientButton} ${ui.submitButton}`}
             disabled={isSubmitting}
           >
-            {isSubmitting ? 'Sending…' : 'Request Training →'}
+            {isSubmitting ? 'Sending…' : 'Send Request →'}
           </button>
 
           <div

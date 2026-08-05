@@ -8,7 +8,7 @@ function HomeMissionSection() {
           Our <span className={ui.accent}>Mission</span>
         </h2>
         <p className={ui.missionText}>
-          We help organizations and professionals build the technical capabilities needed to succeed in a rapidly evolving digital world.
+          We help organizations and professionals build the technical capabilities and solutions needed to succeed in a rapidly evolving digital world.
         </p>
       </div>
     </section>

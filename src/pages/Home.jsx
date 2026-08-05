@@ -5,7 +5,8 @@ import styles from '../App.module.css';
 import { useSEO } from '../utils/useSEO';
 import HomeHeroSection from './home/HomeHeroSection';
 import HomeMissionSection from './home/HomeMissionSection';
-import HomeServicesSection from './home/HomeServicesSection';
+import HomeTrainingSection from './home/HomeTrainingSection';
+import HomeConsultingSection from './home/HomeConsultingSection';
 import HomeWhySection from './home/HomeWhySection';
 import HomeContactSection from './home/HomeContactSection';
 import EngagementModal from './home/EngagementModal';
@@ -94,6 +95,11 @@ function Home() {
     scrollToSection('contact');
   };
 
+  const handleBookScopingCall = () => {
+    prefillMessage('I\'d like to book a free consulting scoping call.\n\n- Organization:\n\n- Services needed (PaaS architecture, implementation, cost and governance, or AI via Microsoft Foundry):\n\n- Tell us about your environment, goals, and timeline:\n');
+    scrollToSection('contact');
+  };
+
   const handleScheduleDiscovery = () => {
     setEngagementOpen(false);
     scrollToContact();
@@ -107,10 +113,14 @@ function Home() {
   return (
     <div className={styles.appContainer}>
       <Navigation />
-      <HomeHeroSection onRequestTraining={handleHeroRequestTraining} />
+      <HomeHeroSection
+        onRequestTraining={handleHeroRequestTraining}
+        onBookScopingCall={handleBookScopingCall}
+      />
       <HomeMissionSection />
-      <HomeServicesSection />
+      <HomeTrainingSection />
       <HomeWhySection onOpenEngagement={() => setEngagementOpen(true)} onOpenPricing={() => setPricingOpen(true)} />
+      <HomeConsultingSection onBookScopingCall={handleBookScopingCall} />
       <HomeContactSection
         formData={formData}
         isSubmitting={isSubmitting}
