@@ -442,6 +442,24 @@
   margin-top: 0.5rem;
 }
 
+.submitButton:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.formStatus {
+  min-height: 1.5rem;
+  margin-top: -0.75rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.formStatusError {
+  color: #ffb4ab;
+}
+
 .modalOverlay {
   position: fixed;
   inset: 0;

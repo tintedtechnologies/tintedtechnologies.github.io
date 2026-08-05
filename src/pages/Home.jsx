@@ -11,6 +11,8 @@ import HomeContactSection from './home/HomeContactSection';
 import EngagementModal from './home/EngagementModal';
 import PricingModal from './home/PricingModal';
 
+const GOOGLE_FORM_ENDPOINT = 'https://docs.google.com/forms/d/e/1FAIpQLScCMAq3tRyxuu97GMmPlJv2RwvODpCGa0pZbiDyWG-MDrBMnA/formResponse';
+
 function Home() {
   useSEO({
     title: null,
@@ -24,6 +26,8 @@ function Home() {
     email: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -47,29 +51,41 @@ function Home() {
 
   const prefillMessage = (message) => {
     setFormData((prev) => ({ ...prev, message }));
+    setSubmitStatus(null);
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setSubmitStatus(null);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    const subject = `Tinted Technologies: ${formData.name} would like to get in touch`;
-    const body = `Name: ${formData.name}
-Email: ${formData.email}
+    if (isSubmitting) return;
 
-Message:
-${formData.message}`;
+    const payload = new URLSearchParams({
+      'entry.1207403898': formData.name,
+      'entry.1186975992': formData.email,
+      'entry.2090133804': formData.message,
+    });
 
-    const mailtoLink = `mailto:jay@tintedtechnologies.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    window.location.href = mailtoLink;
-    
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      await fetch(GOOGLE_FORM_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: payload,
+      });
+      setFormData({ name: '', email: '', message: '' });
+      setSubmitStatus({ type: 'success', message: 'Your request was sent. We’ll follow up by email.' });
+    } catch {
+      setSubmitStatus({ type: 'error', message: 'We couldn’t send your request. Please check your connection and try again.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleHeroRequestTraining = (e) => {
@@ -95,7 +111,13 @@ ${formData.message}`;
       <HomeMissionSection />
       <HomeServicesSection />
       <HomeWhySection onOpenEngagement={() => setEngagementOpen(true)} onOpenPricing={() => setPricingOpen(true)} />
-      <HomeContactSection formData={formData} onChange={handleChange} onSubmit={handleSubmit} />
+      <HomeContactSection
+        formData={formData}
+        isSubmitting={isSubmitting}
+        submitStatus={submitStatus}
+        onChange={handleChange}
+        onSubmit={handleSubmit}
+      />
       <Footer />
 
       <EngagementModal

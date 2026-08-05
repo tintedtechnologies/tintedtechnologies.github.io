@@ -1,6 +1,6 @@
 import ui from './HomeSections.module.css';
 
-function HomeContactSection({ formData, onChange, onSubmit }) {
+function HomeContactSection({ formData, isSubmitting, submitStatus, onChange, onSubmit }) {
   return (
     <section id="contact" className={`${ui.sectionBase} ${ui.contactSection} ${ui.onBlue}`}>
       <div className={ui.contactInner}>
@@ -53,9 +53,21 @@ function HomeContactSection({ formData, onChange, onSubmit }) {
             />
           </div>
 
-          <button type="submit" className={`${ui.gradientButton} ${ui.submitButton}`}>
-            Request Training →
+          <button
+            type="submit"
+            className={`${ui.gradientButton} ${ui.submitButton}`}
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Sending…' : 'Request Training →'}
           </button>
+
+          <div
+            className={`${ui.formStatus} ${submitStatus?.type === 'error' ? ui.formStatusError : ''}`}
+            role="status"
+            aria-live="polite"
+          >
+            {submitStatus?.message || ''}
+          </div>
         </form>
       </div>
     </section>
