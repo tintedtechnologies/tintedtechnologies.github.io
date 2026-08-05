@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import styles from '../App.module.css';
 import { useSEO } from '../utils/useSEO';
+import { CONTACT_LIMITS, validateContactForm } from '../utils/contactValidation';
 
 const Contact = () => {
   useSEO({
@@ -18,6 +19,7 @@ const Contact = () => {
     email: '',
     message: '',
   });
+  const [validationError, setValidationError] = useState('');
 
   useEffect(() => {
     const service = searchParams.get('service');
@@ -32,17 +34,24 @@ const Contact = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    setValidationError('');
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const validation = validateContactForm(formData);
+    if (validation.error) {
+      setValidationError(validation.error);
+      return;
+    }
     
-    const subject = `Tinted Technologies: ${formData.name} would like to get in touch`;
-    const body = `Name: ${formData.name}
-Email: ${formData.email}
+    const subject = `Tinted Technologies: ${validation.values.name} would like to get in touch`;
+    const body = `Name: ${validation.values.name}
+Email: ${validation.values.email}
 
 Message:
-${formData.message}`;
+${validation.values.message}`;
 
     const mailtoLink = `mailto:jay@tintedtechnologies.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
@@ -109,6 +118,8 @@ ${formData.message}`;
                 value={formData.name}
                 onChange={handleChange}
                 required
+                minLength={CONTACT_LIMITS.name.min}
+                maxLength={CONTACT_LIMITS.name.max}
                 placeholder="Your name"
                 style={{
                   padding: '16px 20px',
@@ -139,6 +150,7 @@ ${formData.message}`;
                 value={formData.email}
                 onChange={handleChange}
                 required
+                maxLength={CONTACT_LIMITS.email.max}
                 placeholder="your.email@example.com"
                 style={{
                   padding: '16px 20px',
@@ -168,6 +180,8 @@ ${formData.message}`;
                 value={formData.message}
                 onChange={handleChange}
                 required
+                minLength={CONTACT_LIMITS.message.min}
+                maxLength={CONTACT_LIMITS.message.max}
                 placeholder="Tell us how we can help..."
                 rows="5"
                 style={{
@@ -177,7 +191,7 @@ ${formData.message}`;
                   background: 'var(--color-card-translucent)',
                   color: 'var(--color-text)',
                   fontSize: 'var(--font-body)',
-                  resize: 'vertical',
+                  resize: 'none',
                   fontFamily: 'inherit'
                 }}
               />
@@ -209,6 +223,18 @@ ${formData.message}`;
             >
               Send Message →
             </button>
+            <div
+              role="status"
+              aria-live="polite"
+              style={{
+                minHeight: '1.5rem',
+                color: '#b42318',
+                fontWeight: '600',
+                textAlign: 'center'
+              }}
+            >
+              {validationError}
+            </div>
           </form>
         </div>
       </section>

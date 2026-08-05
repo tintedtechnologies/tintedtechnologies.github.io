@@ -11,6 +11,7 @@ import HomeWhySection from './home/HomeWhySection';
 import HomeContactSection from './home/HomeContactSection';
 import EngagementModal from './home/EngagementModal';
 import PricingModal from './home/PricingModal';
+import { validateContactForm } from '../utils/contactValidation';
 
 const GOOGLE_FORM_ENDPOINT = 'https://docs.google.com/forms/d/e/1FAIpQLScCMAq3tRyxuu97GMmPlJv2RwvODpCGa0pZbiDyWG-MDrBMnA/formResponse';
 
@@ -65,10 +66,16 @@ function Home() {
     e.preventDefault();
     if (isSubmitting) return;
 
+    const validation = validateContactForm(formData);
+    if (validation.error) {
+      setSubmitStatus({ type: 'error', message: validation.error });
+      return;
+    }
+
     const payload = new URLSearchParams({
-      'entry.1207403898': formData.name,
-      'entry.1186975992': formData.email,
-      'entry.2090133804': formData.message,
+      'entry.1207403898': validation.values.name,
+      'entry.1186975992': validation.values.email,
+      'entry.2090133804': validation.values.message,
     });
 
     setIsSubmitting(true);

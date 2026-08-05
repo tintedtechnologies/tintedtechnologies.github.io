@@ -1,4 +1,5 @@
 import ui from './HomeSections.module.css';
+import { CONTACT_LIMITS } from '../../utils/contactValidation';
 
 function HomeContactSection({ formData, isSubmitting, submitStatus, onChange, onSubmit }) {
   return (
@@ -22,6 +23,8 @@ function HomeContactSection({ formData, isSubmitting, submitStatus, onChange, on
               value={formData.name}
               onChange={onChange}
               required
+              minLength={CONTACT_LIMITS.name.min}
+              maxLength={CONTACT_LIMITS.name.max}
               placeholder="Your name"
               className={ui.formInput}
             />
@@ -35,6 +38,7 @@ function HomeContactSection({ formData, isSubmitting, submitStatus, onChange, on
               value={formData.email}
               onChange={onChange}
               required
+              maxLength={CONTACT_LIMITS.email.max}
               placeholder="your.email@example.com"
               className={ui.formInput}
             />
@@ -47,6 +51,8 @@ function HomeContactSection({ formData, isSubmitting, submitStatus, onChange, on
               value={formData.message}
               onChange={onChange}
               required
+              minLength={CONTACT_LIMITS.message.min}
+              maxLength={CONTACT_LIMITS.message.max}
               placeholder="Tell us a bit about your goals or challenges…"
               rows="6"
               className={ui.formTextarea}
